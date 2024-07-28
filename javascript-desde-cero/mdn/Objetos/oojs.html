@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+    
+    <script>
+      const persona = {
+        nombre: {
+          primero: 'Bob',
+          segundo: 'Borja'
+          },
+        edad: 26,
+        genero: 'masculino',
+        intereses: ['futbol', 'soccer'],
+        bio: function(){
+          alert(`${this.nombre[0]} ${this.nombre[1]} tiene ${this.edad} anios. Su hobbie favorito es jugar ${this.intereses[0]}, no confundir con el ${this.intereses[1]}`)
+        },
+        saludo: function(){
+          alert(`Hola, me gusta el ${this.intereses[0]}`)
+        }
+      }
+
+      persona.edad = 77; // Establecer nuevo valor a elementos del objeto
+      persona['nombre']['segundo'] = 'Arias';
+
+      console.log(persona.edad,persona['nombre']['segundo'])
+
+      persona['ojos'] = 'Color Fucsia'; //Anadiendo elementos al objeto
+      persona.despedida = function(){
+        alert('hASTA LUEGO CHICOS...')
+      } // Anadiendo funcion al objeto
+
+      persona['ojos']; 
+      persona.despedida(); //Llamando elemento y funcion
+
+      const elementoPersonalizado = 'Pais';
+      const valorPersonalizado = 'Colombia :)';
+
+      persona[elementoPersonalizado] = valorPersonalizado; // Anadiendo elemento con notacion corchete y por medio de variables
+      const miNotificacion = new Notification("¡Hola!");
+
+
+      //CREANDO CONSTRUCTOR PERSON
+
+      function Persona(nombre, apellido, edad, pais, hobbies)
+      {
+        this.nombre = nombre;
+        this.apellido = apellido
+        this.edad = edad
+        this.pais = pais
+        this.hobbies = hobbies
+      } // Constructor finalizado
+
+      var persona1 = new Persona('Miguel','Suarez','18','Colombia',['Futbol', 'Programar'])
+      //Instancia objeto
+
+      console.log(persona1.valueOf())
+      // Accediendo a elemento proto del objeto, y dentro de este accediendo a proto
+      // y sucesivamente, se llegara hasta el ultimo proto, que es null
+
+      const cadena1 = 'Cadena de ejemplo';
+
+      const persona2 = Object.create(persona1); //Objeto nuevo a partir del prototipo de persona1
+      console.log(persona2.__proto__) //Devuelve el objeto Persona
+
+      //Tanto persona1 como persona2 heredan las propiedades definidas de Person.prototype
+      // Son instancias del objeto, se hereda nombre-edad y denmas. PERO tambien heredan el constructor
+      // Es decir, se puede acceder al constructor Persona desde persona1
+
+      const persona3 = new persona1.constructor('Luis','Diaz','27','Colombia =)');
+      console.log(persona3.nombre, persona3.edad);
+      // Util si se desconoce constructor original, aunque se podria saber el nombre asi
+      console.log(persona3.constructor.name);
+      console.log(persona3 instanceof Persona); // Extra
+
+      //MODIFICANDO PROTOTIPOS
+      //Se anade metodo al prototipo de la funcion constructora Persona
+      Persona.prototype.jugando = function(){
+        alert(this.nombre + ' ' + this.apellido + ' esta jugando futbol...')
+      } // Este metodo como se agrego al prototipo de la funcion constructora, significa
+      // que todas las instancias de este constructor tendran el metodo...
+      // No importa si la instancia se creo antes del metodo anadido al prototipo...
+
+      persona3.jugando();
+    </script>
+  </body>
+
+</html>

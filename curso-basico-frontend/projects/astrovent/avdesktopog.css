@@ -1,0 +1,178 @@
+        
+    nav
+    {
+        height: 80px;
+    }    
+        nav img
+        {
+            height: 70px;
+            width: 80PX;  
+        }
+        nav p
+        {
+
+            font-size: 42rem;
+        }
+        .navlinks a
+        {
+            padding: 10px 10px;
+        }
+    
+ 
+    header .headertxt h1
+    {   
+        font-size: 82rem;
+    }
+    header .headertxt p
+    {
+        font-size: 36rem;
+    }
+
+    .sect1grid
+    {
+        display: grid;
+        height: auto;
+        max-width: 1600px;
+        grid-template-rows: 1fr;
+        grid-template-columns: 2fr 2fr;
+        grid-template-areas: 
+        "article1   sectimg1"
+        ;
+    }
+            .article1hc
+            {
+                display: none;
+            }
+            .article1
+            {
+                grid-area: article1;
+                display: flex;
+                flex-direction: column;
+            }
+            .article1h
+            {
+                display: block;
+            }
+            
+            
+            .article1h h1
+            {
+                color: black;
+                vertical-align: middle;
+                font-size: 48rem;
+                font-weight: 800;
+                text-align: left;
+                margin-bottom: 35px;
+            }
+            .article1pa
+            {
+                display: block;
+            }
+            .article1pa h1
+            {
+                margin-bottom: 35px;
+                font-size: 28rem;
+                text-align: left;
+            }
+
+            
+            .article1pa p
+            {
+                font-size: 18rem;
+                margin-bottom: 35px;
+                line-height: 32rem;
+
+            }
+
+            .article1pa a
+            {
+                font-size: 18px;
+            }
+
+            .sect1img
+            {   
+                grid-area: sectimg1;
+                margin: auto;
+                background: url(https://www.nasa.gov/wp-content/uploads/2023/11/iss053e023965orig.jpg);
+                width: 90%;
+                height: 100%; 
+                background-size: cover;
+                }
+
+    .card
+    {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+    }
+    .cardgrid
+    {
+        padding: 0 50px;
+        display: grid;
+        height:900px;
+        max-width: 1800px;
+        grid-template-rows: 250px 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "cardheader cardheader cardheader cardheader"
+        "carditem1 carditem2 carditem3 carditem4"
+        ;
+    }
+        
+        .cardheader
+        {
+            grid-area: cardheader;
+        }
+        
+        .cardheader h1
+        {
+            font-size: 56rem;
+        }
+        .cardheader p
+        {
+            font-size: 28rem;
+        }
+
+            .carditem h1
+            {
+                font-size: 24rem;
+            }
+            .carditem p
+            {            
+                font-size: 16rem;
+            }
+        
+
+form
+{
+    grid-area: form;
+    padding-top: .1em;
+    padding-bottom: .5em;
+    background-color: #626060;
+}
+
+        label
+        {
+            display: block;
+            font-weight: 300;
+            text-align: center;
+
+        }
+
+        input
+        {
+            display: block;
+            margin: 0 auto;
+            line-height: 35px;
+            width: 50%;
+            text-align: center;
+        }
+        ::placeholder
+        {
+            font-style: italic;
+            text-align: center;
+        }
+footer
+{
+    grid-area: footer;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO: ADIVINA LA PALABRA</title>
+    <link rel="stylesheet" href="32-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧐</text></svg>">
+
+</head>
+<body>
+        <button class="reset-section">
+            <p class="rainbow_text_animated rainbow-text"> RESET GAME</p>
+        </button>
+        
+        <main>
+            <header>
+                <h1>GUESS THE WORD GAME</h1>
+            </header>
+            <section class="game-info">
+                <p>Welcome. In this game you will have to guess an unknown word...</p>
+                <ul>
+                    <li>You have only three lives! Be careful</li>
+                    <li>You can use two hints at any moment</li>
+                    <li>If you can't guess the word after showing both hints. You can surrender</li>
+                </ul>
+            </section>
+            
+            <form>
+                <label for="text">
+                    ENTER YOUR ANSWER BELOW
+                </label>
+                <input type="text" id="text" placeholder="Mmm...">
+                <section>
+                    <p >LIVES: <span id="nVidasTexto"></span> </p>
+                </section>
+                <button class="form-button" type="button">
+                    Check
+                </button>
+                <section class="result-section">
+                </section>
+            
+            </form>
+            <section class="game-hints">
+                <button id="hint-button">
+                    Unlock a hint
+                </button>
+                <section class="hints">
+                </section>
+            </section>
+        </main>
+
+        
+    
+</body>
+
+<script src="32-proyecto-adivina-la-palabra.js"></script>
+
+</html>

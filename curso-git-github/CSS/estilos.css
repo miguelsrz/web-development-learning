@@ -1,0 +1,105 @@
+body
+{
+    background: #d5d0d0;
+    color: rgb(30, 8, 8);
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
+
+}
+
+#htitle
+{
+    box-shadow: 0px 2px 20px 0px rgb(41, 8, 8) ; 
+    width: 95%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgb(41, 8, 8);
+    color:#d5d0d0 ;
+    padding: 1em;
+    
+
+}
+
+#cabecera
+{
+    background:rgb(41, 8, 25);
+    box-shadow: 0px 2px 20px 0px rgb(41, 8, 8) ;
+    color: #d5d0d0;
+    font-weight: bold;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0.5em;
+    font-size: 38px;
+}
+
+#cabecera #logo1
+{
+    padding: 0 0 0 0.5em;
+    width: 100px;
+    vertical-align:middle;
+}
+#cabecera #tagline
+{
+    padding: 0 0 0 .5em;
+    font-weight: normal;
+    font-size: 60px;
+    vertical-align: top;
+}
+#cabecera #tagline2
+{
+    padding: 0 0 0 .5em;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+
+#container1
+{
+    
+    width: 70%;
+    padding: 0.5em;
+    text-align: left;
+    border: 2px solid rgb(41, 8, 8);
+    margin: auto;
+    margin-top: 2em;
+    
+}
+
+#container1 h1
+{
+    font-size: 38px;
+}
+
+#container1 p
+{
+    font-size: 26px;
+}
+
+
+#post
+{
+    text-align: justify;
+    padding: 0.5em;
+}
+#post img
+{
+    display: block;
+    padding: .5em;
+    margin: 0 auto;
+    width: 50%;
+    box-shadow: 0px 2px 20px 0px #a6a1a1 ; 
+
+}
+
+#footer
+{
+    text-align: center;
+    margin: 0 auto;
+    width: 30%;
+    background: #b4afaf;
+    box-shadow: 0px 2px 20px 0px #a6a1a1 ; 
+    vertical-align: middle;
+    padding: .5em;
+    font-size: 18px;
+}

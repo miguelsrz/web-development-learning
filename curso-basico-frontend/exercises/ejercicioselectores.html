@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicioselectores
+    </title>
+    <style>
+        div p
+        {
+            background: red;
+        }
+        div > p
+        {
+            background: blue;
+            color: aliceblue;
+        }
+        
+        div ~ p
+        {
+            background: purple;
+        }
+        div + p 
+        {
+            background:pink;
+        }
+    </style>
+</head>
+<body>
+    <p>GGG</p>
+    <div>
+        <p>AAA</p>
+        <div>
+            <p>BBB</p>
+            <section>
+                <P>CCC</P>
+            </section>
+        </div>
+        <P>DDD</P>
+    </div>
+    <p>EEE</p>
+    <section>
+        <p>HHH</p>
+    </section>
+    <p>
+        FFF
+    </p>
+</body>
+</html>

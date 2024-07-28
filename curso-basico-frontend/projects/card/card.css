@@ -1,0 +1,181 @@
+*
+{
+    font-family: 'Poppins', sans-serif;    
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+a
+{
+    text-decoration: none;
+    color: black;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+body
+{
+    background: rgb(6,15,94);
+    background: linear-gradient(90deg, rgba(6,15,94,1) 0%, rgba(52,60,199,1) 35%, rgba(0,1,255,1) 100%);
+}
+
+.base
+{
+    width: 100%;
+    height: 100vh;
+}
+
+.containertarjeta
+{
+    box-shadow: 0px 0px 105px -10px rgba(0,0,0,0.75);
+
+    position: relative;
+    top: 50%;
+    translate: 0 -50%;
+
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1.5fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "banner banner"
+    "prfname prfname"
+    "prfdsc prfdsc"
+    "prfctc prfctc"
+    "prfdata prfdata"
+    "prffollow prffollow"
+
+    ;
+    width: 400px;
+    height: 650px;
+    background-color: white;
+    border-radius: 35px;
+    border: 4px solid white;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+.containertarjeta:hover
+{
+    box-shadow: 0px 0px 105px -10px rgba(74, 74, 74, 0.75);
+    transform: scale(1.05);
+}
+
+.banner
+{
+    grid-area: banner;
+    background: url(https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D) black;
+    background-size: cover;
+    border-radius: 35px 35px 0 0;
+
+}
+.prfpic
+{   
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    top: 140px ;
+    border-radius: 100%;
+    width: 135px;
+    height: 135px;
+    background: url(img/Foto.jpg);
+    background-position:1% 25%;
+    background-size:cover;
+    border: 4px solid white;
+}
+.prfname
+{
+    grid-area: prfname;
+    align-self:last baseline;
+    text-align: center;
+    font-weight: 800;
+    font-size: 42px;
+}
+.hrname
+{
+    width: 95%;
+    margin: 0 auto;
+    border: .5px solid lightgrey;
+    
+}
+.prfdsc
+{
+    grid-area: prfdsc;
+    margin: 0 auto;
+    padding: 5px 25px 0 25px;
+    font-weight: 300;
+    font-size: 22px;
+    text-align: center;
+}
+.prfctc
+{
+    grid-area: prfctc;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 500;
+    font-size: 18px;
+}
+.ctcflex
+{
+    display: flex;
+    width: 25%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.prfdata
+{
+    position: relative;
+    grid-area: prfdata;
+    display: flex;
+    justify-content: stretch;
+}
+.prfdata1
+{
+    
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    background-color: rgb(205, 203, 203);
+    text-align: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.prfdata2
+{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    background-color: rgb(205, 203, 203);
+    text-align: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.hrdata
+{
+    position: absolute;
+    height: 60px;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border: .5px solid white;
+}
+.prffollow
+{
+    grid-area: prffollow;
+    display: flex ;
+    background-color: rgb(73, 186, 203);
+    border-radius: 0 0 35px 35px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 28px;
+}
+.prffollow:hover
+{
+    
+    background-color: rgb(83, 212, 232);
+    cursor: pointer;
+}

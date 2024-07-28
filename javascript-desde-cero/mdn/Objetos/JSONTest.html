@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Simple JSON example</title>
+  </head>
+
+  <body>
+
+    <script>
+    const superHeroes = { // JSON asignado a variable
+      "squadName" : "Super hero squad",
+      "homeTown" : "Metro City",
+      "formed" : 2016,
+      "secretBase" : "Super tower",
+      "active" : true,
+      "members" : [
+        {
+          "name" : "Molecule Man",
+          "age" : 29,
+          "secretIdentity" : "Dan Jukes",
+          "powers" : [
+            "Radiation resistance",
+            "Turning tiny",
+            "Radiation blast"
+          ]
+        },
+        {
+          "name" : "Madame Uppercut",
+          "age" : 39,
+          "secretIdentity" : "Jane Wilson",
+          "powers" : [
+            "Million tonne punch",
+            "Damage resistance",
+            "Superhuman reflexes"
+          ]
+        },
+        {
+          "name" : "Eternal Flame",
+          "age" : 1000000,
+          "secretIdentity" : "Unknown",
+          "powers" : [
+            "Immortality",
+            "Heat Immunity",
+            "Inferno",
+            "Teleportation",
+            "Interdimensional travel"
+          ]
+        }
+      ]
+    } //Formato JSON
+    // JSON puede ser escrito como objeto (este caso) o como arreglo
+
+    /*
+        [
+          {
+            "name": "Molecule Man",
+            "age": 29,
+            "secretIdentity": "Dan Jukes",
+            "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+          },
+          {
+            "name": "Madame Uppercut",
+            "age": 39,
+            "secretIdentity": "Jane Wilson",
+            "powers": [
+              "Million tonne punch",
+              "Damage resistance",
+              "Superhuman reflexes"
+            ]
+          }
+        ]
+    */
+    console.log(superHeroes.homeTown);
+    console.log(superHeroes.members[1].name) //Accediendo a JSON por medio de la variable
+    // Acceso normal por medio de objeto literal y arreglo
+    </script>
+  </body>
+</html>

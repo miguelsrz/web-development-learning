@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function library example</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+  </style>
+  </head>
+<body>
+
+  <input class="numberInput" type="text">
+  <p></p>
+
+  <script>
+    const input = document.querySelector('.numberInput');
+    const para = document.querySelector('p');
+
+    function squared(num) {
+      return num * num;
+    }
+
+    function cubed(num) {
+      return num * num * num;
+    }
+
+    function factorial(num) {
+      if (num < 0) return undefined;
+      if (num === 0) return 1;
+      let x = num - 1;
+      while (x > 1) {
+        num *= x;
+        x--;
+      }
+      return num;
+    }
+
+    function rootNumber(num, otherNumber)
+    {
+      if(num===0) return num
+      if(otherNumber===0 || otherNumber<0) return undefined;
+      if(num<0 && (otherNumber%2===0)) return undefined;
+      if(num<0 && otherNumber%2!==0) return '...';
+      return Math.pow(num, 1/otherNumber);
+    }
+
+    function potencyNumber(num, otherNumber)
+    {
+      if(num===0) return 1;
+      return Math.pow(num, otherNumber)
+    }
+
+    function multiplyNumber(num, otherNumber)
+    {
+      if(num==0 || otherNumber===0) return 0
+      return num * otherNumber
+    }
+
+    function divideNumber(num, otherNumber)
+    {
+      if (num===0) return 0;
+      if (otherNumber===0) return undefined;
+      return num/otherNumber;
+    }
+
+    input.addEventListener("change", () => {
+    const num = parseFloat(input.value);
+    let notCompleted = true;
+
+    if (isNaN(num)) {
+      para.textContent = "You need to enter a number!";
+    } else {
+        while(notCompleted)
+      {
+        otherNumber = prompt('Enter second value for other operations that require it');
+        if(!isNaN(otherNumber))
+        {
+          notCompleted = false;
+        }else
+        {
+          alert('Invalid input!')
+        }
+      }
+      para.textContent = `${num} squared is ${squared(num)}. || `;
+      para.textContent += `${num} cubed is ${cubed(num)}. || `;
+      para.textContent += `${num} factorial is ${factorial(num)}. || `;
+      para.textContent += `${num} root of ${otherNumber} is ${rootNumber(num, otherNumber)}. || `;
+      para.textContent += `${num} potency of ${otherNumber} is ${potencyNumber(num, otherNumber)}. || `;
+      para.textContent += `${num} multiplied ${otherNumber} is ${multiplyNumber(num, otherNumber)}. || `;
+      para.textContent += `${num} divided by ${otherNumber} is ${divideNumber(num, otherNumber)}.`;
+
+    }
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Bouncing balls</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Odibee+Sans&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js" integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <div class="containerh1">
+      <h1 class="black-ops-one-regular title"> BOUNCING BALLS: ULTIMATUM</h1>
+    </div>
+
+    <section class="menu">
+      <h1 class="black-ops-one-regular mh1">HOW TO PLAY</h1>
+      <p class="odibee-sans-regular mp">// CONTROL THE BALL-EATER AND CAPTURE ALL THE COLORFUL BALLS! <br>
+      // BE CAREFUL, YOU HAVE A SET AMOUNT OF TIME. IF THE TIME RUNS OUT, YOU LOSE... <br>
+    // PRESS "SPACE" TO ACTIVATE YOUR SUPER AND GAIN INCREASED RADIUS!</p>
+      <button class="button-game black-ops-one-regular mb">START</button>
+    </section>
+
+
+    <section class="game-w sect-w">
+      <div class="container-w">
+        <h1 class="h1-w black-ops-one-regular">WELL PLAYED!
+        </h1>
+        <p class="p-w odibee-sans-regular m-w">CONGRATULATIONS! YOU WON THE GAME BY EATING ALL THE BALLS!</p>
+        <p class="p-w odibee-sans-regular t-w">TOTAL TIME: <span class="timer-w">X</span> SECONDS</p>
+        <button class="black-ops-one-regular button-game play-button">PLAY AGAIN</button>
+        <button class="black-ops-one-regular button-game menu-button">MENU</button>
+      </div>
+    </section>
+
+    <section class="game-w sect-l">
+      <div class="container-w">
+        <h1 class="h1-w black-ops-one-regular">GAME OVER
+        </h1>
+        <p class="p-w odibee-sans-regular m-w">YOU LOST... <br> YOU WERE NOT QUICK ENOUGH</p>
+        <p class="p-w odibee-sans-regular t-w">BALLS LEFT: <span class="balls-l"></span></p>
+        <button class="black-ops-one-regular button-game play-button">PLAY AGAIN</button>
+        <button class="black-ops-one-regular button-game menu-button">MENU</button>
+
+      </div>
+    </section>
+
+    <canvas>
+      
+    </canvas>
+
+    
+
+    <section class="bottomInfo">
+      <div class="bottomDeco black-ops-one-regular">
+        /////////
+      </div>
+      <div class="containerbottom">
+        <div class="cb1">
+          <h1 class="black-ops-one-regular secth1 cbh1">
+            EAT ALL THE BALLS
+          </h1>
+          <p class="odibee-sans-regular sectp"> <span class="balls-counter">1</span> BALLS</p>
+        </div>
+        <div class="cb2">
+          <h1 class="cb2h1 black-ops-one-regular secth1"> ACTIVATE SUPER</h1>
+        </div>
+        <div class="cb3">
+          <h1 class="black-ops-one-regular  secth1 cbh1" >GAME TIMER</h1>
+          <p class="odibee-sans-regular sectp"><span class="game-timer">X</span> SECS LEFT</p>
+        </div>
+      </div>
+    </section>
+    
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,922 @@
+html
+{
+    font-size: 6.25%;
+}
+*
+{
+    font-size: 16rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
+}
+a
+{
+    text-decoration: none;
+}
+p
+{
+    text-wrap:pretty;
+}
+
+.txtblack
+{
+    color: black;
+}
+
+.txtgray
+{
+    color: rgb(146, 146, 146);
+}
+.txtlightgray
+{
+    color: rgb(151, 151, 151);
+}
+.txtlightblack
+{
+    color: #1b1b1b;
+}
+
+
+.finterssbold36-72
+{
+    font-family: "inter", sans-serif;
+    font-size: 36rem;
+    font-weight: 700;
+    text-align: left;
+}
+.finterssbold36-48
+{
+    font-family: "inter", sans-serif;
+    font-size: 36rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+
+.finterssbold32-42
+{
+    font-family: "inter", sans-serif;
+    font-size: 32rem;
+    font-weight: 700;
+    text-align: left;
+}
+.finterssbold18
+{
+    font-family: "inter", sans-serif;
+    font-size: 18rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.finterbold24
+{
+    font-family: "inter", sans-serif;
+    font-size: 24rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+.finterbold18
+{
+    font-family: "inter", sans-serif;
+    font-size: 18rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.finterss14
+{
+    font-family: "inter", sans-serif;
+    font-size: 15rem;
+    font-weight: 300;
+    text-align: left;
+    line-height: 24rem;
+
+}
+
+
+.fpublicsw24
+{
+    font-family: "Public Sans Web", sans-serif;
+    font-weight: 700;
+    font-size: 24rem;
+    line-height: 24rem;
+}
+
+.fpublicsw14-18
+{
+    font-family: "Public Sans Web", sans-serif;
+    font-size: 14.5rem;
+    line-height: 24rem;
+
+}
+
+.fpublicsw14
+{
+    font-family: "Public Sans Web", sans-serif;
+    font-size: 15rem;
+    line-height: 24rem;
+
+}
+.fpublicsw16
+{
+    font-family: "Public Sans Web", sans-serif;
+    font-size: 16rem;
+    line-height: 24rem;
+}
+
+.fpublicsw-bold12
+{
+    font-family: "Public Sans Web", sans-serif;
+    font-weight: 600;
+    font-size: 14rem;
+    
+}
+
+
+
+
+.fdmmono12
+{
+    font-family: "DM Mono", monospace;
+    font-size: 12.5rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+
+.fdmmono8
+{
+    font-family: "DM Mono", monospace;
+    font-size: 10rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.navbutton
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: transparent;
+    border: none;
+    padding: .5em 1em;
+}
+
+.nvbsmall
+{
+    background-color: transparent;
+    border: solid 4px black;
+}
+
+
+
+.svgspan
+{
+    width: 25px;
+    padding-left: .5em;
+}
+
+
+.button-white-arrow
+{
+    display: flex;
+    align-items:center;
+    justify-content: left;
+    background-color: transparent;
+    border: none;
+    outline: solid 4px transparent;
+    padding: .5em 0;
+    width: max-content;
+}
+
+.button-white-arrow:hover rect
+{
+    fill: rgb(170, 31, 31);
+}
+
+.nasalive
+    {
+        display: flex;
+        align-items: center;
+    }
+
+    .nasalive:hover .livetext
+    {
+
+        background-color: rgb(170, 31, 31);;
+    }
+
+.livetext
+{
+    border: solid 1px red;
+    padding: 0 .5em ;
+    margin-left: .5em;
+    border-radius: 2px;
+}
+
+.objhovfocradius
+{
+    border-radius: 100%;
+}
+
+.objhovfocradius:focus
+{
+    box-shadow: 0px 0px 0px 4px rgb(21, 149, 235);
+}
+.objhovfoc:hover
+{
+    cursor: pointer;
+    
+    outline: solid 4px rgba(19, 132, 207, 0.5);
+
+}
+.objhovfoc:focus
+{
+    outline: solid 4px rgb(21, 149, 235);
+}
+
+
+
+
+
+
+
+
+.pagegrid
+{
+    display: grid;
+    grid-template-rows: 85px max-content 1fr 1375px;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "footer"
+    ;
+}
+.parentbg
+{
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+.figbg
+{
+    z-index: -1;
+    filter: brightness(40%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+}
+.imgbg
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+nav
+{
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+    .navgrid
+    {
+        display: grid;
+        width: 100%;
+        height: 55px;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas: 
+        "menu logo search"
+        ;
+        align-items: center;
+        padding: 0 1em 0 1em;
+        
+    }
+    .navsearch, .navlinks
+    {
+        display: none;
+    }
+    .navsmallmenu
+    {
+        grid-area: menu;
+        justify-self: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 35px;
+        height: 25px;
+    }
+
+    .navsmallmenu hr
+    {
+        border: none;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+
+    }
+
+
+    .navlogo
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: logo;
+    }
+        .navlogo img
+        {
+            display: block;
+            width: 60px;
+            height: 50px;
+        }
+    .navsmallsearch
+    {
+        grid-area: search;
+        justify-self: right;
+
+        width: 30px;
+        height: 30px;
+    }
+
+    .navinput
+    {
+        height: 35px;
+        background-color: black;
+        border: solid 1px rgb(75, 75, 75);
+        padding-left: .5em;
+    }
+    .navinput:focus
+    {
+        outline: solid 4px rgb(21, 149, 235);
+    }
+    
+    .nvsmall
+    {
+        background-color: transparent;
+    }
+
+.mainheader
+{
+    grid-area: header;
+    height: max-content;
+    
+}
+    .headergrid
+    {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 3fr 2fr;
+        grid-template-areas: 
+        "hart "
+        "hsect"
+        ;
+        padding: 0 1.5em 0 1.5em;
+        margin: 4em 0 2em 0;
+    }
+    .hart
+    {
+        grid-area: hart;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .hart h2, .hart p, .hart a
+        {
+            margin-bottom: 24rem;
+        }
+        
+
+        .hbutton
+        {
+            display: flex;
+            align-items:center;
+            justify-content: space-evenly;
+            background-color: rgb(212, 35, 35);
+            border: solid 4px transparent;
+            padding: 0.5em 1em 0.5em 1em;
+            width: 200px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hbutton:hover
+        {
+            background-color: rgb(170, 31, 31);
+
+        }
+
+        .hsect
+        {
+            grid-area: hsect;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            
+        }
+        
+        .hsect hr
+        {
+            border: solid .1px rgba(128, 128, 128, 0.76);  
+        }
+        .hsect hr, .hsect h3
+        {
+            margin-top: 16rem;
+            margin-bottom: 8rem;
+        }
+
+
+main
+{
+    grid-area: main;
+    display: grid;
+    grid-template-rows:max-content 880px max-content 880px max-content 880px max-content;
+    grid-template-areas:
+    "fnews"
+    "fstory"
+    "imgday"
+    "info"
+    "lnews"
+    "explore"
+    "topics"
+    ;
+    background-color: white;
+
+}
+
+
+
+.fnews
+{
+    grid-area: fnews;
+    padding: 3em 2.5em;
+    max-height: 2300px;
+}
+    .newsgrid
+    {
+        display: grid;
+        grid-template-rows: max-content 1265px max-content;
+        grid-template-areas: 
+        "nheader"
+        "nblock"
+        "nflex"
+        ;
+    }
+        .nheader
+        {
+            grid-area:nheader;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+            .nheader h2
+            {
+                margin-bottom: 1em;
+            }
+            .nheader a
+            {
+                margin-bottom: 1.5em;
+                width: 100%;
+            }
+
+            .nheader a span
+            {
+                width: 204px;
+            }
+
+        .nblock
+        {
+            grid-area:nblock ;
+            display: grid;
+            grid-template-rows: 2fr 2fr 1fr 1fr;
+            
+        }
+            
+            .nbpadding
+            {
+                display: block;
+                width: 100%;
+                height: 95%;
+            }
+            .nbflex
+            {
+                width: 100%;
+                height: 100%;
+                padding: 1.5em;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+                .nbarticletxt
+                {
+                    display: flex;
+                    align-items: center;
+                    justify-content: left;
+                }
+                    .svgarticle
+                    {
+                        width: 15px;
+                        margin-right: .5em;
+                    }
+                .nbtextsmall
+                {
+                    margin-bottom: 1em;
+                }
+
+        .nflex
+        {
+            grid-area: nflex;
+            display: flex;
+            flex-direction: column;
+            margin-top: 1em;
+            max-height: 900px;
+        }
+            .nfpadding
+            {
+                width: 100%;
+                height: 100%;
+                padding-bottom:1.5em ;
+            }
+            
+            .nfgrid
+            {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: 105px 2fr;
+                grid-template-areas: 
+                "nfimg nftext"
+                ;
+                align-items: center;
+            }
+                .nffig
+                {
+                    grid-area: nfimg;
+                    padding-right: 1.5em;
+                }
+                    .nfimg
+                    {
+                        width: 85px;
+                        height: 85px;
+                        border-radius: 100%;
+                    }
+                
+                .nftext
+                {
+                    grid-area: nftext;
+                }
+
+                    .nftextsmall, .nftextmain
+                    {
+                        margin-bottom: .5em;
+                    }
+                    
+
+.banner
+{
+    padding: 8em 2.5em;
+}
+
+    .bannergrid
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100%;
+
+    }
+
+        .bannerflex
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+
+        .bannerflex h2, .bannerflex p
+        {
+            margin-bottom: .5em;
+        }
+
+.fstory
+{
+    grid-area: fstory;
+
+}
+.imgday
+{
+    grid-area: imgday;
+    padding: 5em 1.5em;
+    height: max-content;
+}
+    
+    .imgdaygrid
+    {
+        display: grid;
+        grid-template-rows: max-content max-content max-content   ;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: 
+        "himgday"
+        "fimgday"
+        "simgday"
+        ;
+
+    }
+
+        .himgday
+        {
+            grid-area: himgday;
+            margin-bottom: 2em;
+        }
+
+        .himgday p
+        {
+            margin-bottom: 1em;
+        }
+        .fimgday
+        {
+            justify-self: center;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            grid-area: fimgday;
+            margin-bottom: 2em;
+        }
+            .img-imgday
+            {
+                width: 100%;
+                height: 100%;
+                margin-bottom: 1em;
+            }
+            
+        .simgday
+        {
+            grid-area: simgday;
+        }
+
+        .simgday h2 
+        {
+            margin-bottom: 1em;
+        }
+        .simgday p
+        {
+            margin-bottom: 1em;            
+        }
+        
+
+
+.info
+{
+    grid-area: info;
+
+}
+.lnews
+{
+    grid-area: lnews;
+    padding: 3em 2.5em;
+    max-height: 2300px;
+}
+.explore
+{
+    grid-area: explore;
+
+}
+.topics
+{
+    grid-area: topics;
+    padding: 4em 1em;
+    min-height: 700px;
+}
+.topicsgrid
+{
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    grid-template-areas: 
+    'theader'
+    'tcardcontainer'
+    ;
+    align-items: center;
+    overflow-x:auto;
+    height: 100%;
+
+}
+
+.topicsheader
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    grid-area: theader;
+    margin-bottom: 2em ;
+    padding-left: .5em;
+}
+
+.topicsheader p
+{
+    margin-bottom: 2em;
+}
+
+    
+
+.tcardcontainer
+{
+    grid-area: tcardcontainer;
+    display: flex;
+    align-items: center;
+    overflow-x:auto;
+    height: 100%;
+    padding: .5em .5em 2em .5em;
+}
+
+.tcardcontainer::-webkit-scrollbar
+{
+
+    height: 5px;
+
+}
+
+.tcardcontainer::-webkit-scrollbar-thumb
+{
+    border-radius: 5px;
+    background-color: gray;
+}
+
+.tcardcontainer::-webkit-scrollbar-track
+{
+    
+    background-color: rgba(128, 128, 128, 0.301);
+}
+.tcard
+{
+    min-width: 80%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin: 0 .75em 0 .75em;
+    padding: 2em;
+}
+
+.tcard1
+{
+    margin-left: 0;
+}
+.tcard4
+{
+    margin-right: 0;
+}
+
+
+
+
+footer
+{
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    padding: 0em 1.5em;
+    max-height: 1450px;
+}
+    .footergrid
+    {
+        display: grid;
+        height: 100%;
+        grid-template-rows: 3fr 10fr 10fr 4fr 6fr 4fr;
+        grid-template-areas: 
+        "logofooter"
+        "nasaabout"
+        "footerlinks"
+        "footersocial"
+        "nasainfo"
+        "pageinfo"
+        ;
+    }
+        
+        .aflinks:hover
+        {
+            text-decoration:underline dashed;
+            text-underline-offset: 3px;
+        }   
+
+        .logofooter
+        {
+            grid-area: logofooter;
+        }
+
+        .footerlogo
+        {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            ;
+            margin: 2em 0;
+        }
+            .footerlogo img
+            {
+                width: 70px;
+                height: 60px;
+            }
+        .nasaabout
+        {
+            grid-area: nasaabout;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 2.5em;
+        }
+        .footerlinks
+        {
+            grid-area: footerlinks;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: auto;
+            margin-bottom: 2.5em;
+
+        }
+
+            .footerlinks a
+            {
+                margin-bottom: 1em;
+                margin-right: .5em;
+            }
+        .footersocial
+        {
+            grid-area: footersocial;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 2.5em;
+
+        }
+            .footersocial p, .footersocial a
+            {
+                margin-bottom: 1em;
+
+            }
+            
+            .asocialicon svg:hover rect
+            {
+                fill: #414141;
+            }
+            
+            .asocialicon
+            {
+               width: 30px;
+               height: 30px;
+               margin-right: .5em;
+            }
+                
+            .socialmedia
+            {
+                display: flex;
+                justify-content: left;;
+            }
+        .nasainfo
+        {
+            position: relative;
+            padding-top: 1.5em;
+            grid-area: nasainfo;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: auto;
+        }
+            .nasainfo a
+            {
+                margin-bottom: 1em;
+
+            }
+            .hrfooter
+            {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 1px;
+                border: solid .1px rgba(128, 128, 128, 0.301);  
+            }
+        .pageinfo
+        {
+            height: 200px;
+            padding: 2em 0 2em 0;
+            grid-area: pageinfo;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        

@@ -1,0 +1,411 @@
+
+html
+{
+    font-size: 6.25%;
+    font-family: Helvetica, sans-serif;
+}
+*
+{
+    font-size: 16rem;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+body
+{
+    background: rgb(231, 231, 231);
+}
+
+.pagegrid
+{
+    display: grid;
+    grid-template-rows: 60px 750px 5fr 1fr 1fr;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "form"
+    "footer"
+    ;
+}
+
+nav
+{
+    max-width: 100%;
+    width: 100vw;
+    z-index: 100;
+    padding: 0 15px 0 15px;
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 60px;
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    top: 0;
+    grid-template-areas: 
+    "navp hamburguer";
+    -webkit-backface-visibility: hidden;
+    border-bottom: 2px solid white;
+
+
+}
+
+        nav img
+        {
+            display: none; 
+        }
+        .navhr
+        {
+            display: none;
+        }
+
+        nav p
+        {
+            grid-area: navp;
+            font-family: 'Nasa', sans-serif;            
+            color: white;
+            font-weight:800;
+            font-size: 32rem;
+
+        }
+
+        .navlinks
+        {
+            display: none; 
+        }
+        .hamburger 
+        {
+            grid-area: hamburguer;
+            justify-self: last baseline;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 50px;
+            height: 50px;
+        }
+        .hamburger hr
+        {
+            height: 5px;
+            background-color: white;
+            border: none;
+        }
+        
+header
+{
+    
+    position: relative;
+    grid-area: header;
+    display: flex;
+    background: url("https://www.nasa.gov/wp-content/uploads/2024/01/50357031136-19790264a3-k.jpg") blue;
+    background-size:cover;
+    align-items: center;
+    justify-content: center;
+    height: 750px ;
+}
+    .headerblack
+    {
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        opacity: 70%;
+    }
+    
+    .headertxt
+    {
+        z-index: 1;
+    }
+    .headertxt h1
+    {   
+        margin: 0;
+        padding: 10px;
+        font-weight: 800;
+        text-align: center;
+        color: white;
+        font-size: 52rem;
+    }
+    .headertxt p
+    {
+        padding: 10px;
+        text-align: center;
+        color: rgb(181, 181, 181);
+        font-size: 24rem;
+    }
+
+main
+{
+    grid-area: main;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "sect1"
+    "sect2"
+    "sect3"
+    "card"
+    ;
+
+}
+    .layout
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 800px;
+    }
+    .sect1
+    {
+        grid-area: sect1;
+        
+    }
+    .sect2
+    {
+        grid-area: sect2;
+        background-color: #626060;
+    }.sect3
+    {
+        grid-area: sect3;
+        color: black;
+    }
+
+        .sect1grid
+        {
+            display: grid;
+            width: 90%;
+            height: 750px;
+            align-items: center;
+            grid-template-rows: 140px 200px 1fr;
+            grid-template-areas:
+            "article1h"
+            "sectimg1" 
+            "article1"
+
+            ;
+            
+        }
+            
+            .article1h
+            {
+                display: none;
+            }
+
+            .article1hc
+            {
+                grid-area: article1h;
+                margin: 10px 20px;
+            }
+
+            
+            .article1hc h1
+            {
+                vertical-align: middle;
+                font-size: 24rem;
+                font-weight: 800;
+                text-align: center;
+                text-wrap: pretty;
+                color: black;
+            }
+
+            .article1
+            {
+                grid-area: article1;
+            }
+            
+            .article1pa h1
+            {
+                margin-bottom: 25px;
+                font-size: 22rem;
+                font-weight:600;
+                text-align: center;
+                color: black;
+
+            }
+            .article1pa p
+            {
+                text-wrap: pretty;
+                margin-bottom: 25px;
+                line-height: 24rem;
+                color: black;
+
+            }
+
+            .article1pa a
+            {
+                display: block;
+                padding: 15px;
+                font-weight: 600;
+                text-decoration: none;
+                text-align: center;
+                color: white;
+                background-color: black;
+                font-size: 14px;
+            }
+            .article1pa a:hover
+            {
+                background-color: rgb(19, 19, 19);
+
+            }
+            .sect1img
+            {   
+                grid-area: sectimg1;
+                background: url(https://www.nasa.gov/wp-content/uploads/2023/11/iss053e023965orig.jpg);
+                width:100%;
+                height: 200px; 
+                background-size: cover;
+            }
+
+
+.card
+{
+    grid-area: card;
+}
+    .cardgrid
+    {
+        padding: 0 30px;
+        display: grid;
+        align-items: center;
+        background-color: black;
+        height:2400px;
+        grid-template-rows: 250px 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "cardheader"
+        "carditem1"
+        "carditem2"
+        "carditem3"
+        "carditem4"
+        ;
+    }
+        
+        .cardheader
+        {
+            grid-area: cardheader;
+            
+        }
+        
+        .cardheader h1
+        {
+            
+            padding: 10px;
+            font-weight: 800;
+            text-align: center;
+            color: white;
+            font-size: 28rem;
+        }
+        .cardheader p
+        {
+            padding: 10px;
+            text-align: center;
+            color: rgb(181, 181, 181);
+            font-size: 24rem;
+        }
+        .carditemblack
+            {
+                z-index: -1;
+                position: absolute;
+                background-color: black;
+                width: 100%;
+                height: 100%;
+                opacity: 80%;
+            }
+
+        .carditem
+        {
+            z-index: 1;
+            align-self: flex-start;
+            position: relative;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 95%;
+            margin: 0 auto;
+            color: white;
+            border: 2px solid black;
+            transition: all 0.3s ease-in-out;
+        }
+
+            .carditem:hover
+            {
+                transform:scale(1.05);
+                border: 2px solid white;
+                box-shadow: 0px 0px 15px 3px rgba(255, 255, 255, 0.074);
+            }
+
+            .carditem h1
+            {
+                padding: 5px 25px 5px 25px;
+                font-weight: 800;
+            }
+            .carditem img
+            {
+                max-width: 100%;
+                width: 100%;
+                margin: 0;
+            
+            }
+            .carditem p
+            {            
+                justify-self:center;
+                padding: 5px 25px 25px 25px;
+                text-wrap: pretty;
+            }
+            .ci1
+            { 
+                background: url(https://img.freepik.com/free-photo/black-white-details-moon-texture-concept_23-2149535764.jpg) blue;   
+                background-size: cover;
+                background-position: center
+            }
+            .ci2
+            {
+                background: url(https://services.meteored.com/img/article/imagens-do-perseverance-da-nasa-mostram-um-registo-de-um-rio-marciano-selvagem-1684002960103_1280.jpg) blue;    
+                background-size: cover;
+                background-position: center
+            }
+            .ci3
+            {
+                background: url(https://media.istockphoto.com/id/1200463149/es/foto/vista-art%C3%ADstica-del-planeta-saturno-y-su-luna-tit%C3%A1n.jpg?s=612x612&w=0&k=20&c=zVjwPAj0z5c7_Uv2-mOvIru_7N-GuUi7UTpAmcyymWI=) blue;     
+                background-size: cover;
+                background-position: center
+            }
+            .ci4
+            {
+                background: url(https://qph.cf2.quoracdn.net/main-qimg-b8f0d77d7f733f906be93c345ea74f2a-lq) blue;     
+                background-size: cover;
+                background-position: center
+            }
+
+            
+        
+
+form
+{
+    grid-area: form;
+    padding-top: .1em;
+    padding-bottom: .5em;
+    background-color: #626060;
+}
+
+        label
+        {
+            display: block;
+            font-weight: 300;
+            text-align: center;
+
+        }
+
+        input
+        {
+            display: block;
+            margin: 0 auto;
+            line-height: 35px;
+            width: 50%;
+            text-align: center;
+        }
+        ::placeholder
+        {
+            font-style: italic;
+            text-align: center;
+        }
+

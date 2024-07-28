@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN - MAIN</title>
+
+    <style>
+        html
+        {
+            font-size: 6.25%;
+        }
+        :root
+        {
+            --white: #FFFFFF;
+            --black: #000000;
+            --light-text: #8b8b8b;
+            --text-input-field: #ebebeb;    
+            --object-fill: #8672db;
+            --object-fill-hover: #927df0;
+            --xlg: 24rem;
+            --lg: 18rem;
+            --md: 16rem;
+            --sm: 14rem;
+
+        }
+
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-wrap: pretty;
+        }
+
+        @font-face 
+        {
+            font-family: "Quicksand" ;
+            src: url(assets/fonts/Quicksand-VariableFont_wght.woff2) format("woff2");
+            font-weight: 300, 500, 700;
+            font-style: lighter, normal, bold;
+
+        }
+        body
+        {
+            
+            font-family: "Quicksand";
+            font-size: 16rem;
+        }
+
+        .login
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            width: 100%;
+            height: 100vh;
+
+            background: rgb(39,41,109);
+            background: -moz-linear-gradient(180deg, rgba(39,41,109,1) 0%, rgba(94,99,182,1) 35%, rgba(163,147,235,1) 100%);
+            background: -webkit-linear-gradient(180deg, rgba(39,41,109,1) 0%, rgba(94,99,182,1) 35%, rgba(163,147,235,1) 100%);
+            background: linear-gradient(180deg, rgba(39,41,109,1) 0%, rgba(94,99,182,1) 35%, rgba(163,147,235,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#27296d",endColorstr="#a393eb",GradientType=1);        }
+
+        .bg-svg
+        {
+            z-index: -1;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%) rotate(45deg);
+            
+            border-radius: 30%;
+            width: 500px;
+            height: 500px;
+        }
+
+        .bg-svg-bottom
+        {
+            z-index: 0;
+           position: absolute;
+
+           bottom: 0;
+           
+           
+        }
+        .form-container
+        {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+        }
+
+        .form-content
+        {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            align-items: center;
+            padding: 2.5em 2em;
+            border-radius: 8px;
+
+            max-width: 350px;
+            width: 90%;
+
+            background-color: white;
+        }
+
+        .figure-center
+        {
+            display: flex;
+            justify-content: center;
+        }
+        .logo
+        {
+            display: block;
+            width: 200px;
+        }
+
+        .hr-login
+        {
+            justify-self: center;
+
+            margin: 1em 0;
+            border: none;
+
+            height: 1px;
+            background-color: #000000;
+            width: 100%;
+        }
+
+        .title
+        {
+            margin-bottom: 1em;
+
+            text-align: center;
+            font-size: var(--xlg);
+            font-weight: 700;
+
+            color: var(--black);
+        }
+
+        .form-login
+        {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        .label
+        {
+            margin-bottom: .5em;
+
+            font-size: var(--md);
+            font-weight: 700;
+        }
+
+        .input
+        {
+            margin-bottom: 1em;
+            padding: 1em;
+            border: none;
+
+            height: 35px;
+            border-radius: 16px;
+
+            font-family: inherit;
+            font-size: var(--md);
+            font-weight: 500;
+           
+            background-color: var(--text-input-field);
+        }
+        .button-primary
+        {
+            margin-top: 1em;
+            border: none;
+
+            width: 100%;
+            height: 50px;
+            border-radius: 8px;
+            
+            font-family: inherit;
+            font-size: var(--lg);
+            font-weight: 700;
+            color: var(--white);
+
+            background-color: var(--object-fill);
+            cursor: pointer;
+        }
+
+        .button-primary:hover
+        {
+            background-color: var(--object-fill-hover);
+        }
+
+        .a-small-colored
+        {
+            margin-top: 2em;
+            
+            font-size: var(--sm);
+            text-decoration: none;
+            text-align: center;
+            color: var(--object-fill);
+        }
+        .a-small-colored ~ button
+        {
+            display: none;
+            margin-top: 2em;
+        }
+
+        .a-small-colored:hover
+        {
+            text-decoration: underline;
+        }
+
+        .button-container
+        {
+            z-index: 2;
+            margin-top: 3em;
+            border-radius: 8px;
+
+            max-width: 350px;
+            width: 90%;
+
+            background-color: white;
+        }
+
+        .button-secondary
+        {
+
+            width: 100%;
+            height: 50px;
+            border-radius: 8px;
+            border: 2px solid var(--object-fill);
+
+            font-family: inherit;
+            font-size: var(--lg);
+            font-weight: 700;
+            color: var(--white);
+
+            background-color: var(--white);
+            color: var(--object-fill);
+
+            cursor: pointer;
+
+        }
+        .button-secondary:hover
+        {
+            background-color: var(--text-input-field);
+        }
+
+
+
+        @media (max-width:600px)  , (max-height:665px)
+        {
+            
+            .bg-svg
+            {
+                width: 350px;
+                height: 350px;
+            }
+            
+        }
+
+        @media (max-height:820px)
+        {
+            .a-small-colored ~ button
+            {
+            display: block;
+            margin-top: 2em;
+            }
+            .button-container
+            {
+                display: none;
+            }
+        }
+
+        @media (max-height:665px)
+        {
+            .logo, .hr-login
+            {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="login">
+                
+                <svg class="bg-svg-bottom" id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 110" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(255, 255, 255, 1)" offset="0%"></stop><stop stop-color="rgba(255, 255, 255, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,0L40,1.8C80,4,160,7,240,22C320,37,400,62,480,69.7C560,77,640,66,720,67.8C800,70,880,84,960,77C1040,70,1120,40,1200,29.3C1280,18,1360,26,1440,36.7C1520,48,1600,62,1680,67.8C1760,73,1840,70,1920,56.8C2000,44,2080,22,2160,16.5C2240,11,2320,22,2400,31.2C2480,40,2560,48,2640,45.8C2720,44,2800,33,2880,29.3C2960,26,3040,29,3120,42.2C3200,55,3280,77,3360,84.3C3440,92,3520,84,3600,69.7C3680,55,3760,33,3840,20.2C3920,7,4000,4,4080,14.7C4160,26,4240,51,4320,66C4400,81,4480,84,4560,80.7C4640,77,4720,66,4800,67.8C4880,70,4960,84,5040,75.2C5120,66,5200,33,5280,29.3C5360,26,5440,51,5520,55C5600,59,5680,40,5720,31.2L5760,22L5760,110L5720,110C5680,110,5600,110,5520,110C5440,110,5360,110,5280,110C5200,110,5120,110,5040,110C4960,110,4880,110,4800,110C4720,110,4640,110,4560,110C4480,110,4400,110,4320,110C4240,110,4160,110,4080,110C4000,110,3920,110,3840,110C3760,110,3680,110,3600,110C3520,110,3440,110,3360,110C3280,110,3200,110,3120,110C3040,110,2960,110,2880,110C2800,110,2720,110,2640,110C2560,110,2480,110,2400,110C2320,110,2240,110,2160,110C2080,110,2000,110,1920,110C1840,110,1760,110,1680,110C1600,110,1520,110,1440,110C1360,110,1280,110,1200,110C1120,110,1040,110,960,110C880,110,800,110,720,110C640,110,560,110,480,110C400,110,320,110,240,110C160,110,80,110,40,110L0,110Z"></path></svg>
+
+                <div class="form-container">
+                    <svg class="bg-svg"  xmlns="http://www.w3.org/2000/svg">
+                        <rect  width="100%" height="100%" fill="#f5c7f7" />
+                    </svg>
+                    <div class="form-content">
+                        <figure class="figure-center">
+                            <img class="logo" src="assets/logos/logo_yard_sale.svg" alt="logo">
+                        </figure>
+                        <hr class="hr-login">
+                        <h1 class="title">
+                            Enter your account details
+                        </h1>
+                        
+                        <form class="form-login" action="/">
+                            <label for="email" class="label">
+                                Email <address></address>
+                            </label>
+                            <input type="email" class="input input-password" id="email" placeholder="email@address.com">
+            
+                            <label for="password" class="label">
+                                Password
+                            </label>
+                            <input type="password" class="input input-password" id="password" placeholder="**********">
+            
+                            <input type="submit" class="button-primary login-button" value="Log in"></label>
+                        </form>
+    
+                        <a href="/ " class="a-small-colored">
+                            Forgot my password
+                        </a>
+    
+                        <button class="button-secondary">
+                            Sign up
+                        </button>
+                    </div>
+                    
+                </div>
+                <div class="button-container">
+                    <button class="button-secondary">
+                        Sign up
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

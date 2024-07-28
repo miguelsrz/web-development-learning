@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Our superheroes</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+      <header>
+
+      </header>
+
+      <section>
+
+      </section>
+
+      <script>
+        // https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json
+        // LINK DATOS JSON
+
+        // TODOS LOS ELEMENTOS YA CREADOS EN EL HTML BASE, TIENEN SU CSS EN ARCHIVO APARTE
+        // EL CSS CUBRE HASTA LOS ELEMENTOS CREADOS EN EL CODIGO!
+
+        // INICIO SCRIPT
+        const header = document.querySelector('header');
+        const section = document.querySelector('section');
+
+        const requestURL = "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
+        const request = new XMLHttpRequest(); // Se crea solicitud, creando nueva instancia del constructor
+        
+
+        request.open('GET', requestURL) // Metodo open, pasamos dos parametros GET (Metodo HTTP a usar en este caso) y el url a conseguir
+        request.responseType = 'json'; // XHR ahora sabra que devolvera un JSON, para que ademas de devolverlo lo convierta automaticamente en un objeto JS
+        request.send(); // Envia la solicitud con este metodo
+
+        request.onload = function() // Cuando request se carga correctamente, se ejecuta funcion
+        {
+          const superHeroes = request.response; // La variable superHeroes contendra el objeto JS basado en el JSON que se paso
+          populateHeader(superHeroes); // Llamada a funcion, donde se le pasa la variable. Esta funcion llenara el header del html
+          showHeroes(superHeroes); // Llamada a funcion, donde se le pasa la variable. Esta llenara el section del html con tarjetas de info para cada heroe
+        }
+
+        function populateHeader(jsonObj) // Pasa parametro. El nombre ayuda a recordar que se trabajara con objeto JS originado de un JSON
+        {
+          const myH1 = document.createElement('h1'); // Crea elemento html
+          myH1.textContent = jsonObj.squadName; // Cambia contenido elemento creado
+          header.appendChild(myH1); // Se agrega como hijo (dentro) del header ya asignado a variable
+
+          const myPara1 = document.createElement('p') // Se repite lo mismo
+          myPara1.textContent = `- Hometown: ${jsonObj.homeTown} || Formed: ${jsonObj['formed']} -`
+          header.appendChild(myPara1);
+        }
+
+        function showHeroes(jsonObj)
+        {
+          // TODO ESTO IRA EN EL SECTION
+
+          const teamMembers = jsonObj.members; //Se asigna array de miembros a una variable
+
+          for(i=0; i<teamMembers.length; i++) // Se recorre array de miembros para sacar informacion
+          {
+            // SE CREAN LOS ELEMENTOS
+            const myArticle = document.createElement('article') // Contenedor de la informacion de cada superheroe
+
+            const myH2Name = document.createElement('h2'); 
+            const myParaID = document.createElement('p');
+            const myParaAge = document.createElement('p');
+            const myParaPowers = document.createElement('p');// Este es el subtitulo que abre a la lista de poderes
+            const myListPowers = document.createElement('ul'); // Lista que tendra los poderes
+            // Se crea elemento para cada dato del superheroe
+            
+
+            myH2Name.textContent = teamMembers[i].name; // Asigna nombre
+            myParaID.textContent = `SECRET IDENTITY: ${teamMembers[i].secretIdentity}.`; // Asigna identidad secreta
+            myParaAge.textContent = `AGE: ${teamMembers[i].age}.`; // Asigna edad
+            myParaPowers.textContent = `SUPERPOWERS:`; // Subtitulo antes de lista de poderes
+
+            const powersArray = teamMembers[i].powers; // Dentro del objeto del superheroe se encuentra un array de poderes, aqui se asigna para recorrer
+            for(j=0; j<powersArray.length; j++) // Recorre array poderes
+            {
+              const myListItem = document.createElement('li'); // Crea elemento
+              myListItem.textContent = powersArray[j]; // Asigna poder
+              myListPowers.appendChild(myListItem); // Anexa a lista creada al inicio del for
+            } // Realiza proceso por cada poder
+
+            myArticle.appendChild(myH2Name);
+            myArticle.appendChild(myParaID);
+            myArticle.appendChild(myParaAge);
+            myArticle.appendChild(myParaPowers);
+            myArticle.appendChild(myListPowers);
+            // Se asigna toda la informacion al contendedor, el article.
+
+            section.appendChild(myArticle); // Se asigna el article a la section
+
+            // SE REPITE POR CADA MIEMBRO
+          } // Finaliza cuando no hay mas miembros
+
+        }
+
+      </script>
+
+  </body>
+</html>

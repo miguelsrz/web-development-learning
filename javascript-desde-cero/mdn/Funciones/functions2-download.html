@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Functions: Task 2</title>
+    <style>
+      h1
+      {
+        font-size: 24px;
+      }
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+    <h1>FUNCTION EXERCISE: DRAW ON CANVAS
+    </h1>
+    
+    <canvas width="480" height="320">
+
+    </canvas>
+    <button class="button">
+      INPUT NEW RECTANGLE INFO
+    </button>
+
+  </body>
+  <script>
+    const canvas = document.querySelector('canvas');
+    const ctx = canvas.getContext('2d');
+    const newButton = document.querySelector('.button');
+
+    newButton.addEventListener('click',drawRectangle, false);
+
+    // Add your code here
+    function drawRectangle()
+    {
+      ctx.clearRect(0, 0, 1000, 1000)
+
+      const x = Number(prompt('ENTER RECTANGLE POSITION X'));
+      const y = Number(prompt('ENTER RECTANGLE POSITION Y'));
+      const width = Number(prompt('ENTER RECTANGLE WIDTH - MAX 480'));
+      const height = Number(prompt('ENTER RECTANGLE HEIGHT - MAX 320'));
+      const color = String(prompt('ENTER RECTANGLE COLOR'));
+
+      ctx.fillStyle = color;
+      ctx.fillRect(x,y,width,height);
+      
+    }
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+  </script>
+
+</html>

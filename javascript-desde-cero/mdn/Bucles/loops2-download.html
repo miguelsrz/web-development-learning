@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Loops: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+    <button class="button">
+      ENTER NAME
+    </button>
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    const name = 'Mustafa';
+    const para = document.createElement('p');
+
+    const phonebook = [
+      { name : 'Chris', number : '1549' },
+      { name : 'Li Kang', number : '9634' },
+      { name : 'Anne', number : '9065' },
+      { name : 'Francesca', number : '3001' },
+      { name : 'Mustafa', number : '6888' },
+      { name : 'Tina', number : '4312' },
+      { name : 'Bert', number : '7780' },
+      { name : 'Jada', number : '2282' },
+    ]
+
+    // Add your code here
+    i = 0;
+    const button = document.querySelector('.button')
+    button.addEventListener('click', checkPhonebook, false)
+    function checkPhonebook()
+    {
+      isFound = false
+      nameGiven = String(prompt('ENTER A NAME'))
+      while(i<phonebook.length)
+      {
+        if(phonebook[i].name.toLowerCase()===nameGiven.toLowerCase())
+        {
+          para.innerHTML = `NAME: ${phonebook[i].name} <br>
+                            NUMBER: ${phonebook[i].number}`
+          isFound =  true
+          break;
+        }
+        i++
+      }
+
+      if(!isFound)
+      {
+        alert('NAME NOT FOUND TRY AGAIN')
+      }
+    }
+    
+    // Don't edit the code below here!
+    const section = document.querySelector('section');
+    section.appendChild(para);
+  </script>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>OOJS: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+  class Shape {
+    name;
+    sides;
+    sideLength;
+
+    constructor(name, sides, sideLength)
+    {
+      this.name = name;
+      this.sides = sides;
+      this.sideLength = sideLength;
+    }
+
+    calcPerimeter()
+    {
+      const perimeter = this.sideLength * this.sides;
+      console.log(`El perimetro de la figura "${this.name}" es de: ${perimeter} unidades`)
+    }
+  }
+
+  const square = new Shape('Cuadrado','4','5');
+  square.calcPerimeter();
+
+  const triangle = new Shape('Triangulo','3','3');
+  triangle.calcPerimeter();
+
+  class Square extends Shape{
+    constructor(sideLength)
+    {
+      super();
+      this.name = 'Cuadrado';
+      this.sides = 4;
+      this.sideLength = sideLength;
+    }
+
+    calcArea()
+    {
+      const area = this.sideLength * this.sideLength;
+      console.log(`El area de la figura "${this.name}" es de: ${area} unidades cuadradas`)
+    }
+  }
+
+  const square2 = new Square(5);
+  square2.calcPerimeter();
+  square2.calcArea();
+  </script>
+  
+
+</html>

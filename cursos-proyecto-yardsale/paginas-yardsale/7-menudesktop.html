@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU - DESKTOP</title>
+
+    <style>
+        html
+        {
+            font-size: 6.25%;
+        }
+        :root
+        {
+            --white: #FFFFFF;
+            --black: #000000;
+            --light-text: #8b8b8b;
+            --text-input-field: #ebebeb;    
+            --object-fill: #8672db;
+            --object-fill-hover: #927df0;
+            --xlg: 24rem;
+            --lg: 18rem;
+            --md: 16rem;
+            --sm: 14rem;
+
+        }
+
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-wrap: pretty;
+        }
+
+        @font-face 
+        {
+            font-family: "Quicksand" ;
+            src: url(assets/fonts/Quicksand-VariableFont_wght.woff2) format("woff2");
+            font-weight: 300, 500, 700;
+            font-style: lighter, normal, bold;
+
+        }
+        body
+        {
+            
+            font-family: "Quicksand";
+            font-size: 16rem;
+        }
+
+        .menu-desktop
+        {
+            display: grid;
+            grid-template-rows: 2fr 1fr;
+
+
+            padding: 0 1.5em 2em 1.5em;
+            border: 1px solid var(--text-input-field);
+            border-radius: 8px;
+            -webkit-box-shadow: 0px 0px 5px 0px var(--light-text);
+            -moz-box-shadow: 0px 0px 5px 0px var(--light-text);
+            box-shadow: 0px 0px 5px 0px var(--light-text);
+
+            height: 200px;
+            width: 160px;
+
+        }
+
+        .menu-desktop-info
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: end;
+        }
+
+        .menu-desktop-sign-out
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: end;
+
+            border-top: 1px solid #999999;
+        }
+
+
+        .a-large
+        {
+            font-size: var(--lg);
+            font-weight: 700;
+            color: var(--black);
+
+            text-decoration: none;
+        }
+
+        .a-large:hover
+        {
+            text-decoration: underline;
+        }
+
+        .a-large-colored
+        {
+            font-size: var(--lg);
+            font-weight: 500;
+            color: var(--object-fill);
+
+            text-decoration: none;
+        }
+
+        .a-large-colored:hover
+        {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="menu-desktop">
+        <section class="menu-desktop-info">
+            <a class="a-large" href="#">My orders</a>
+            <a class="a-large" href="#"> My account</a>
+        </section>
+        <section class="menu-desktop-sign-out">
+            <a class="a-large-colored" href="#">Sign out</a>
+        </section>
+    </section>
+</body>
+</html>

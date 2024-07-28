@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" >
+    <link rel="stylesheet" href="cell.css"> 
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width: 648px)"> 
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 1024px)"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap" rel="stylesheet">
+
+    <title>NASA CLONE</title>
+</head>
+<body>
+    <div class="pagegrid">
+
+        <nav>
+            <div class="navgrid">
+
+                <button href="" class="navsmallmenu nvsmall nvbsmall objhovfoc">
+                    <hr>
+                    <hr>
+                    <hr>
+                </button>
+                <button href="" class="navsmallsearch nvsmall nvbsmall objhovfoc">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" stroke="white" stroke-width="0" viewBox="0 0 16 16"><path fill-rule="evenodd" stroke="none" d="M12.027 9.92 16 13.95 14 16l-4.075-3.976A6.465 6.465 0 0 1 6.5 13C2.91 13 0 10.083 0 6.5 0 2.91 2.917 0 6.5 0 10.09 0 13 2.917 13 6.5a6.463 6.463 0 0 1-.973 3.42zM1.997 6.452c0 2.48 2.014 4.5 4.5 4.5 2.48 0 4.5-2.015 4.5-4.5 0-2.48-2.015-4.5-4.5-4.5-2.48 0-4.5 2.014-4.5 4.5z"/>
+                    SEARCH
+                    </svg>
+                </button>
+
+                
+                <div class="navsearch">
+                    <button href="" class="navbutton objhovfoc">
+                        <span class="finterbold18">Explore</span>
+                        <svg class="svgexplore" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" stroke="#ffffff" stroke-width="0"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="icomoon-ignore"> </g> <path d="M15.976 2.656c-7.366 0-13.337 5.97-13.337 13.337s5.97 13.337 13.337 13.337 13.337-5.97 13.337-13.337-5.97-13.337-13.337-13.337zM15.976 28.262c-6.765 0-12.27-5.504-12.27-12.27s5.505-12.27 12.27-12.27 12.27 5.505 12.27 12.27c0 6.765-5.505 12.27-12.27 12.27z" fill="#ffffff"> </path> <path d="M15.214 19.175l0.754 0.754 6.035-6.035-0.754-0.754-5.281 5.281-5.256-5.256-0.754 0.754 3.013 3.013z" fill="#ffffff"> </path> </g></svg>
+                    </button>
+                    <input class="fpublicsw14 txrgray navinput" type="text" placeholder="Search...">
+                </div>
+                <a href="" class="objhovfoc">
+                    <figure class="navlogo ">
+                        <img src="https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg" alt="logo">
+                    </figure>
+                </a>
+                <div class="navlinks">
+                    <button href="" class="navbutton objhovfoc">
+                        <span class="finterbold18">News & Events</span>
+                        <svg class="svgspannav" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" stroke="#ffffff" stroke-width="1.6"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="icomoon-ignore"> </g> <path d="M15.233 19.175l0.754 0.754 6.035-6.035-0.754-0.754-5.281 5.281-5.256-5.256-0.754 0.754 3.013 3.013z" fill="#ffffff"> </path> </g></svg>
+                    </button>
+                    <button href="" class="navbutton objhovfoc">
+                        <span class="finterbold18">Multimedia</span>
+                        <svg class="svgspannav" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" stroke="#ffffff" stroke-width="1.6"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="icomoon-ignore"> </g> <path d="M15.233 19.175l0.754 0.754 6.035-6.035-0.754-0.754-5.281 5.281-5.256-5.256-0.754 0.754 3.013 3.013z" fill="#ffffff"> </path> </g></svg>
+                    </button>
+                    <a class="objhovfoc navbutton" href="https://plus.nasa.gov/">
+                        <span class="finterbold18 nasalive">
+                            NASA+
+                            <span class="livetext fdmmono8">
+                                LIVE
+                            </span>
+                        </span>    
+                    </a>
+                </div>
+                
+            </div>
+            
+        </nav>
+
+        <header class="parentbg mainheader">
+            <figure class="figbg">
+                <img class="imgbg" src="https://www.nasa.gov/wp-content/uploads/2023/06/phytoplanktonsweden-1.jpeg?resize=2000,1990" alt="">
+            </figure>
+            <div class="headergrid">
+                <article class="hart">
+                    <h2 class="finterssbold36-72">
+                        The Health of Earth's Climate
+                    </h2>
+                    <p class="fpublicsw16">
+                        The PACE mission will offer important insights on airborne particles of sea salt, smoke, human-made pollutants,
+                        and dust by observing how they interact with the light.
+                    </p>
+                
+                    <a href="" class="hbutton finterbold24">
+                        Learn More
+                    </a>
+                    
+                </article>
+                <section class="hsect">
+                    <section>
+                        <hr>
+                        <h3 class="fdmmono12">
+                           QUALITY OBSERVATIONS
+                        </h3>
+                        <a href="" class="button-white-arrow objhovfoc">
+                            <span class="finterbold18 ">
+                                Explore the Mission
+                            </span>
+                            <svg class="svgspan" xmlns="http://www.w3.org/2000/svg" fill="none" transform="rotate(-45)" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+                        </a> 
+                    </section>
+                    <section>
+                        <hr>
+                        <h3 class="fdmmono12">
+                            MEASURING LIGHT
+                        </h3>
+                        <a href="" class="button-white-arrow objhovfoc">
+                            <span class="finterbold18 ">
+                                Discover the Science
+                            </span>
+                            <svg class="svgspan" xmlns="http://www.w3.org/2000/svg" fill="none" transform="rotate(-45)" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+                        </a> 
+                    </section>
+                    <section>
+                        <hr>
+                        <h3 class="fdmmono12">
+                            PEOPLE OF PACE
+                        </h3>
+                        <a href="" class="button-white-arrow objhovfoc">
+                            <span class="finterbold18 ">
+                                Meet the Team
+                            </span>
+                            <svg class="svgspan" xmlns="http://www.w3.org/2000/svg" fill="none" transform="rotate(-45)" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+                        </a> 
+                    </section>
+                </section>
+            </div>
+            
+        </header>
+
+        <main>
+
+            <section class="fnews">
+                <section class="newsgrid">
+                    <header class="nheader">
+                        <h2 class="finterssbold36-48 txtlightblack">
+                            Featured News
+                        </h2>
+                        <a href="" class="button-white-arrow objhovfoc">
+                            <span class="finterbold24 txtblack">
+                                More NASA News
+                            </span>
+                            <svg class="svgspan" xmlns="http://www.w3.org/2000/svg" fill="none" transform="rotate(-45)" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+                        </a> 
+                    </header>
+                    <section class="nblock">
+                        <div class="nb1">
+                            <div class="nbpadding nb1pad">
+                                <a href="" class="nbflex parentbg objhovfoc">
+                                    <figure class="figbg">
+                                        <img class="imgbg" src=https://www.nasa.gov/wp-content/uploads/2024/01/cygnus-advisory-2024.jpg?resize=1200,800" alt="">
+                                    </figure>
+                                    <div class="nbarticletxt fdmmono12">
+                                        <svg class="svgarticle" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M15.75 5h-7.5C7.56 5 7 5.588 7 6.313V19l5-3.5 5 3.5V6.312C17 5.588 16.44 5 15.75 5Z"/></svg>
+
+                                        NEWS RELEASE
+                                    </div>
+                                    <div class="nbtext">
+                                        <div class="nbtextsmall fdmmono12">
+                                            5 MIN READ
+                                        </div>
+                                        <p class="nbtextmain finterssbold18">   
+                                            NASA Sets Coverage for Northrop Grumman Cargo Space Station Mission 
+                                        </p>
+                                    </div>
+                                </a>  
+                            </div>
+                        </div>
+                        <div class="nb2">
+                            <div class="nbpadding nb2pad">
+                                <a href="" class="nbflex parentbg objhovfoc">
+                                    <figure class="figbg">
+                                        <img class="imgbg" src="https://science.nasa.gov/wp-content/uploads/2023/11/2606-perseveranceingenuity.jpeg" alt="">
+                                    </figure>
+                                    <div class="nbarticletxt fdmmono12">
+                                        <svg class="svgarticle" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M15.75 5h-7.5C7.56 5 7 5.588 7 6.313V19l5-3.5 5 3.5V6.312C17 5.588 16.44 5 15.75 5Z"/></svg>
+
+                                        ARTICLE
+                                    </div>
+                                    <div class="nbtext">
+                                        <div class="nbtextsmall fdmmono12">
+                                            3 MIN READ
+                                        </div>
+                                        <p class="nbtextmain finterssbold18">   
+                                            Landing On Mars: A Tricky Feat! 
+                                        </p>
+                                    </div>
+                                </a>  
+                            </div>
+                        </div>
+                        <div class="nb3">
+                            <div class="nbpadding">
+                                <a href="" class="nbflex parentbg objhovfoc">
+                                    <figure class="figbg">
+                                        <img class="imgbg" src="https://science.nasa.gov/wp-content/uploads/2024/01/geosqiwwoaeu1ib.jpg" alt="">
+                                    </figure>
+                                    <div class="nbarticletxt fdmmono12">
+                                        <svg class="svgarticle" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M15.75 5h-7.5C7.56 5 7 5.588 7 6.313V19l5-3.5 5 3.5V6.312C17 5.588 16.44 5 15.75 5Z"/></svg>
+
+                                        ARTICLE
+                                    </div>
+                                    <div class="nbtext">
+                                        <div class="nbtextsmall fdmmono12">
+                                            6 MIN READ
+                                        </div>
+                                        <p class="nbtextmain finterssbold18">   
+                                            2023 NASA International Space Apps Challenge Announces 10 Global Winners
+                                        </p>
+                                    </div>
+                                </a>  
+                            </div>
+                        </div>
+                        <div class="nb4">
+                            <div class="nbpadding">
+                                <a href="" class="nbflex parentbg objhovfoc">
+                                    <figure class="figbg">
+                                        <img class="imgbg" src="https://www.nasa.gov/wp-content/uploads/2024/01/fig01-m1460739214l.1100x1100.png" alt="">
+                                    </figure>
+                                    <div class="nbarticletxt fdmmono12">
+                                        <svg class="svgarticle" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M15.75 5h-7.5C7.56 5 7 5.588 7 6.313V19l5-3.5 5 3.5V6.312C17 5.588 16.44 5 15.75 5Z"/></svg>
+
+                                        ARTICLE
+                                    </div>
+                                    <div class="nbtext">
+                                        <div class="nbtextsmall fdmmono12">
+                                            1 MIN READ
+                                        </div>
+                                        <p class="nbtextmain finterssbold18">   
+                                            NASA's LRO Spots Japan's Moon Lander 
+                                        </p>
+                                    </div>
+                                </a>  
+                            </div>
+                        </div>
+                    </section>
+                    <section class="nflex">
+                        
+                        <div class="nf1">
+                            <div class="nfpadding">
+                                <a href="" class="nfgrid objhovfoc">
+                                    <figure class="nffig">
+                                        <img class="nfimg" src="https://www.nasa.gov/wp-content/uploads/2024/01/asap-2023-report.png?resize=200,200" alt="">
+                                    </figure>
+                                    <div class="nftext">
+                                        <div class="nftextsmall fdmmono12 txtblack">
+                                            3 MIN READ
+                                        </div>
+                                        <p class="nftextmain fpublicsw-bold12 txtblack">   
+                                            NASA’s Aerospace Safety Advisory Panel Releases 2023 Annual Report
+                                        </p>
+                                        <div class="nbarticletxt fdmmono12 txtblack">
+                                            <svg class="svgarticle" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24"><path stroke="black" stroke-linecap="round" stroke-linejoin="round" d="M15.75 5h-7.5C7.56 5 7 5.588 7 6.313V19l5-3.5 5 3.5V6.312C17 5.588 16.44 5 15.75 5Z"/></svg>
+
+                                            NEWS RELEASE
+                                        </div>
+                                    </div>
+                                </a> 
+                            </div>
+                        </div>
+                        <div class="nf2">
+                            <div class="nfpadding">
+                                <a href="" class="nfgrid objhovfoc">
+                                    <figure class="nffig">
+                                        <img class="nfimg" src="https://images-assets.nasa.gov/image/AFRC2023-0174-176/AFRC2023-0174-176~large.jpg?w=1920&h=1280&fit=crop&crop=faces%2Cfocalpoint" alt="">
+                                    </figure>
+                                    <div class="nftext">
+                                        <div class="nftextsmall fdmmono12 txtblack">
+                                            4 MIN READ
+                                        </div>
+                                        <p class="nftextmain fpublicsw-bold12 txtblack">   
+                                            NASA Autonomous Flight Software Successfully Used in Air Taxi Stand-Ins
+                                        </p>
+                                        <div class="nbarticletxt fdmmono12 txtblack">
+                                            <svg class="svgarticle" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24"><path stroke="black" stroke-linecap="round" stroke-linejoin="round" d="M15.75 5h-7.5C7.56 5 7 5.588 7 6.313V19l5-3.5 5 3.5V6.312C17 5.588 16.44 5 15.75 5Z"/></svg>
+
+                                            ARTICLE
+                                        </div>
+                                    </div>
+                                </a> 
+                            </div>
+                        </div>
+                        <div class="nf3">
+                            <div class="nfpadding">
+                                <a href="" class="nfgrid objhovfoc">
+                                    <figure class="nffig">
+                                        <img class="nfimg" src="https://science.nasa.gov/wp-content/uploads/2024/01/lisa-2arms-gws-red2.png" alt="">
+                                    </figure>
+                                    <div class="nftext">
+                                        <div class="nftextsmall fdmmono12 txtblack">
+                                            5 MIN READ
+                                        </div>
+                                        <p class="nftextmain fpublicsw-bold12 txtblack">   
+                                            NASA Collaborating on European-led Gravitational Wave Observatory in Space
+                                        </p>
+                                        <div class="nbarticletxt fdmmono12 txtblack">
+                                            <svg class="svgarticle" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24"><path stroke="black" stroke-linecap="round" stroke-linejoin="round" d="M15.75 5h-7.5C7.56 5 7 5.588 7 6.313V19l5-3.5 5 3.5V6.312C17 5.588 16.44 5 15.75 5Z"/></svg>
+
+                                            ARTICLE
+                                        </div>
+                                    </div>
+                                </a> 
+                            </div>
+                        </div>
+                        <div class="nf4">
+                            <div class="nfpadding">
+                                <a href="" class="nfgrid objhovfoc">
+                                    <figure class="nffig">
+                                        <img class="nfimg" src="https://www.nasa.gov/wp-content/uploads/2023/12/south-pole-press-image-1.jpg?resize=200,200" alt="">
+                                    </figure>
+                                    <div class="nftext">
+                                        <div class="nftextsmall fdmmono12 txtblack">
+                                            4 MIN READ
+                                        </div>
+                                        <p class="nftextmain fpublicsw-bold12 txtblack">   
+                                            Shrinking Moon Causing Moonquakes and Faults Near Lunar South Pole
+                                        </p>
+                                        <div class="nbarticletxt fdmmono12 txtblack">
+                                            <svg class="svgarticle" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24"><path stroke="black" stroke-linecap="round" stroke-linejoin="round" d="M15.75 5h-7.5C7.56 5 7 5.588 7 6.313V19l5-3.5 5 3.5V6.312C17 5.588 16.44 5 15.75 5Z"/></svg>
+
+                                            ARTICLE
+                                        </div>
+                                    </div>
+                                </a> 
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+
+            <section class="fstory banner parentbg">
+                <figure class="figbg">
+                    <img class="imgbg" src="https://www.nasa.gov/wp-content/uploads/2024/01/52945857760-666c5484fe-o.jpg?resize=1536,1199" alt="">
+                </figure>
+                <div class="bannergrid">
+                    <div class="bannerflex">
+                        <h2 class="finterssbold36-72">
+                            Summer Internships
+                        </h2>
+                        <p class="fpublicsw16">
+                            Our Student Airborne Research Program is an eight-week summer internship for senior undergraduate 
+                            students in the United States. Interns assist with NASA's Airborne Science program, which takes 
+                            flight to study the Earth. The application deadline is January 31.
+                        </p>
+                        <a href="" class="button-white-arrow objhovfoc">
+                            <span class="finterbold24">Application Details</span>
+                            <svg class="svgspan" xmlns="http://www.w3.org/2000/svg" fill="none" transform="none" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="imgday">
+                <div class="imgdaygrid">
+                    <header class="himgday">
+                        <p class="fdmmono12 txtblack">
+                            TODAY
+                        </p>
+                        <h2 class="finterssbold32-42 txtblack">
+                            Image Of The Day
+                        </h2>
+                        
+                    </header>
+                    <section class="simgday">
+                        <h2 class="fpublicsw24 txtblack">
+                            Celebrating NASA’s Spirit and 
+                            Opportunity Rovers’ Mars Landings
+                        </h2>
+                        <p class="fpublicsw14-18 txtblack">
+                            On the 20th anniversary of the landing of Spirit and Opportunity, celebrate NASA’s Mars 
+                            Exploration Rover Project with this two-sided 
+                            poster that lists some of the pioneering 
+                            explorers’ accomplishments on the Red Planet.
+                        </p>
+                        <a href="" class="button-white-arrow objhovfoc">
+                            <span class="txtblack finterbold18">Browse Image Archive</span>
+                            <svg class="svgspan" xmlns="http://www.w3.org/2000/svg" fill="none" transform="none" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+                        </a>
+                    </section>
+                    <figure class="fimgday">
+                        <img class="img-imgday" src="https://www.nasa.gov/wp-content/uploads/2024/01/e1-mer-20th-poster-vert-front-1080x1920-1-eefb7b.png" alt="">
+                        <a href="" class="button-white-arrow objhovfoc">
+                            <span class="txtblack finterbold18">View Image</span>
+                            <svg class="svgspan" xmlns="http://www.w3.org/2000/svg" fill="none" transform="none" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+                        </a>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="info banner parentbg" >
+                <figure class="figbg">
+                    <img class="imgbg" src="https://www.nasa.gov/wp-content/uploads/2024/01/orex-high-res.jpg?resize=1536,1199" alt="">
+                </figure>
+                <div class="bannergrid">
+                    <div class="bannerflex">
+                        <h2 class="finterssbold36-72">
+                            The Return of OREx
+                        </h2>
+                        <p class="fpublicsw16">
+                            On this episode of Houston We Have a Podcast, 
+                            planetary scientists and OSIRIS-REx co-investigators 
+                            walk us through the processes and emotions of working 
+                            in the lab with asteroid Bennu’s precious samples. 
+                        </p>
+                        <a href="" class="button-white-arrow objhovfoc">
+                            <span class="finterbold24">Listen</span>
+                            <svg class="svgspan" xmlns="http://www.w3.org/2000/svg" fill="none" transform="none" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+                        </a>
+                    </div>
+            </section>
+
+            <section class="lnews">
+                <section class="newsgrid">
+                    <header class="nheader">
+                        <h2 class="finterssbold36-48 txtlightblack">
+                            Latest News
+                        </h2>
+                        <a href="" class="button-white-arrow objhovfoc">
+                            <span class="finterbold24 txtblack">
+                                More NASA News Releases
+                            </span>
+                            <svg class="svgspan" xmlns="http://www.w3.org/2000/svg" fill="none" transform="rotate(-45)" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+                        </a> 
+                    </header>
+                    <section class="nblock">
+                        <div class="nb1">
+                            <div class="nbpadding nb1pad">
+                                <a href="" class="nbflex parentbg objhovfoc">
+                                    <figure class="figbg">
+                                        <img class="imgbg" src="https://www.nasa.gov/wp-content/uploads/2023/04/cropped-nasa-logo-wallpaper.jpeg" alt="">
+                                    </figure>
+                                    <div class="nbarticletxt fdmmono12">
+                                        <svg class="svgarticle" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M15.75 5h-7.5C7.56 5 7 5.588 7 6.313V19l5-3.5 5 3.5V6.312C17 5.588 16.44 5 15.75 5Z"/></svg>
+
+                                        NEWS RELEASE
+                                    </div>
+                                    <div class="nbtext">
+                                        <div class="nbtextsmall fdmmono12">
+                                            2 MIN READ
+                                        </div>
+                                        <p class="nbtextmain finterssbold18">   
+                                            NASA Awards Contract for Aviation, Railroad Safety Reporting Systems
+                                        </p>
+                                    </div>
+                                </a>  
+                            </div>
+                        </div>
+                        <div class="nb2">
+                            <div class="nbpadding nb2pad">
+                                <a href="" class="nbflex parentbg objhovfoc">
+                                    <figure class="figbg">
+                                        <img class="imgbg" src="https://www.nasa.gov/wp-content/uploads/2024/01/asap-2023-report.png" alt="">
+                                    </figure>
+                                    <div class="nbarticletxt fdmmono12">
+                                        <svg class="svgarticle" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M15.75 5h-7.5C7.56 5 7 5.588 7 6.313V19l5-3.5 5 3.5V6.312C17 5.588 16.44 5 15.75 5Z"/></svg>
+
+                                        NEWS RELEASE
+                                    </div>
+                                    <div class="nbtext">
+                                        <div class="nbtextsmall fdmmono12">
+                                            3 MIN READ
+                                        </div>
+                                        <p class="nbtextmain finterssbold18">   
+                                            NASA’s Aerospace Safety Advisory Panel Releases 2023 Annual Report
+                                        </p>
+                                    </div>
+                                </a>  
+                            </div>
+                        </div>
+                        <div class="nb3">
+                            <div class="nbpadding">
+                                <a href="" class="nbflex parentbg objhovfoc">
+                                    <figure class="figbg">
+                                        <img class="imgbg" src="https://www.nasa.gov/wp-content/uploads/2024/01/1-pia25968-fig-a.jpg?resize=1200,325" alt="">
+                                    </figure>
+                                    <div class="nbarticletxt fdmmono12">
+                                        <svg class="svgarticle" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M15.75 5h-7.5C7.56 5 7 5.588 7 6.313V19l5-3.5 5 3.5V6.312C17 5.588 16.44 5 15.75 5Z"/></svg>
+
+                                        NEWS RELEASE
+                                    </div>
+                                    <div class="nbtext">
+                                        <div class="nbtextsmall fdmmono12">
+                                            5 MIN READ
+                                        </div>
+                                        <p class="nbtextmain finterssbold18">   
+                                            After Three Years on Mars, NASA’s Ingenuity Helicopter Mission Ends
+                                        </p>
+                                    </div>
+                                </a>  
+                            </div>
+                        </div>
+                        <div class="nb4">
+                            <div class="nbpadding">
+                                <a href="" class="nbflex parentbg objhovfoc">
+                                    <figure class="figbg">
+                                        <img class="imgbg" src="https://www.nasa.gov/wp-content/uploads/2024/01/cygnus-advisory-2024.jpg?resize=1200,800" alt="">
+                                    </figure>
+                                    <div class="nbarticletxt fdmmono12">
+                                        <svg class="svgarticle" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path stroke="white" stroke-linecap="round" stroke-linejoin="round" d="M15.75 5h-7.5C7.56 5 7 5.588 7 6.313V19l5-3.5 5 3.5V6.312C17 5.588 16.44 5 15.75 5Z"/></svg>
+
+                                        NEWS RELEASE
+                                    </div>
+                                    <div class="nbtext">
+                                        <div class="nbtextsmall fdmmono12">
+                                            5 MIN READ
+                                        </div>
+                                        <p class="nbtextmain finterssbold18">   
+                                            NASA Sets Coverage for Northrop Grumman Cargo Space Station Mission   
+                                        </p>
+                                    </div>
+                                </a>  
+                            </div>
+                        </div>
+                    </section>
+                    <section class="nflex">
+                        
+                        <div class="nf1">
+                            <div class="nfpadding">
+                                <a href="" class="nfgrid objhovfoc">
+                                    <figure class="nffig">
+                                        <img class="nfimg" src="https://www.nasa.gov/wp-content/uploads/2024/01/sierra-space-dream-chaser-spaceplane-at-nasa-neil-armstrong-test-facility.jpg?resize=150,150" alt="">
+                                    </figure>
+                                    <div class="nftext">
+                                        <div class="nftextsmall fdmmono12 txtblack">
+                                            3 MIN READ
+                                        </div>
+                                        <p class="nftextmain fpublicsw-bold12 txtblack">   
+                                            NASA, Sierra Space Invite Media to See Spaceplane for Cargo Missions
+                                        </p>
+                                        <div class="nbarticletxt fdmmono12 txtblack">
+                                            <svg class="svgarticle" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24"><path stroke="black" stroke-linecap="round" stroke-linejoin="round" d="M15.75 5h-7.5C7.56 5 7 5.588 7 6.313V19l5-3.5 5 3.5V6.312C17 5.588 16.44 5 15.75 5Z"/></svg>
+
+                                            NEWS RELEASE
+                                        </div>
+                                    </div>
+                                </a> 
+                            </div>
+                        </div>
+                        <div class="nf2">
+                            <div class="nfpadding">
+                                <a href="" class="nfgrid objhovfoc">
+                                    <figure class="nffig">
+                                        <img class="nfimg" src="https://www.nasa.gov/wp-content/uploads/2024/01/belgium-signs-accords.jpg?resize=200,200" alt="">
+                                    </figure>
+                                    <div class="nftext">
+                                        <div class="nftextsmall fdmmono12 txtblack">
+                                            2 MIN READ
+                                        </div>
+                                        <p class="nftextmain fpublicsw-bold12 txtblack">   
+                                            NASA Welcomes Belgium as Newest Artemis Accords Signatory
+                                        </p>
+                                        <div class="nbarticletxt fdmmono12 txtblack">
+                                            <svg class="svgarticle" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24"><path stroke="black" stroke-linecap="round" stroke-linejoin="round" d="M15.75 5h-7.5C7.56 5 7 5.588 7 6.313V19l5-3.5 5 3.5V6.312C17 5.588 16.44 5 15.75 5Z"/></svg>
+
+                                            NEWS RELEASE
+                                        </div>
+                                    </div>
+                                </a> 
+                            </div>
+                        </div>
+                        <div class="nf3">
+                            <div class="nfpadding">
+                                <a href="" class="nfgrid objhovfoc">
+                                    <figure class="nffig">
+                                        <img class="nfimg" src="https://www.nasa.gov/wp-content/uploads/2024/01/clps-im-1-nova-c-render-moon.png?resize=200,200" alt="">
+                                    </figure>
+                                    <div class="nftext">
+                                        <div class="nftextsmall fdmmono12 txtblack">
+                                            2 MIN READ
+                                        </div>
+                                        <p class="nftextmain fpublicsw-bold12 txtblack">   
+                                            NASA to Discuss Science, First Intuitive Machines Artemis Moon Flight
+                                        </p>
+                                        <div class="nbarticletxt fdmmono12 txtblack">
+                                            <svg class="svgarticle" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24"><path stroke="black" stroke-linecap="round" stroke-linejoin="round" d="M15.75 5h-7.5C7.56 5 7 5.588 7 6.313V19l5-3.5 5 3.5V6.312C17 5.588 16.44 5 15.75 5Z"/></svg>
+
+                                            NEWS RELEASE
+                                        </div>
+                                    </div>
+                                </a> 
+                            </div>
+                        </div>
+                        <div class="nf4">
+                            <div class="nfpadding ">
+                                <a href="" class="nfgrid objhovfoc">
+                                    <figure class="nffig">
+                                        <img class="nfimg" src="https://www.nasa.gov/wp-content/uploads/2024/01/moon-and-mars-1.png?resize=200,200" alt="">
+                                    </figure>
+                                    <div class="nftext">
+                                        <div class="nftextsmall fdmmono12 txtblack">
+                                            3 MIN READ
+                                        </div>
+                                        <p class="nftextmain fpublicsw-bold12 txtblack">   
+                                            NASA Shares Newest Results of Moon to Mars Architecture Concept Review
+                                        </p>
+                                        <div class="nbarticletxt fdmmono12 txtblack">
+                                            <svg class="svgarticle" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24"><path stroke="black" stroke-linecap="round" stroke-linejoin="round" d="M15.75 5h-7.5C7.56 5 7 5.588 7 6.313V19l5-3.5 5 3.5V6.312C17 5.588 16.44 5 15.75 5Z"/></svg>
+
+                                            NEWS RELEASE
+                                        </div>
+                                    </div>
+                                </a> 
+                            </div>
+                        </div>
+                    </section>
+                </section>
+        </section>
+
+            <section class="explore banner parentbg">
+                <figure class="figbg">
+                    <img class="imgbg" src="https://www.nasa.gov/wp-content/uploads/2023/01/webb-tarantula-neb.png?resize=1536,1199" alt="">
+                </figure>
+                <div class="bannergrid">
+                    <div class="bannerflex">
+                        <h2 class="finterssbold36-72">
+                            Explore the Universe from your Inbox
+                        </h2>
+                        <p class="fpublicsw16">
+                            Stay up-to-date on the latest news from NASA–from Earth to the Moon, the Solar System and beyond. We will never 
+                            share your email address.
+                        </p>
+                        <a href="" class="button-white-arrow objhovfoc">
+                            <span class="finterbold24">Sign Up</span>
+                            <svg class="svgspan" xmlns="http://www.w3.org/2000/svg" fill="none" transform="none" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+                        </a>
+                    </div>
+            </section>
+
+            <section class="topics">
+                <div class="topicsgrid">
+                    <header class="topicsheader">
+                        <p class="fdmmono12 txtblack">
+                            KEEP EXPLORING
+                        </p>
+                        <h1 class="finterssbold36-48 txtlightblack">
+                            Discover More Topics From NASA
+                        </h1>
+                        
+                    </header>
+                    <div class="tcardcontainer">
+                        <a href="" class="tcard tcard1 parentbg objhovfoc">
+                            <figure class="figbg">
+                                <img class="imgbg" src="https://www.nasa.gov/wp-content/uploads/2022/08/jsc2022e046413_orig.jpg?w=1536" alt="">
+                            </figure>
+                            <div class="button-white-arrow">
+                                <span class=" fpublicsw24 fpublicsw28">Missions</span>
+                                <svg class="svgspan svgspantopics" xmlns="http://www.w3.org/2000/svg" fill="none" transform="none" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+                            </div>
+                        </a>
+                        <a href="" class="tcard tcard2 parentbg objhovfoc">
+                            <figure class="figbg">
+                                <img class="imgbg" src="https://www.nasa.gov/wp-content/uploads/2019/05/as11-40-5903_alt2.jpg?" alt="">
+                            </figure>
+                            <div class="button-white-arrow">
+                                <span class=" fpublicsw24 fpublicsw28">Humans In Space</span>
+                                <svg class="svgspan svgspantopics" xmlns="http://www.w3.org/2000/svg" fill="none" transform="none" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+                            </div>
+                        </a>
+                        <a href="" class="tcard tcard3 parentbg objhovfoc">
+                            <figure class="figbg">
+                                <img class="imgbg" src="https://www.nasa.gov/wp-content/uploads/2024/01/53444105597-59bc9ef6ac-k.jpg?w=1000" alt="">
+                            </figure>
+                            <div class="button-white-arrow">
+                                <span class=" fpublicsw24 fpublicsw28">NASA History</span>
+                                <svg class="svgspan svgspantopics" xmlns="http://www.w3.org/2000/svg" fill="none" transform="none" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+                            </div>
+                        </a>
+                        <a href="" class="tcard tcard4 parentbg objhovfoc">
+                            <figure class="figbg">
+                                <img class="imgbg" src="https://www.nasa.gov/wp-content/uploads/2023/04/earth-at-night-north-america-east-coast.jpg" alt="">
+                            </figure>
+                            <div class="button-white-arrow">
+                                <span class=" fpublicsw24 fpublicsw28">Value of NASA</span>
+                                <svg class="svgspan svgspantopics" xmlns="http://www.w3.org/2000/svg" fill="none" transform="none" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="footergrid">
+                <figure class="footerlogo logofooter">
+                    <img src="https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg" alt="logo">
+                </figure>
+                <div class="nasaabout">
+                    <h2 class="finterssbold18">
+                        The National Aeronautics and Space Administration
+                    </h2>
+                    <p class="fpublicsw14 txtlightgray">
+                        NASA explores the unknown in air and space, innovates for the benefit of humanity, 
+                        and inspires the world through discovery.
+                    </p>
+                    <a class="aflinks objhovfoc fpublicsw14 fpublicsw14" href="">
+                        About NASA's Mission
+                    </a>
+
+                    <a href="" class="button-white-arrow objhovfoc">
+                        <span class="finterbold18">Join Us</span>
+                        <svg class="svgspan" xmlns="http://www.w3.org/2000/svg" fill="none" transform="none" viewBox="-2.4 -2.4 28.8 28.8"><rect width="28.8" height="28.8" x="-2.4" y="-2.4" fill="red" stroke-width="0" rx="14.4"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+
+                    </a>
+                </div>
+                <div class="footerlinks">
+                    <a class="aflinks objhovfoc finterss14 " href="">
+                        Home
+                    </a>
+                    <a class="aflinks objhovfoc finterss14 " href="">
+                        News & Events
+                    </a>
+                    <a class="aflinks objhovfoc finterss14 " href="">
+                        Multimedia
+                    </a>
+                    <a class="finterss14 aflinks objhovfoc" href="">
+                        <span class="nasalive">
+                            NASA+
+                            <span class="livetext fdmmono8">
+                                LIVE
+                            </span>
+                        </span>
+                        
+                    </a>
+                    <a class="aflinks objhovfoc finterss14" href="">
+                        Missions
+                    </a>
+                    <a class="aflinks objhovfoc finterss14" href="">
+                       Humans in Space
+                    </a>
+                    <a class="aflinks objhovfoc finterss14" href="">
+                        Earth & Climate
+                    </a>
+                    <a class="aflinks objhovfoc finterss14" href="">
+                        The Solar System
+                    </a>
+                    <a class="aflinks objhovfoc finterss14" href="">
+                        The Universe
+                    </a>
+                    <a class="aflinks objhovfoc finterss14" href="">
+                        Aeronautics
+                    </a>
+                    <a class="aflinks objhovfoc finterss14" href="">
+                        Technology
+                    </a>
+                    <a class="aflinks objhovfoc finterss14" href="">
+                        Learning Resources
+                    </a>
+                    <a class="aflinks objhovfoc finterss14" href="">
+                        About NASA
+                    </a>
+                    <a class="aflinks objhovfoc finterss14" href="">
+                        NASA en Español
+                    </a>
+
+                </div>
+                <div class="footersocial">
+                    <p class="finterssbold18 txtgray">Follow NASA</p>
+                    <div class="socialmedia">
+                        <a class="asocialicon objhovfocradius" href="">
+                            <svg class="socialicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-6 -6 36 36"><rect width="36" height="36" x="-6" y="-6" fill="#242424" stroke-width="0" rx="18"/><g fill="#fff"><path fill-rule="evenodd" d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" clip-rule="evenodd"/><path d="M18 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/><path fill-rule="evenodd" d="M1.654 4.276C1 5.56 1 7.24 1 10.6v2.8c0 3.36 0 5.04.654 6.324a6 6 0 0 0 2.622 2.622C5.56 23 7.24 23 10.6 23h2.8c3.36 0 5.04 0 6.324-.654a6 6 0 0 0 2.622-2.622C23 18.44 23 16.76 23 13.4v-2.8c0-3.36 0-5.04-.654-6.324a6 6 0 0 0-2.622-2.622C18.44 1 16.76 1 13.4 1h-2.8c-3.36 0-5.04 0-6.324.654a6 6 0 0 0-2.622 2.622ZM13.4 3h-2.8c-1.713 0-2.878.002-3.778.075-.877.072-1.325.202-1.638.361a4 4 0 0 0-1.748 1.748c-.16.313-.29.761-.36 1.638C3.001 7.722 3 8.887 3 10.6v2.8c0 1.713.002 2.878.075 3.778.072.877.202 1.325.361 1.638a4 4 0 0 0 1.748 1.748c.313.16.761.29 1.638.36.9.074 2.065.076 3.778.076h2.8c1.713 0 2.878-.002 3.778-.075.877-.072 1.325-.202 1.638-.361a4 4 0 0 0 1.748-1.748c.16-.313.29-.761.36-1.638.074-.9.076-2.065.076-3.778v-2.8c0-1.713-.002-2.878-.075-3.778-.072-.877-.202-1.325-.361-1.638a4 4 0 0 0-1.748-1.748c-.313-.16-.761-.29-1.638-.36C16.278 3.001 15.113 3 13.4 3Z" clip-rule="evenodd"/></g></svg>
+                        </a>
+                        <a class="asocialicon objhovfocradius" href="">
+                            <svg class="socialicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-6 -6 36 36"><rect width="36" height="36" x="-6" y="-6" fill="#242424" stroke-width="0" rx="18"/><g fill="#fff"><path fill-rule="evenodd" d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" clip-rule="evenodd"/><path d="M18 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/><path fill-rule="evenodd" d="M1.654 4.276C1 5.56 1 7.24 1 10.6v2.8c0 3.36 0 5.04.654 6.324a6 6 0 0 0 2.622 2.622C5.56 23 7.24 23 10.6 23h2.8c3.36 0 5.04 0 6.324-.654a6 6 0 0 0 2.622-2.622C23 18.44 23 16.76 23 13.4v-2.8c0-3.36 0-5.04-.654-6.324a6 6 0 0 0-2.622-2.622C18.44 1 16.76 1 13.4 1h-2.8c-3.36 0-5.04 0-6.324.654a6 6 0 0 0-2.622 2.622ZM13.4 3h-2.8c-1.713 0-2.878.002-3.778.075-.877.072-1.325.202-1.638.361a4 4 0 0 0-1.748 1.748c-.16.313-.29.761-.36 1.638C3.001 7.722 3 8.887 3 10.6v2.8c0 1.713.002 2.878.075 3.778.072.877.202 1.325.361 1.638a4 4 0 0 0 1.748 1.748c.313.16.761.29 1.638.36.9.074 2.065.076 3.778.076h2.8c1.713 0 2.878-.002 3.778-.075.877-.072 1.325-.202 1.638-.361a4 4 0 0 0 1.748-1.748c.16-.313.29-.761.36-1.638.074-.9.076-2.065.076-3.778v-2.8c0-1.713-.002-2.878-.075-3.778-.072-.877-.202-1.325-.361-1.638a4 4 0 0 0-1.748-1.748c-.313-.16-.761-.29-1.638-.36C16.278 3.001 15.113 3 13.4 3Z" clip-rule="evenodd"/></g></svg>
+                        </a>
+                        <a class="asocialicon objhovfocradius" href="">
+                            <svg class="socialicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-6 -6 36 36"><rect width="36" height="36" x="-6" y="-6" fill="#242424" stroke-width="0" rx="18"/><g fill="#fff"><path fill-rule="evenodd" d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" clip-rule="evenodd"/><path d="M18 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/><path fill-rule="evenodd" d="M1.654 4.276C1 5.56 1 7.24 1 10.6v2.8c0 3.36 0 5.04.654 6.324a6 6 0 0 0 2.622 2.622C5.56 23 7.24 23 10.6 23h2.8c3.36 0 5.04 0 6.324-.654a6 6 0 0 0 2.622-2.622C23 18.44 23 16.76 23 13.4v-2.8c0-3.36 0-5.04-.654-6.324a6 6 0 0 0-2.622-2.622C18.44 1 16.76 1 13.4 1h-2.8c-3.36 0-5.04 0-6.324.654a6 6 0 0 0-2.622 2.622ZM13.4 3h-2.8c-1.713 0-2.878.002-3.778.075-.877.072-1.325.202-1.638.361a4 4 0 0 0-1.748 1.748c-.16.313-.29.761-.36 1.638C3.001 7.722 3 8.887 3 10.6v2.8c0 1.713.002 2.878.075 3.778.072.877.202 1.325.361 1.638a4 4 0 0 0 1.748 1.748c.313.16.761.29 1.638.36.9.074 2.065.076 3.778.076h2.8c1.713 0 2.878-.002 3.778-.075.877-.072 1.325-.202 1.638-.361a4 4 0 0 0 1.748-1.748c.16-.313.29-.761.36-1.638.074-.9.076-2.065.076-3.778v-2.8c0-1.713-.002-2.878-.075-3.778-.072-.877-.202-1.325-.361-1.638a4 4 0 0 0-1.748-1.748c-.313-.16-.761-.29-1.638-.36C16.278 3.001 15.113 3 13.4 3Z" clip-rule="evenodd"/></g></svg>
+                        </a>
+                        <a class="asocialicon objhovfocradius" href="">
+                            <svg class="socialicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-6 -6 36 36"><rect width="36" height="36" x="-6" y="-6" fill="#242424" stroke-width="0" rx="18"/><g fill="#fff"><path fill-rule="evenodd" d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" clip-rule="evenodd"/><path d="M18 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/><path fill-rule="evenodd" d="M1.654 4.276C1 5.56 1 7.24 1 10.6v2.8c0 3.36 0 5.04.654 6.324a6 6 0 0 0 2.622 2.622C5.56 23 7.24 23 10.6 23h2.8c3.36 0 5.04 0 6.324-.654a6 6 0 0 0 2.622-2.622C23 18.44 23 16.76 23 13.4v-2.8c0-3.36 0-5.04-.654-6.324a6 6 0 0 0-2.622-2.622C18.44 1 16.76 1 13.4 1h-2.8c-3.36 0-5.04 0-6.324.654a6 6 0 0 0-2.622 2.622ZM13.4 3h-2.8c-1.713 0-2.878.002-3.778.075-.877.072-1.325.202-1.638.361a4 4 0 0 0-1.748 1.748c-.16.313-.29.761-.36 1.638C3.001 7.722 3 8.887 3 10.6v2.8c0 1.713.002 2.878.075 3.778.072.877.202 1.325.361 1.638a4 4 0 0 0 1.748 1.748c.313.16.761.29 1.638.36.9.074 2.065.076 3.778.076h2.8c1.713 0 2.878-.002 3.778-.075.877-.072 1.325-.202 1.638-.361a4 4 0 0 0 1.748-1.748c.16-.313.29-.761.36-1.638.074-.9.076-2.065.076-3.778v-2.8c0-1.713-.002-2.878-.075-3.778-.072-.877-.202-1.325-.361-1.638a4 4 0 0 0-1.748-1.748c-.313-.16-.761-.29-1.638-.36C16.278 3.001 15.113 3 13.4 3Z" clip-rule="evenodd"/></g></svg>
+                        </a>
+                        
+                    </div>
+
+                    <a class="aflinks objhovfoc finterss14" href="">
+                        More NASA Social Accounts
+                    </a>                    
+                    <a class="aflinks objhovfoc finterss14" href="">
+                        NASA Newsletters
+                    </a>
+                    
+                </div>
+
+
+                <div class="nasainfo">
+                    <hr class="hrfooter">
+                    <a class="aflinks objhovfoc finterss14 txtgray" href="">
+                        Sitemap
+                    </a>
+                    <a class="aflinks objhovfoc finterss14 txtgray" href="">
+                        For Media
+                    </a>
+                    <a class="aflinks objhovfoc finterss14 txtgray" href="">
+                        Privacy Policy
+                    </a>
+                    <a class="aflinks objhovfoc finterss14 txtgray" href="">
+                        FOIA
+                    </a>
+                    <a class="aflinks objhovfoc finterss14 txtgray" href="">
+                        No FEAR Act
+                    </a>
+                    <a class="aflinks objhovfoc finterss14 txtgray" href="">
+                       Office of the IG
+                    </a>
+                    <a class="aflinks objhovfoc finterss14 txtgray" href="">
+                        Budget & Annual Repports
+                    </a>
+                    <a class="aflinks objhovfoc finterss14 txtgray" href="">
+                        Agency Financial Reports
+                    </a>
+                    <a class="aflinks objhovfoc finterss14 txtgray" href="">
+                        Contact NASA
+                    </a>
+                    <a class="aflinks objhovfoc finterss14 txtgray" href="">
+                        Accessibility
+                    </a>
+                </div>
+                <div class="pageinfo">
+                    <div class="pinfotext">
+                        <p class="fpublicsw14 txtlightgray">
+                            Page Last Updated: <span class="finterss14">January 25, 2024</span>
+                        </p>
+                        
+                    </div>
+                    <div class="pinfotext">
+                        <p class="fpublicsw14 txtlightgray">
+                            Official Page Editor: <span class="finterss14"> Dacia Massengill</span>
+                        </p>
+                        
+                    </div>
+                    <div class="pinfotext">
+                        <p class="fpublicsw14 txtlightgray">
+                            Clone Creator: <span class="finterss14">Miguel Suarez</span>
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>

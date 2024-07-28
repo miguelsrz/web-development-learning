@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX</title>
+    <style>
+        body
+        {
+            margin: 0;
+        }
+        .containerflex
+        {
+            display: flex;
+            background-color: papayawhip;
+            justify-content: space-evenly;
+            height: 50px ;
+            align-items: center;
+            flex-direction: row;
+        }
+        
+        .containerflex .item:nth-child(2n+1)
+        {
+            background-color: rgb(146, 69, 95);
+        }
+
+        .item
+        {
+            width: 15%;
+            padding: 10px 0;
+            background-color: pink;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="containerflex">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

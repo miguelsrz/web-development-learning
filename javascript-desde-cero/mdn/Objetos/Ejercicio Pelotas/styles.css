@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.black-ops-one-regular {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+
+}
+.odibee-sans-regular {
+  font-family: "Odibee Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+
+body {
+  position: relative;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-rows: auto calc(100vh - 180px) auto;
+  grid-template-areas: 
+  "title"
+  "game"
+  "bottom";
+
+  height: 100%;
+
+  background-color: black;
+}
+
+.button-game
+{
+  width: 80%;
+  max-width: 600px;
+  height: 60px;
+  
+  border: 2px solid white;
+  background: rgba(255, 255, 255, 0.3);
+
+  color: white;
+  font-size: 28px;
+}
+
+.button-game:hover
+{
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+
+}
+
+.containerh1
+{
+  background: rgb(131,58,180);
+  background: -moz-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#833ab4",endColorstr="#fcb045",GradientType=1);
+  height: 90px;
+  padding-bottom: 8px;
+
+
+}
+
+.title
+{
+  background-color: rgba(0, 0, 0, 0.637);
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 40px;
+  padding: 8px 0;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+canvas
+{
+  height: 100%;
+  width: 100vw;
+  grid-area: game;
+}
+
+.menu
+{
+  z-index: 100;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  width: 70%;
+  height: 70% ;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mh1
+{
+  text-align: center;
+  font-size: 72px;
+  width: 100%;
+  max-width: 750px;
+  border-bottom: 1px solid white;
+}
+
+.mp
+{
+  font-size: 28px;
+  line-height: 48px;
+  text-align: justify;
+}
+
+.mb
+{
+  font-size: 42px;
+  height: 80px;
+}
+
+.game-w
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  background: rgb(131,58,180);
+  background: -moz-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#833ab4",endColorstr="#fcb045",GradientType=1);
+
+  height: 65%;
+  width: 500px;
+  padding: 8px;
+  
+  border: 2px solid white;
+
+}
+.sect-w
+{
+  display: none;
+}
+
+.sect-l
+{
+  display: none ;
+}
+.container-w
+{
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 2em;
+
+  height: 100%;
+}
+
+.h1-w
+{
+  font-size: 48px;
+  border-bottom: 2px solid white;
+}
+
+.p-w
+{
+  text-align: center;
+  font-size: 32px;
+  width: 100%;
+
+}
+
+.m-w
+{
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+
+}
+
+.t-w
+{
+  border: 2px solid white;
+  padding: 8px;
+}
+
+.bottomInfo
+{
+  height: 90px;
+  width: 100%;
+  background-color: black;
+  border-top: 8px solid white;
+}
+
+
+.containerbottom
+{
+  width: inherit;
+  height: inherit;
+
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 1em;
+  background-color: black;
+
+}
+
+.bottomDeco
+{
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  overflow-x: hidden;
+
+  width: 100%;
+  max-width: 100vw;
+  height: inherit;
+
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  letter-spacing: 24px;
+  padding: 0 16px;
+}
+
+.cb1, .cb3
+{
+  flex-direction: row;
+  justify-content:center;
+  gap: 8px;
+  border-right: 4px solid white;
+  width: 25%;
+}
+.secth1
+{
+  font-size: 24px;
+
+}
+.cb1 .secth1, .cb3 .secth1
+{
+  border-right: 2px solid white;
+  padding-right: 8px;
+}
+
+.sectp
+{
+  font-weight: 200;
+  font-size: 22px;
+}
+
+.cb1, .cb2, .cb3
+{
+  display: flex;
+  align-items: center;
+
+  border: 1px dashed white;
+  padding: 8px 24px;
+
+}
+
+.cb2
+{
+  border: 2px solid white;
+
+  width: 25%;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(255,255,255,0.25);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(255,255,255,0.25);
+  box-shadow: 0px 0px 5px 1px rgba(255,255,255,0.25);
+}
+
+.cb2h1
+{
+  font-size: 32px;
+}
+.super-active
+{
+  background: linear-gradient(135deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff80, #0080ff, #8000ff, #ff00ff);
+  background-size: 1600% 1600%;
+  animation: rainbowAnimation 10s ease infinite;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@keyframes rainbowAnimation {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
+@media (max-width: 1100px) and (max-height: 1200px)
+{
+
+  .cbh1
+  {
+    display: none;
+  }
+
+  .cb2h1
+{
+  font-size: 28px;
+}
+
+  .game-w{
+    width: 65%;
+    max-width: 500px;
+
+  }
+} 
+
+@media (max-width: 385px)
+{
+  .title{
+    font-size: 18px;
+  }
+  .secth1
+  {
+    font-size: 12px;
+  }
+
+  .sectp{
+    font-size: 110px;
+  }
+}

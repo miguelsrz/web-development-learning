@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Functions: Task 3</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+    <button class="button">
+      PRINT RANDOM NAME
+    </button>
+  
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+    const para = document.createElement('p');
+    const button1 = document.querySelector('.button');
+    const button2 = document.querySelector('.button2');
+
+    button1.addEventListener('click',chooseName,false);
+
+
+    function chooseName()
+    {
+      startValue = prompt('Enter start value (Default 0)')
+      endValue = prompt('Enter end value (Default array length)')
+      random(startValue, endValue)
+      para.innerHTML = names[indexChosen]
+      console.log(startValue, endValue)
+    }
+
+    function random(start, end)
+    {
+      start === '' ? start=0 : start
+      end === '' ? end=names.length: end
+
+      indexChosen = Math.floor(Math.random() * end)
+      return indexChosen
+    }
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    section.appendChild(para);
+  </script>
+
+</html>

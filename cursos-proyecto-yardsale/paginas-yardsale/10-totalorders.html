@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOTAL ORDERS</title>
+
+    <style>
+        html
+        {
+            font-size: 6.25%;
+        }
+        :root
+        {
+            --white: #FFFFFF;
+            --black: #000000;
+            --light-text: #8b8b8b;
+            --text-input-field: #ebebeb;    
+            --object-fill: #8672db;
+            --object-fill-hover: #927df0;
+            --xlg: 24rem;
+            --lg: 18rem;
+            --md: 16rem;
+            --sm: 14rem;
+
+        }
+
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-wrap: pretty;
+        }
+
+        @font-face 
+        {
+            font-family: "Quicksand" ;
+            src: url(assets/fonts/Quicksand-VariableFont_wght.woff2) format("woff2");
+            font-weight: 300, 500, 700;
+            font-style: lighter, normal, bold;
+
+        }
+        body
+        {
+            
+            font-family: "Quicksand";
+            font-size: 16rem;
+        }
+
+        .bg-rounded-light-gray
+        {
+            border-radius: 16px;
+            background-color: var(--text-input-field);
+            -webkit-box-shadow: 0px 0px 4px 0px var(--light-text);
+            -moz-box-shadow: 0px 0px 4px 0px var(--light-text);
+            box-shadow: 0px 0px 4px 0px var(--light-text);
+        }
+
+        .myorder
+        {
+            display: flex;
+            justify-content: center;
+
+            width: 100%;
+            padding:  0 2.5em;
+        }
+
+ 
+
+        .myorder-grid
+        {
+            display: grid;
+            grid-template-rows: repeat(3, auto);
+            gap: 32px;
+
+            width: 100%;
+            max-width: 700px;
+            margin-top: 3em;
+            
+        }
+
+        .myorder-grid h1
+        {
+            font-size: var(--xlg);
+            font-weight: 700;
+            color: var(--black);
+            width: 100%;
+        }
+
+        .objhovfoc-gray
+        {
+            display: block;
+            width: 100%;
+
+            border-radius: 16px;
+            border: 2px solid transparent;
+
+            text-decoration: none;
+            color: var(--black);
+        }
+
+        .objhovfoc-gray:hover
+        {
+            border-color: var(--light-text)
+        }
+
+        .myorder-resume
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 1em 2em;
+            width: 100%;
+        }
+
+        
+
+        .resume-info h1
+        {
+            margin-bottom: .5em;
+            font-size: var(--lg);
+            font-weight: 700;
+        }
+
+        .resume-info p
+        {
+            font-size: var(--md);
+            font-weight: 500;
+            color: var(--light-text);
+        }
+
+        .resume-total
+        {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .total-product-price
+        {
+            font-size: var(--xlg);
+            font-weight: 700;
+            
+        }
+
+        @media (max-width:540px)
+        {
+        }
+
+        @media (max-width:440px)
+        {
+            .myorder
+            {
+                padding: 0 1.5em;
+            }
+            
+            .resume-total
+            {
+                gap: 8px;
+            }
+            .resume-info h1 ,.total-product-price
+            {
+                font-size: var(--md);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section class="myorder">
+            <div class="myorder-grid">
+                <h1>My orders</h1>
+
+                <a href="#" class="objhovfoc-gray bg-rounded-light-gray">
+                    <section class="myorder-resume">
+                        <div class="resume-info">
+                            <h1>
+                                05.02.2024
+                            </h1>
+                            <p>
+                                # Articles
+                            </p>
+                        </div>
+                        <div class="resume-total">
+                            <p class="total-product-price">
+                                $ 575.00
+                            </p>
+                            <figure class="figure-arrow">
+                                <svg class="svg-arrow" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.99864 5.94724C5.99234 5.84603 5.95236 5.74983 5.88506 5.67396L1.79607 1.13112C1.68716 1.00945 1.52152 0.955277 1.36175 0.989076C1.20199 1.02287 1.07248 1.13949 1.02218 1.29484C0.971889 1.45018 1.00848 1.62056 1.11813 1.74157L4.9338 5.97919L1.11813 10.2168C1.00848 10.3378 0.971887 10.5082 1.02218 10.6635C1.07248 10.8189 1.20199 10.9355 1.36175 10.9693C1.52152 11.0031 1.68716 10.9489 1.79607 10.8273L5.88506 6.28441C5.96718 6.19213 6.00819 6.0704 5.99864 5.94724Z" fill="#BFBFBF" stroke="#BFBFBF" stroke-width="1.5"/>
+                                </svg>                                
+                            </figure>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="#" class="objhovfoc-gray bg-rounded-light-gray">
+                    <section class="myorder-resume">
+                        <div class="resume-info">
+                            <h1>
+                                05.02.2024
+                            </h1>
+                            <p>
+                                # Articles
+                            </p>
+                        </div>
+                        <div class="resume-total">
+                            <p class="total-product-price">
+                                $ 575.00
+                            </p>
+                            <figure>
+                                <svg class="svg-arrow" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.99864 5.94724C5.99234 5.84603 5.95236 5.74983 5.88506 5.67396L1.79607 1.13112C1.68716 1.00945 1.52152 0.955277 1.36175 0.989076C1.20199 1.02287 1.07248 1.13949 1.02218 1.29484C0.971889 1.45018 1.00848 1.62056 1.11813 1.74157L4.9338 5.97919L1.11813 10.2168C1.00848 10.3378 0.971887 10.5082 1.02218 10.6635C1.07248 10.8189 1.20199 10.9355 1.36175 10.9693C1.52152 11.0031 1.68716 10.9489 1.79607 10.8273L5.88506 6.28441C5.96718 6.19213 6.00819 6.0704 5.99864 5.94724Z" fill="#BFBFBF" stroke="#BFBFBF" stroke-width="1.5"/>
+                                </svg>                                
+                            </figure>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="#" class="objhovfoc-gray bg-rounded-light-gray">
+                    <section class="myorder-resume">
+                        <div class="resume-info">
+                            <h1>
+                                05.02.2024
+                            </h1>
+                            <p>
+                                # Articles
+                            </p>
+                        </div>
+                        <div class="resume-total">
+                            <p class="total-product-price">
+                                $ 575.00
+                            </p>
+                            <figure>
+                                <svg class="svg-arrow" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.99864 5.94724C5.99234 5.84603 5.95236 5.74983 5.88506 5.67396L1.79607 1.13112C1.68716 1.00945 1.52152 0.955277 1.36175 0.989076C1.20199 1.02287 1.07248 1.13949 1.02218 1.29484C0.971889 1.45018 1.00848 1.62056 1.11813 1.74157L4.9338 5.97919L1.11813 10.2168C1.00848 10.3378 0.971887 10.5082 1.02218 10.6635C1.07248 10.8189 1.20199 10.9355 1.36175 10.9693C1.52152 11.0031 1.68716 10.9489 1.79607 10.8273L5.88506 6.28441C5.96718 6.19213 6.00819 6.0704 5.99864 5.94724Z" fill="#BFBFBF" stroke="#BFBFBF" stroke-width="1.5"/>
+                                </svg>                                
+                            </figure>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="#" class="objhovfoc-gray bg-rounded-light-gray">
+                    <section class="myorder-resume">
+                        <div class="resume-info">
+                            <h1>
+                                05.02.2024
+                            </h1>
+                            <p>
+                                # Articles
+                            </p>
+                        </div>
+                        <div class="resume-total">
+                            <p class="total-product-price">
+                                $ 575.00
+                            </p>
+                            <figure>
+                                <svg class="svg-arrow" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.99864 5.94724C5.99234 5.84603 5.95236 5.74983 5.88506 5.67396L1.79607 1.13112C1.68716 1.00945 1.52152 0.955277 1.36175 0.989076C1.20199 1.02287 1.07248 1.13949 1.02218 1.29484C0.971889 1.45018 1.00848 1.62056 1.11813 1.74157L4.9338 5.97919L1.11813 10.2168C1.00848 10.3378 0.971887 10.5082 1.02218 10.6635C1.07248 10.8189 1.20199 10.9355 1.36175 10.9693C1.52152 11.0031 1.68716 10.9489 1.79607 10.8273L5.88506 6.28441C5.96718 6.19213 6.00819 6.0704 5.99864 5.94724Z" fill="#BFBFBF" stroke="#BFBFBF" stroke-width="1.5"/>
+                                </svg>                                
+                            </figure>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="#" class="objhovfoc-gray bg-rounded-light-gray">
+                    <section class="myorder-resume">
+                        <div class="resume-info">
+                            <h1>
+                                05.02.2024
+                            </h1>
+                            <p>
+                                # Articles
+                            </p>
+                        </div>
+                        <div class="resume-total">
+                            <p class="total-product-price">
+                                $ 575.00
+                            </p>
+                            <figure>
+                                <svg class="svg-arrow" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.99864 5.94724C5.99234 5.84603 5.95236 5.74983 5.88506 5.67396L1.79607 1.13112C1.68716 1.00945 1.52152 0.955277 1.36175 0.989076C1.20199 1.02287 1.07248 1.13949 1.02218 1.29484C0.971889 1.45018 1.00848 1.62056 1.11813 1.74157L4.9338 5.97919L1.11813 10.2168C1.00848 10.3378 0.971887 10.5082 1.02218 10.6635C1.07248 10.8189 1.20199 10.9355 1.36175 10.9693C1.52152 11.0031 1.68716 10.9489 1.79607 10.8273L5.88506 6.28441C5.96718 6.19213 6.00819 6.0704 5.99864 5.94724Z" fill="#BFBFBF" stroke="#BFBFBF" stroke-width="1.5"/>
+                                </svg>                                
+                            </figure>
+                        </div>
+                    </section>
+                </a>
+
+                <a href="#" class="objhovfoc-gray bg-rounded-light-gray">
+                    <section class="myorder-resume">
+                        <div class="resume-info">
+                            <h1>
+                                05.02.2024
+                            </h1>
+                            <p>
+                                # Articles
+                            </p>
+                        </div>
+                        <div class="resume-total">
+                            <p class="total-product-price">
+                                $ 575.00
+                            </p>
+                            <figure>
+                                <svg class="svg-arrow" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.99864 5.94724C5.99234 5.84603 5.95236 5.74983 5.88506 5.67396L1.79607 1.13112C1.68716 1.00945 1.52152 0.955277 1.36175 0.989076C1.20199 1.02287 1.07248 1.13949 1.02218 1.29484C0.971889 1.45018 1.00848 1.62056 1.11813 1.74157L4.9338 5.97919L1.11813 10.2168C1.00848 10.3378 0.971887 10.5082 1.02218 10.6635C1.07248 10.8189 1.20199 10.9355 1.36175 10.9693C1.52152 11.0031 1.68716 10.9489 1.79607 10.8273L5.88506 6.28441C5.96718 6.19213 6.00819 6.0704 5.99864 5.94724Z" fill="#BFBFBF" stroke="#BFBFBF" stroke-width="1.5"/>
+                                </svg>                                
+                            </figure>
+                        </div>
+                    </section>
+                </a>
+                
+
+                
+            </div>
+        </section>
+    </main>
+</body>
+</html>

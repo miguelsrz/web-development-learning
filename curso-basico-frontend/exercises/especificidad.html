@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESPECIFICIDAD</title>
+    <style>
+        #idprueba
+        {
+            color: blue;
+        }
+        .classprueba #idprueba2
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="classprueba">
+        <div id="idprueba2" id="idprueba" >PRUEBA ESPECIFICIDAD</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAVBAR</title>
+
+    <style>
+        html
+        {
+            font-size: 6.25%;
+        }
+        :root
+        {
+            --white: #FFFFFF;
+            --black: #000000;
+            --light-text: #8b8b8b;
+            --text-input-field: #ebebeb;    
+            --object-fill: #8672db;
+            --object-fill-hover: #927df0;
+            --xlg: 24rem;
+            --lg: 18rem;
+            --md: 16rem;
+            --sm: 14rem;
+
+        }
+
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-wrap: pretty;
+        }
+
+        @font-face 
+        {
+            font-family: "Quicksand" ;
+            src: url(assets/fonts/Quicksand-VariableFont_wght.woff2) format("woff2");
+            font-weight: 300, 500, 700;
+            font-style: lighter, normal, bold;
+
+        }
+        body, button
+        {
+            font-family: "Quicksand";
+            font-size: 16rem;
+        }
+
+
+        .objhovfoc-gray
+        {
+            display: block;
+            width: 100%;
+
+            border-radius: 16px;
+            border: 2px solid transparent;
+
+            text-decoration: none;
+            color: var(--black);
+        }
+
+        .objhovfoc-gray:hover
+        {
+            border-color: var(--light-text)
+        }
+
+
+        .objhovfoc-purple
+        {
+            display: block;
+            width: 100%;
+
+            border-radius: 16px;
+            border: 2px solid transparent;
+
+            text-decoration: none;
+        }
+
+        .objhovfoc-purple:hover
+        {
+            border-color: var(--object-fill);
+            color: var(--object-fill)
+        }
+
+        header
+        {
+            display: flex;
+            justify-content: center;
+
+            z-index: 100;
+            background-color: white;
+            
+            position: fixed;
+
+            display: flex;
+            justify-content: center;
+
+            width: 100%;
+            height: 60px;
+            padding: 0 2.5em;
+            
+            -webkit-box-shadow: 0px 2px 8px 0px rgba(139,139,139,1);
+            -moz-box-shadow: 0px 2px 8px 0px rgba(139,139,139,1);
+            box-shadow: 0px 2px 8px 0px rgba(139,139,139,1)
+
+        }
+
+        .nav-grid
+        {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+
+            width: 100vw;
+            max-width: 2000px;
+            height: 100%;
+        }
+
+        .a-logo-nav
+        {
+            width: auto;
+        }
+
+        .figure-nav
+        {
+            display: flex;
+            align-items: center;
+            padding: .25em;
+        }
+        .figure-nav img
+        {
+            height: 30px;
+        }
+
+        .icon-menu-nav
+        {
+            display: none;
+            cursor: pointer;
+        }
+
+        .nav-links-grid 
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            max-width: 30%;
+            height: 60%;
+            margin: 0 1.5em;
+            border-left: 1px solid #999999;
+        }
+
+        .nav-links
+        {
+            width: auto;
+            padding: .5em 1em;
+
+            font-size: var(--md);
+            font-weight: 500;
+            color: var(--light-text);
+        }
+
+        .nav-links:first-of-type
+        {
+            margin-left: .5em;
+
+        }
+
+        .nav-info
+        {
+            display: flex;
+            gap: 8px;
+        }
+
+        .drop-down-button
+        {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: .5em 1em;
+
+            cursor: pointer;
+        }
+
+        .nav-button-p
+        {
+            font-family: "Quicksand";
+            font-size: var(--md);
+            font-weight: 500;
+            color: var(--black);
+        }
+
+        .figure-button-arrow
+        {
+            display: flex;
+            align-items: center;
+            transform: rotate(90deg);
+
+        }
+
+        .shopping-cart
+        {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            padding: .25em;
+            cursor: pointer;
+
+        }
+
+        .shopping-cart-item-num
+        {
+            position: absolute;
+            top: 10%;
+            right: 10%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 16px;
+            height: 16px;
+            border-radius: 16px;
+
+            font-size: var(--sm);
+            font-weight: 700;
+            background-color: var(--object-fill);
+        }
+
+        @media (max-width:1280px)
+        {
+            .nav-links-grid
+            {
+                margin: 0 1em;
+            }
+            .nav-links, .nav-button-p
+            {
+                font-size: var(--sm);
+            }
+        }
+
+        @media (max-width:1000px)
+        {
+            header
+            {
+                padding: 0 1em;
+            }
+
+            .nav-grid
+            {
+                display: flex;
+                justify-content: space-between;
+            }
+            .icon-menu-nav
+            {
+                display: block;
+            }
+
+            .nav-links-grid, .drop-down-button
+            {
+                display: none;
+            }
+        }
+
+        @media (max-width:440px)
+        {
+            .figure-nav img
+            {
+                height: 25px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-grid">
+
+            
+            <figure class="figure-nav icon-menu-nav">
+                <img class="img-icon-menu" src="assets/icons/icon_menu.svg" alt="logo">
+            </figure>
+
+            <a href="#" class="objhovfoc-gray a-logo-nav">
+                <figure class="figure-nav">
+                    <img class="logo-nav" src="assets/logos/logo_yard_sale.svg" alt="logo">
+                </figure>
+            </a>
+            <section class="nav-links-grid">
+
+                <a href="#"  class="nav-links objhovfoc-purple">All</a >
+                <a href="#"  class="nav-links objhovfoc-purple">Clothes</a >
+                <a href="#"  class="nav-links objhovfoc-purple">Electronics</a >
+                <a href="#"  class="nav-links objhovfoc-purple">Furniture</a >
+                <a href="#"  class="nav-links objhovfoc-purple">Toys</a >
+                <a href="#"  class="nav-links objhovfoc-purple">Others</a >     
+
+            </section>
+
+            <section class="nav-info">
+                <button class="drop-down-button objhovfoc-gray">
+                    <p class="nav-button-p">
+                        email@address.com
+                    </p>
+                    <figure class="figure-button-arrow">
+                        <svg class="svg-button-arrow" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.99864 5.94724C5.99234 5.84603 5.95236 5.74983 5.88506 5.67396L1.79607 1.13112C1.68716 1.00945 1.52152 0.955277 1.36175 0.989076C1.20199 1.02287 1.07248 1.13949 1.02218 1.29484C0.971889 1.45018 1.00848 1.62056 1.11813 1.74157L4.9338 5.97919L1.11813 10.2168C1.00848 10.3378 0.971887 10.5082 1.02218 10.6635C1.07248 10.8189 1.20199 10.9355 1.36175 10.9693C1.52152 11.0031 1.68716 10.9489 1.79607 10.8273L5.88506 6.28441C5.96718 6.19213 6.00819 6.0704 5.99864 5.94724Z" fill="#BFBFBF" stroke="#BFBFBF" stroke-width="1.5"/>
+                        </svg>                                
+                    </figure>
+                </button>
+                <button class="shopping-cart objhovfoc-gray">
+                    <figure class="figure-nav">
+                        <img class="img-shopping-cart" src="assets/icons/icon_shopping_cart.svg" alt="logo">
+                    </figure>
+                    <div class="shopping-cart-item-num">2</div>
+                </button>
+            </section>
+        </nav>
+    </header>
+</body>
+</html>

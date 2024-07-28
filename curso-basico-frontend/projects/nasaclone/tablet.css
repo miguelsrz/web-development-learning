@@ -1,0 +1,289 @@
+.finterssbold36-72
+{
+    font-size: 54rem;
+}
+.finterssbold36-48
+{
+    font-size: 48rem;
+}
+
+.finterssbold32-42
+{
+    font-size: 42rem;
+}
+
+.fpublicsw14-18
+{
+    font-size: 18rem;
+    line-height: 32rem;
+}
+
+.pagegrid
+{
+    display: grid;
+    grid-template-rows: 90px max-content 1fr 850px;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "footer"
+    ;
+}
+
+nav
+{
+    grid-area: nav;
+}
+
+
+.mainheader
+{
+    grid-area: header;
+    min-height: 640px;
+
+}
+    .headergrid
+    {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr 1fr;
+    grid-template-areas: 
+    "hart . "
+    "hsect hsect"
+    ;
+    }
+   .hart
+   {
+        grid-area: hart;
+   }
+   .hsect
+   {
+        grid-area: hsect;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+   } 
+
+   .hsect hr
+   {
+    width: 90%;
+   }
+main
+{
+    grid-area: main;
+    display: grid;
+    grid-template-rows:1fr 880px max-content 880px max-content 640px max-content;
+    grid-template-areas:
+    "fnews"
+    "fstory"
+    "imgday"
+    "info"
+    "lnews"
+    "explore"
+    "topics"
+    ;
+}
+
+.fnews
+{
+    grid-area: fnews;
+    max-height: 1350px;
+}
+    .newsgrid
+    {
+        display: grid;
+        grid-template-rows: 150px 832px 1fr;
+        grid-template-areas: 
+        "nheader"
+        "nblock"
+        "nflex"
+        ;
+    }
+        .nblock
+        {
+            grid-area:nblock ;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas: 
+            "nb1 nb1"
+            "nb1 nb1"
+            "nb2 nb3"
+            "nb2 nb4"
+            ;
+            
+        }
+
+            .nheader a span
+            {
+                width: auto;
+            }
+
+            .nbpadding
+            {
+                height: 100%;
+                padding-bottom: 1.5em;
+            }
+            
+            .nb2pad
+            {
+                padding-right: 1em;
+            }
+            .nb1
+            {
+                grid-area: nb1;
+            }
+            .nb2
+            {
+                grid-area: nb2;
+            }
+            .nb3
+            {
+                grid-area: nb3;
+            }
+            .nb4
+            {
+                grid-area: nb4;
+            }
+            
+        .nflex
+        {
+            grid-area: nflex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            margin-top: 1em;
+        }   
+
+            .nfpadding
+            {
+                padding-right: 1em;
+            }
+
+            .nf3>div, .nf4>div
+            {
+                padding-bottom: 0;
+            }
+
+.fstory
+{
+    grid-area: fstory;
+
+}
+.imgday
+{
+    grid-area: imgday;
+    
+
+}
+
+    .imgdaygrid
+        {
+            display: grid;
+            grid-template-rows: 120px max-content max-content   ;
+            width: 100%;
+            height: 100%;
+            grid-template-areas: 
+            "himgday"
+            "simgday"
+            "fimgday"
+
+            ;
+
+        }
+            .fimgday
+            {                
+                display: flex;
+                grid-area: fimgday;
+                margin: 0;
+            }
+            .img-imgday
+            {
+                align-self: center;
+                max-width: 800px;
+            }
+
+            
+            .simgday a
+            {
+                margin-bottom: 2em;
+            }
+
+.info
+{
+    grid-area: info;
+
+}
+.lnews
+{
+    grid-area: lnews;
+    
+    max-height: 1350px;
+
+
+}
+.explore
+{
+    grid-area: explore;
+
+}
+.topics
+{
+    grid-area: topics;
+}
+
+
+.tcard
+{
+    min-width: 90%;
+    height: 600px;
+    margin: 0 .75em 0 .75em;
+}
+
+
+
+
+
+footer
+{
+    grid-area: footer;
+
+}
+
+.footergrid
+    {
+        display: grid;
+        height: 100%;
+        grid-template-rows: 1fr max-content max-content 1fr ;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas: 
+        "logofooter logofooter logofooter logofooter"
+        "nasaabout nasaabout footerlinks footerlinks"
+        "footersocial nasainfo nasainfo nasainfo"
+        "pageinfo pageinfo pageinfo pageinfo"
+        ;
+    }
+
+    .nasaabout
+    {
+        margin: 0 2em 2.5em 0;        
+    }
+
+    .nasainfo a
+    {
+        margin-bottom: 1em;
+    }
+
+    .footersocial
+    {
+        justify-content: space-between;
+        margin-top: 1.5em;
+        margin-bottom: 0;
+    }
+    .pageinfo
+    {
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }

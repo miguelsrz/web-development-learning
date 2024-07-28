@@ -1,0 +1,13 @@
+Hola, esto es un ejercicio de GitBash
+
+
+Esta es la version 2.0 :o
+
+Version 3.0 B)
+
+MASTER 2 !
+MASTER 1 !
+
+EXPERIMENTO 1.1
+EXPERIMENTO 2
+

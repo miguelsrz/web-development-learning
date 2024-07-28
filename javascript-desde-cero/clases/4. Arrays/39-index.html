@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO: ANALISIS TRANSACCIONES</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+        body
+        {
+            display: flex;
+            justify-content: center;
+        }
+        .container
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            
+            width: 95%;
+            max-width: 800px;
+        }
+        form
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            gap: 8px;
+            width: 80%;
+
+        }
+    
+        main
+        {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: start;
+            align-items:baseline;
+            gap: 16px;
+            width: 80%;
+
+        }
+  
+        section
+        {
+            display: flex;
+            flex-direction: column;
+            
+            gap: 12px;
+            min-height: 90px;
+            height: auto;
+        }
+        section span
+        {
+            font-weight: 700;
+        }
+        section button
+        {
+            justify-self: baseline;
+        }
+        details
+        {
+            justify-self: start
+        }
+        span li
+        {
+            margin-left: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>EXERCISE: TRANSACTION ANALYSIS</h1>
+    <form>
+        <label for="text">
+            Enter transaction name below
+        </label>
+        <input type="text" placeholder="Enter name" id="text">
+        <label for="number">
+            Enter transaction value below
+        </label>
+        <input type="text" placeholder="Enter value" id="number">
+        <button type="button" class="button-income">
+            Add Income
+        </button>
+        <button type="button" class="button-expense">
+            Add Expense
+        </button>
+    </form>
+    <main>
+            <section>
+            TOTAL BALANCE: <span class="txt-total-balance">---</span>
+            </section>
+
+            <section>
+            LARGEST TRANSACTION: <span class="txt-largest-transaction">---</span>
+            </section>
+
+            <section>
+                DISPLAY ONLY PURCHASE TRANSACTIONS: 
+
+                <details open>
+                    <summary>
+                        See more details...
+                    </summary>
+                    <span class="txt-only-purchase">---</span>
+                </details>
+            </section>
+
+            <section>
+                        FIND TRANSACTION BY DESCRIPTION: <span class="txt-find-by-description">---</span>
+                <button class="button-4">SEARCH BY NAME</button>
+            </section>
+
+            <section>
+            FIND INDEX OF TRANSACTION BY AMOUNT: <span class="txt-index-by-amount">---</span>
+                <button class="button-5">SEARCH BY VALUE</button>
+            </section>
+
+            <section>
+            UPDATE TRANSACTION DESCRIPTION: <span class="txt-update-description">---</span>
+                <button class="button-6">DISPLAY RESULT</button>
+            </section>
+    </main>
+    </div>
+    
+</body>
+<script src="39-ejercicio-analisis-transacciones.js"></script>
+</html>

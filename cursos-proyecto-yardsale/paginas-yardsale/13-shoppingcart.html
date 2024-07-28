@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPPING CART</title>
+
+    <style>
+        html
+        {
+            font-size: 6.25%;
+        }
+        :root
+        {
+            --white: #FFFFFF;
+            --black: #000000;
+            --light-text: #8b8b8b;
+            --text-input-field: #ebebeb;    
+            --object-fill: #8672db;
+            --object-fill-hover: #927df0;
+            --xlg: 24rem;
+            --lg: 18rem;
+            --md: 16rem;
+            --sm: 14rem;
+
+        }
+
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-wrap: pretty;
+            border: none;
+            text-decoration: none;
+        }
+
+        @font-face 
+        {
+            font-family: "Quicksand" ;
+            src: url(assets/fonts/Quicksand-VariableFont_wght.woff2) format("woff2");
+            font-weight: 300, 500, 700;
+            font-style: lighter, normal, bold;
+
+        }
+
+        body, button
+        {
+            
+            font-family: "Quicksand";
+            font-size: 16rem;
+            
+        }
+
+        .bg-rounded-light-gray
+        {
+            border-radius: 16rem;
+            background-color: var(--text-input-field);
+            -webkit-box-shadow: 0rem 0rem 4rem 0rem var(--light-text);
+            -moz-box-shadow: 0rem 0rem 4rem 0rem var(--light-text);
+            box-shadow: 0rem 0rem 4rem 0rem var(--light-text);
+        }
+
+        .aside-display
+        {
+            position: relative;
+            width: 100vw;
+            height: calc(100vh - 60rem);
+        }
+
+        .objhovfoc-gray
+        {
+            display: block;
+            width: 100%;
+
+            border-radius: 16rem;
+            border: 2rem solid transparent;
+
+            text-decoration: none;
+            color: var(--black);
+        }
+
+        .objhovfoc-gray:hover
+        {
+            border-color: var(--light-text)
+        }
+
+        .aside-product-shadow
+        {
+            position: absolute;
+            right: 0;
+    
+            max-width: 400rem;
+            width: 75%;
+            height: 100%;
+
+
+            -webkit-box-shadow: 0rem 2rem 8rem 0rem rgba(139,139,139,1);
+            -moz-box-shadow: 0rem 2rem 8rem 0rem rgba(139,139,139,1);
+            box-shadow: 0rem 2rem 8rem 0rem rgba(139,139,139,1);
+            clip-path: inset(0rem -15rem 0rem -15rem);
+
+        }
+
+        .aside-product-properties-sc
+        {
+
+            display: grid;
+            grid-template-rows: max-content auto max-content;
+
+            height: 100%;
+            max-height:1200rem ;
+
+            background-color: white;
+        }
+
+            .custom-scrollbar
+            {
+                overflow-y: auto;
+                overflow-x: hidden;
+
+            }
+
+            .custom-scrollbar::-webkit-scrollbar
+            {
+                width: 15rem;
+                height: auto;
+            }
+            .custom-scrollbar::-webkit-scrollbar-thumb
+            {
+                background-color: rgba(180, 180, 180, 0.7);
+
+            }
+            .custom-scrollbar::-webkit-scrollbar-track
+            {
+                background-color: rgba(128, 128, 128, 0.301);
+            }
+
+        
+        .aside-title
+        {
+            position: relative;
+            padding: 1em 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 75rem;
+
+            -webkit-box-shadow: 0rem 2rem 8rem 0rem rgba(139,139,139,1);
+            -moz-box-shadow: 0rem 2rem 8rem 0rem rgba(139,139,139,1);
+            box-shadow: 0rem 2rem 8rem 0rem rgba(139,139,139,1);
+            clip-path: inset(-15rem 0 -15rem 0);
+
+        }
+
+        .aside-title h1
+        {
+            font-size: var(--xlg);
+            font-weight: 700;
+        }
+
+        .close-bg-x
+        {
+            position: absolute;
+            left: 1%;
+            top: 50%;
+            transform: translate(0, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: white;
+
+            border-radius: 100%;
+            width: 40rem;
+            height: 40rem;
+
+            cursor: pointer;
+        }
+        
+
+        
+        .button-buy
+        {
+            padding: 0 1em;
+        }
+
+        .button-buy-border
+        {
+            border-top: 1rem solid #999999;
+            margin-bottom: 1em;
+
+        }
+
+        .button-primary
+        {
+            margin-top: 1em;
+            border: none;
+
+            width: 100%;
+            height: 50rem;
+            border-radius: 8rem;
+            
+            font-family: inherit;
+            font-size: var(--lg);
+            font-weight: 700;
+            color: var(--white);
+
+            background-color: var(--object-fill);
+            cursor: pointer;
+        }
+
+        .button-primary:hover
+        {
+            background-color: var(--object-fill-hover);
+        }
+        .aside-product-button
+        {
+            align-self: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12rem;
+
+            height: 60rem;
+
+            border-top: 1rem solid #999999;
+
+        }
+
+        .button-secondary
+        {
+
+            width: 100%;
+            height: 50px;
+            border-radius: 8px;
+            border: 2px solid var(--object-fill);
+
+            font-family: inherit;
+            font-size: var(--lg);
+            font-weight: 700;
+            color: var(--white);
+
+            background-color: var(--white);
+            color: var(--object-fill);
+
+            cursor: pointer;
+
+        }
+        .button-secondary:hover
+        {
+            background-color: var(--text-input-field);
+        }
+
+        .product-price
+        {
+        
+            font-size: var(--lg);
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        .aside-product-title
+        {
+            font-size: var(--xlg);
+            font-weight: 500;
+            color: var(--light-text);
+        }
+
+        .product-description-full
+        {
+            font-size: var(--md);
+            font-weight: 500;
+            color: var(--light-text);
+        }
+
+        .shopping-cart-product-grid
+        {
+            padding: 1.5em;
+        }
+        .aside-myorder-details
+        {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+        }
+
+
+        .aside-myorder-article-box:not(:last-of-type)
+        {
+            padding-bottom: 2em;
+            margin-bottom: 2em;
+
+            border-bottom: 1rem solid #999999;
+        }
+
+        .overlay-gray
+        {
+            display: none;
+            position: absolute;
+            z-index: 0;
+
+            width: 100%;
+            height: 100%;
+
+            border-radius: 8px;
+            background-color:rgba(139, 139, 139, 0.5);
+
+        }
+        .aside-myorder-article
+        {
+            position: relative;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+        }
+
+        
+
+        .aside-product-options
+        {
+            display: none;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            height: 100%;
+            max-width: 150rem;
+            width: 80%;
+            
+        }
+
+        .aside-product-options a
+        {
+            margin: 0;
+            padding: 0 .5em;
+
+            width: 100%;
+            height: 40%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: var(--sm);
+        }
+
+        .aside-myorder-article:hover .overlay-gray
+        {
+            display: block;
+        }
+        
+        .aside-myorder-article:hover .aside-product-options
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .aside-product-figure
+        {
+            width: 110rem;
+            height: 110rem;
+        }
+
+        .aside-product-figure img
+        {
+            width: inherit;
+            height: inherit;
+            border-radius: 16rem;
+
+            object-fit: cover;
+        }
+
+        .aside-myorder-product-info
+        {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                gap: 8rem;
+
+                padding: 0 .5em;
+        }
+
+        .product-price
+        {
+            
+            font-size: var(--md);
+            font-weight: 500;
+            color: var(--white);
+            padding: 0.25em .5em;
+
+            border-radius: 16rem;
+            background-color: var(--object-fill);
+        }
+        
+        .product-info
+        {
+            max-width: 250rem;
+
+        }
+        .product-title
+        {
+            font-size: var(--md);
+            font-weight: 500;
+            color: var(--black);
+        }
+
+        .myorder-resume
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            
+            padding: 1em 1.5em;
+            width: 100%;
+
+        }
+
+        .resume-info h1
+        {
+            margin-bottom: .5em;
+            font-size: var(--lg);
+            font-weight: 700;
+        }
+
+        .resume-info p
+        {
+            font-size: var(--md);
+            font-weight: 500;
+            color: var(--light-text);
+        }
+
+        .total-product-price
+        {
+            font-size: var(--xlg);
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px)
+        {
+            .aside-product
+            {
+                max-width: 400rem;
+                width: 75%;
+            }
+            .aside-title h1
+            {
+                font-size: var(--lg);
+            }
+            .close-bg-x
+            {
+                width: 30rem ;
+                height: 30rem ;
+            }
+        }
+
+        @media (max-width:540px)
+        {
+            
+            .aside-myorder-product-info
+            {
+                flex-direction: column;
+            }
+
+            .total-product-price, .resume-info h1
+            {
+                font-size: var(--md);
+            }
+
+            .product-title, .product-price
+            {
+                font-size: var(--sm);
+                text-align: center;
+            }
+
+            .aside-product-figure
+            {
+                width: 80rem;
+                height: 80rem;
+            }
+        }
+
+
+        
+
+
+
+        
+    </style>
+
+</head>
+<body>
+    <div class="aside-display">
+        <aside class="aside-product-shadow">
+            <div class="aside-product-properties-sc">
+                <div class="aside-title">
+                    <button class="close-bg-x objhovfoc-gray">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16 8L8 16M8.00001 8L16 16" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>                
+                    </button>
+                    <h1>Shopping cart</h1>
+                </div>
+                
+                <div class="shopping-cart-product-grid custom-scrollbar">
+                    <section class="aside-myorder-details ">
+    
+                        <div class="aside-myorder-article-box">
+                            <section class="objhovfoc-gray aside-myorder-article">
+                                
+                                <div class="overlay-gray"></div>
+
+                                <figure class="aside-product-figure">
+                                    <img src="assets/img/bike.jpg" alt="Bike">
+                                </figure>
+                                <div class="aside-myorder-product-info">
+                                    <article class="product-info">
+                                        <p class="product-title">
+                                            Classic bike
+                                        </p>             
+                                    </article> 
+                                    <p class="product-price">
+                                            $ 125,99
+                                    </p>
+                                    
+                                </div>
+                                <div class="aside-product-options">
+                                    <a  href="#" class="button-primary">Remove from cart</a>
+                                    <a  href="#" class="button-secondary">View product</a>
+                                </div>
+                                
+                            </section>
+                        </div>
+                        
+                        <div class="aside-myorder-article-box">
+                            <section class="objhovfoc-gray aside-myorder-article">
+                                
+                                <div class="overlay-gray"></div>
+
+                                <figure class="aside-product-figure">
+                                    <img src="assets/img/bike.jpg" alt="Bike">
+                                </figure>
+                                <div class="aside-myorder-product-info">
+                                    <article class="product-info">
+                                        <p class="product-title">
+                                            Classic bike
+                                        </p>             
+                                    </article> 
+                                    <p class="product-price">
+                                            $ 125,99
+                                    </p>
+                                    
+                                </div>
+                                <div class="aside-product-options">
+                                    <a  href="#" class="button-primary">Remove from cart</a>
+                                    <a  href="#" class="button-secondary">View product</a>
+                                </div>
+                                
+                            </section>
+                        </div>
+
+                        <div class="aside-myorder-article-box">
+                            <section class="objhovfoc-gray aside-myorder-article">
+                                
+                                <div class="overlay-gray"></div>
+
+                                <figure class="aside-product-figure">
+                                    <img src="assets/img/bike.jpg" alt="Bike">
+                                </figure>
+                                <div class="aside-myorder-product-info">
+                                    <article class="product-info">
+                                        <p class="product-title">
+                                            Classic bike
+                                        </p>             
+                                    </article> 
+                                    <p class="product-price">
+                                            $ 125,99
+                                    </p>
+                                    
+                                </div>
+                                <div class="aside-product-options">
+                                    <a  href="#" class="button-primary">Remove from cart</a>
+                                    <a  href="#" class="button-secondary">View product</a>
+                                </div>
+                                
+                            </section>
+                        </div>
+
+                        <div class="aside-myorder-article-box">
+                            <section class="objhovfoc-gray aside-myorder-article">
+                                
+                                <div class="overlay-gray"></div>
+
+                                <figure class="aside-product-figure">
+                                    <img src="assets/img/bike.jpg" alt="Bike">
+                                </figure>
+                                <div class="aside-myorder-product-info">
+                                    <article class="product-info">
+                                        <p class="product-title">
+                                            Classic bike
+                                        </p>             
+                                    </article> 
+                                    <p class="product-price">
+                                            $ 125,99
+                                    </p>
+                                    
+                                </div>
+                                <div class="aside-product-options">
+                                    <a  href="#" class="button-primary">Remove from cart</a>
+                                    <a  href="#" class="button-secondary">View product</a>
+                                </div>
+                                
+                            </section>
+                        </div>
+
+                        <div class="aside-myorder-article-box">
+                            <section class="objhovfoc-gray aside-myorder-article">
+                                
+                                <div class="overlay-gray"></div>
+
+                                <figure class="aside-product-figure">
+                                    <img src="assets/img/bike.jpg" alt="Bike">
+                                </figure>
+                                <div class="aside-myorder-product-info">
+                                    <article class="product-info">
+                                        <p class="product-title">
+                                            Classic bike
+                                        </p>             
+                                    </article> 
+                                    <p class="product-price">
+                                            $ 125,99
+                                    </p>
+                                    
+                                </div>
+                                <div class="aside-product-options">
+                                    <a  href="#" class="button-primary">Remove from cart</a>
+                                    <a  href="#" class="button-secondary">View product</a>
+                                </div>
+                                
+                            </section>
+                        </div>
+
+                        <div class="aside-myorder-article-box">
+                            <section class="objhovfoc-gray aside-myorder-article">
+                                
+                                <div class="overlay-gray"></div>
+
+                                <figure class="aside-product-figure">
+                                    <img src="assets/img/bike.jpg" alt="Bike">
+                                </figure>
+                                <div class="aside-myorder-product-info">
+                                    <article class="product-info">
+                                        <p class="product-title">
+                                            Classic bike
+                                        </p>             
+                                    </article> 
+                                    <p class="product-price">
+                                            $ 125,99
+                                    </p>
+                                    
+                                </div>
+                                <div class="aside-product-options">
+                                    <a  href="#" class="button-primary">Remove from cart</a>
+                                    <a  href="#" class="button-secondary">View product</a>
+                                </div>
+                                
+                            </section>
+                        </div>
+
+                        <div class="aside-myorder-article-box">
+                            <section class="objhovfoc-gray aside-myorder-article">
+                                
+                                <div class="overlay-gray"></div>
+
+                                <figure class="aside-product-figure">
+                                    <img src="assets/img/bike.jpg" alt="Bike">
+                                </figure>
+                                <div class="aside-myorder-product-info">
+                                    <article class="product-info">
+                                        <p class="product-title">
+                                            Classic bike
+                                        </p>             
+                                    </article> 
+                                    <p class="product-price">
+                                            $ 125,99
+                                    </p>
+                                    
+                                </div>
+                                <div class="aside-product-options">
+                                    <a  href="#" class="button-primary">Remove from cart</a>
+                                    <a  href="#" class="button-secondary">View product</a>
+                                </div>
+                                
+                            </section>
+                        </div>
+
+                        <div class="aside-myorder-article-box">
+                            <section class="objhovfoc-gray aside-myorder-article">
+                                
+                                <div class="overlay-gray"></div>
+
+                                <figure class="aside-product-figure">
+                                    <img src="assets/img/bike.jpg" alt="Bike">
+                                </figure>
+                                <div class="aside-myorder-product-info">
+                                    <article class="product-info">
+                                        <p class="product-title">
+                                            Classic bike
+                                        </p>             
+                                    </article> 
+                                    <p class="product-price">
+                                            $ 125,99
+                                    </p>
+                                    
+                                </div>
+                                <div class="aside-product-options">
+                                    <a  href="#" class="button-primary">Remove from cart</a>
+                                    <a  href="#" class="button-secondary">View product</a>
+                                </div>
+                                
+                            </section>
+                        </div>
+        
+                        
+        
+                    </section>
+                </div>
+                
+                <div class="button-buy">
+                    <div class="button-buy-border"></div>
+                    <section class="myorder-resume bg-rounded-light-gray">
+    
+                        <div class="resume-info">
+                            <h1>
+                                05.02.2024
+                            </h1>
+                            <p>
+                                # Articles
+                            </p>
+                        </div>
+                        <div class="resume-total">
+                            <p class="total-product-price">
+                                $ 575.00
+                            </p>
+                        </div>
+    
+                    </section>
+                    <button class="button-primary aside-product-button">
+                        <p>Checkout</p>
+                    </button>
+                </div>
+            </div>
+            
+            
+        </aside>
+    </div>
+    
+</body>
+</html>
