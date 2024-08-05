@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - YARDSALE</title>
+    <link rel="stylesheet" href="yardsale.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-grid">
+            
+            <div class="icon-menu-nav">
+                <figure data-target="nav-menu-mobile" class="figure-nav  drop-down-button" >
+                    <img class="img-icon-menu" src="assets/icons/icon_menu.svg" alt="logo">
+                </figure>
+                <section id="nav-menu-mobile" class="menu-mobile display-none drop-down-content">
+                    <h1>CATEGORIES</h1>
+                    <section class="menu-mobile-info">
+                        <a class="a-large" href="#">All</a>
+                        <a class="a-large" href="#">Clothes</a>
+                        <a class="a-large" href="#">Electronics</a>
+                        <a class="a-large" href="#">Furnitures</a>
+                        <a class="a-large" href="#">Toys</a>
+                        <a class="a-large" href="#">Others</a>
+                    </section>
+                    <section class="menu-mobile-info">
+                        <a class="a-large" href="#">My orders</a>
+                        <a class="a-large" href="#"> My account</a>
+                    </section>
+                    <section class="menu-mobile-sign-out">
+                        <p class="email">email@address.com</p>
+                        <a class="a-large-colored" href="#">Sign out</a>
+                    </section>
+                </section> 
+            </div>
+
+            <a href="#" class="objhovfoc-purple a-logo-nav">
+                <figure class="figure-nav">
+                    <img class="logo-nav" src="assets/logos/logo_yard_sale.svg" alt="logo">
+                </figure>
+            </a>
+            <section class="nav-links-grid">
+
+                <a href="#"  class="nav-links objhovfoc-purple">All</a >
+                <a href="#"  class="nav-links objhovfoc-purple">Clothes</a >
+                <a href="#"  class="nav-links objhovfoc-purple">Electronics</a >
+                <a href="#"  class="nav-links objhovfoc-purple">Furniture</a >
+                <a href="#"  class="nav-links objhovfoc-purple">Toys</a >
+                <a href="#"  class="nav-links objhovfoc-purple">Others</a >     
+
+            </section>
+
+            <section class="nav-info">
+                <div class="nav-email-flex">
+                    <button data-target="nav-menu-desktop" class="menu-desktop-button drop-down-button objhovfoc-gray">
+                        <p class="nav-button-p">
+                            email@address.com
+                        </p>
+                        <figure class="figure-button-arrow">
+                            <svg class="svg-button-arrow" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.99864 5.94724C5.99234 5.84603 5.95236 5.74983 5.88506 5.67396L1.79607 1.13112C1.68716 1.00945 1.52152 0.955277 1.36175 0.989076C1.20199 1.02287 1.07248 1.13949 1.02218 1.29484C0.971889 1.45018 1.00848 1.62056 1.11813 1.74157L4.9338 5.97919L1.11813 10.2168C1.00848 10.3378 0.971887 10.5082 1.02218 10.6635C1.07248 10.8189 1.20199 10.9355 1.36175 10.9693C1.52152 11.0031 1.68716 10.9489 1.79607 10.8273L5.88506 6.28441C5.96718 6.19213 6.00819 6.0704 5.99864 5.94724Z" fill="#BFBFBF" stroke="#BFBFBF" stroke-width="1.5"/>
+                            </svg>                                
+                        </figure>
+                        
+                    </button>
+                    <section id="nav-menu-desktop" class="menu-desktop display-none drop-down-content">
+                        <section class="menu-desktop-info">
+                            <a class="a-large" href="#">My orders</a>
+                            <a class="a-large" href="#"> My account</a>
+                        </section>
+                        <section class="menu-desktop-sign-out">
+                            <a class="a-large-colored" href="#">Sign out</a>
+                        </section>
+                    </section> 
+                </div>
+                <button data-target="aside-shopping-cart" class="shopping-cart drop-down-button objhovfoc-gray">
+                    <figure class="figure-nav">
+                        <img class="img-shopping-cart" src="assets/icons/icon_shopping_cart.svg" alt="logo">
+                    </figure>
+                    <div class="shopping-cart-item-num">2</div>
+                </button>
+            </section>
+
+
+        </nav>
+        
+    </header>
+
+    <main>
+        <aside id="aside-shopping-cart" class="aside-display drop-down-content display-none">
+            <div class="aside-product-shadow">
+                <div class="aside-product-properties-sc">
+                    <div class="aside-title">
+                        <button class="drop-down-close close-bg-x objhovfoc-gray">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16 8L8 16M8.00001 8L16 16" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>                
+                        </button>
+                        <h1>Shopping cart</h1>
+                    </div>
+                    
+                    <div class="shopping-cart-product-grid custom-scrollbar">
+                        <section class="aside-myorder-details ">
+        
+                            <!--
+                            <div class="aside-myorder-article-box">
+                                <section class="objhovfoc-gray aside-myorder-article">
+                                    
+                                    <div class="overlay-gray"></div>
+    
+                                    <figure class="aside-product-figure">
+                                        <img src="assets/img/bike.jpg" alt="Bike">
+                                    </figure>
+
+                                    <div class="aside-myorder-product-info">
+                                        <article class="product-info">
+                                            <p class="product-title">
+                                                Classic bike
+                                            </p>             
+                                        </article> 
+                                        <p class="product-price">
+                                                $ 125,99
+                                        </p>
+                                        
+                                    </div>
+
+                                    <div class="aside-product-options">
+                                        <button  href="#" class="button-primary">Remove from cart</button>
+                                        <button  href="#" class="button-secondary">View product</button>
+                                    </div>
+                                    
+                                </section>
+                            </div>
+                            -->
+
+                        </section>
+                        
+                    </div>
+                    
+                    <div class="button-buy">
+                        <div class="button-buy-border"></div>
+                        <section class="myorder-resume bg-rounded-light-gray">
+        
+                            <div class="resume-info">
+                                <h1>
+                                    05.02.2024
+                                </h1>
+                                <p>
+                                    # Articles
+                                </p>
+                            </div>
+                            <div class="resume-total">
+                                <p class="total-product-price">
+                                    $ 575.00
+                                </p>
+                            </div>
+        
+                        </section>
+                        <button class="button-primary aside-product-button">
+                            <p>Checkout</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </aside>
+        
+        <section class="card-display">
+
+            <div class="card-container">
+            <!-- 
+                <section class="card-item">
+                    <figure class="product-figure">
+                        <img src="assets/img/bike.jpg" alt="Bike">
+                    </figure>
+                    <div class="card-info">
+                        <div class="product-text">
+                            <p class="product-price">
+                                $ 125,99
+                            </p>
+                            <p class="product-title">
+                                Classic bike
+                            </p>
+                            
+                        </div>
+                        <figure class="add-to-cart">
+                            <img src="assets/icons/bt_add_to_cart.svg" alt="Shopping-Cart Icon">
+                        </figure>
+                    </div>
+                </section>
+            -->
+            </div>
+        </section>
+
+        
+
+        <div class="blur-gray"></div>
+
+
+    </main>
+    
+
+    <script src="yardsale.js"></script>
+</body>
+</html>
