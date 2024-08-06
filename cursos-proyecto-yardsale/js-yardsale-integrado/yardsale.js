@@ -1,6 +1,4 @@
-// OBTAIN DOM ELEMENTS
-const dropDownButtons = document.querySelectorAll('.drop-down-button');
-const dropDownContent = document.querySelectorAll('.drop-down-content')
+// OBTAIN DOM ELEMENTS - ESSENTIAL FOR RENDERING PAGE
 
 const asideCartContainer = document.querySelector('.aside-myorder-details');
 const mainCardContainer = document.querySelector('.card-container');
@@ -11,13 +9,15 @@ class CreateProduct
 {
   id;
   title;
+  description
   img;
   price;
 
-  constructor(id,title,img,alt,price)
+  constructor(id,title,description,img,alt,price)
   {
     this.id = id;
     this.title = title;
+    this.description = description;
     this.img = img;
     this.alt = alt;
     this.price = price
@@ -29,7 +29,8 @@ class CreateProduct
 
     // SECTION CONTAINER
     const sectionContainer = document.createElement('section'); // (1) MAIN CARD CONTAINER
-    sectionContainer.classList.add('card-item');
+    sectionContainer.classList.add('card-item','drop-down-button');
+    sectionContainer.setAttribute('data-target','aside-product-view')
     sectionContainer.id = this.id;
     // --------------------------------------------------------------
 
@@ -155,30 +156,31 @@ class CreateProduct
     asideCartContainer.appendChild(divMainContainer);
   }
 
+  updateAsideProductView = function()
+  {
+    const productImg = document.querySelector('#apv-img');
+    const productPrice = document.querySelector('#apv-price');
+    const productTitle = document.querySelector('#apv-title');
+    const productDescription = document.querySelector('#apv-description');
+
+    productImg.setAttribute('src', this.img);
+    productImg.setAttribute('alt', this.alt);
+    productPrice.textContent = '$ ' + this.price;
+    productTitle.textContent = this.title;
+    productDescription.textContent = this.description
+  }
+
 } 
 
 const productsDataArray = ([
   {
     id:100,
     title: 'Classic bike',
+    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id magna posuere, elementum ex sit amet, pellentesque lorem. Nulla a pretium ex. Maecenas viverra facilisis diam, eget tempus massa facilisis in. Duis lectus tortor, cursus eget malesuada eu, iaculis sed dolor. Nulla id leo finibus, ornare eros id, tristique tortor. ',
     img: 'assets/img/bike.jpg',
     alt: 'Bike',
     price: '125,99'
   },
-  {
-    id:101,
-    title: 'Literature books',
-    img: 'assets/img/books.jpg',
-    alt: 'Books',
-    price: '65,25'
-  },
-  {
-    id:102,
-    title: 'Professional camera',
-    img: 'assets/img/camera.jpg',
-    alt: 'Camera',
-    price: '299,99'
-  }
 ])
 
 let productInstancesArray = [];
@@ -189,16 +191,25 @@ function renderProducts()
 {
   for(product of productsDataArray)
     {
-      const newProduct = new CreateProduct(product.id,product.title, product.img, product.alt, product.price);
+      const newProduct = new CreateProduct(product.id,product.title, product.description, product.img, product.alt, product.price);
       productInstancesArray.push(newProduct);
 
       newProduct.createMainCardProductHTML();
     }
 }
+
 renderProducts();
 // ------------------------------------------------------
 
-// DROPDOWN HANDLERS
+// OBTAIN DOM ELEMENTS - THAT ACCESS PRODUCTS RENDERED
+const dropDownButtons = document.querySelectorAll('.drop-down-button');
+const dropDownContent = document.querySelectorAll('.drop-down-content')
+const cardItems = document.querySelectorAll('.card-item');
+
+
+// ------------------------------------------------------
+
+// EVENT HANDLERS
 function handleDropdown(event) {
     event.stopPropagation();
     const button = event.target; // Use the event.target, the clicked element
@@ -240,6 +251,20 @@ document.documentElement.addEventListener('click',(event)=>
     )
   }
 })
+
+cardItems.forEach(item =>
+  {
+    item.addEventListener('click',(event)=>
+  {
+    if(!event.target.closest('.add-to-cart'))
+    {
+      const productId = event.target.closest('.card-item').id;
+      const getProduct = productInstancesArray.find(product => product.id === +productId);
+      getProduct.updateAsideProductView();
+    }
+  })
+  }
+  );
 // ------------------------------------------------------
 
 // ADD TO CART METHOD

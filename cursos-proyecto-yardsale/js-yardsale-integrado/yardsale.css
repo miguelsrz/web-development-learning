@@ -133,6 +133,62 @@
         {
             text-decoration: underline;
         }
+        /* BUTTONS */
+        .button-primary
+        {
+            margin-top: 1em;
+            border: none;
+
+            width: 100%;
+            height: 50rem;
+            border-radius: 8rem;
+            
+            font-family: inherit;
+            font-size: var(--lg);
+            font-weight: 700;
+            color: var(--white);
+
+            background-color: var(--object-fill);
+            cursor: pointer;
+        }
+
+        .button-primary:hover
+        {
+            background-color: var(--object-fill-hover);
+        }
+
+        .button-secondary
+        {
+
+            width: 100%;
+            height: 50px;
+            border-radius: 8px;
+            border: 2px solid var(--object-fill);
+
+            font-family: inherit;
+            font-size: var(--lg);
+            font-weight: 700;
+            color: var(--white);
+
+            background-color: var(--white);
+            color: var(--object-fill);
+
+            cursor: pointer;
+
+        }
+        .button-secondary:hover
+        {
+    background-color: var(--text-input-field);
+        }  
+
+        /* TEXT */
+        .product-price
+        {
+        
+            font-size: var(--lg);
+            font-weight: 700;
+            color: var(--black);
+        }
 
         
 /*=============================================================*/
@@ -512,14 +568,6 @@ main
             object-fit:cover;        
         }
 
-        .product-price
-        {
-        
-            font-size: var(--lg);
-            font-weight: 700;
-            color: var(--black);
-        }
-
         .product-title
         {
             font-size: var(--md);
@@ -561,10 +609,6 @@ main
 
 /* ASIDE GENERAL*/
 /*=============================================================*/
-
-
-/* ASIDE - SHOPPING CART*/
-/*=============================================================*/
 .bg-rounded-light-gray
 {
     border-radius: 16rem;
@@ -573,7 +617,6 @@ main
     -moz-box-shadow: 0rem 0rem 4rem 0rem var(--light-text);
     box-shadow: 0rem 0rem 4rem 0rem var(--light-text);
 }
-
 
 .aside-display
 {
@@ -614,8 +657,6 @@ aside:not(.display-none) ~ .card-display
     overflow:clip;
 }
 
-
-
 .aside-product-shadow
 {
     position: absolute;
@@ -631,19 +672,6 @@ aside:not(.display-none) ~ .card-display
     clip-path: inset(0rem -15rem 0rem -15rem);
 
 }
-
-.aside-product-properties-sc
-{
-
-    display: grid;
-    grid-template-rows: max-content auto max-content;
-
-    height: 100%;
-    max-height:1200rem ;
-
-    background-color: white;
-}
-
     .custom-scrollbar
     {
         overflow-y: auto;
@@ -665,7 +693,6 @@ aside:not(.display-none) ~ .card-display
     {
         background-color: rgba(128, 128, 128, 0.301);
     }
-
 
 .aside-title
 {
@@ -713,7 +740,7 @@ aside:not(.display-none) ~ .card-display
 
 .button-buy
 {
-    padding: 0 1em 1em;
+    padding: 0 1em;
 }
 
 .button-buy-border
@@ -723,192 +750,6 @@ aside:not(.display-none) ~ .card-display
 
 }
 
-.button-primary
-{
-    margin-top: 1em;
-    border: none;
-
-    width: 100%;
-    height: 50rem;
-    border-radius: 8rem;
-    
-    font-family: inherit;
-    font-size: var(--lg);
-    font-weight: 700;
-    color: var(--white);
-
-    background-color: var(--object-fill);
-    cursor: pointer;
-}
-
-.button-primary:hover
-{
-    background-color: var(--object-fill-hover);
-}
-.aside-product-button
-{
-    align-self: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12rem;
-
-    height: 60rem;
-
-    border-top: 1rem solid #999999;
-
-}
-
-.button-secondary
-{
-
-    width: 100%;
-    height: 50px;
-    border-radius: 8px;
-    border: 2px solid var(--object-fill);
-
-    font-family: inherit;
-    font-size: var(--lg);
-    font-weight: 700;
-    color: var(--white);
-
-    background-color: var(--white);
-    color: var(--object-fill);
-
-    cursor: pointer;
-
-}
-.button-secondary:hover
-{
-    background-color: var(--text-input-field);
-}
-
-.aside-product-title
-{
-    font-size: var(--xlg);
-    font-weight: 500;
-    color: var(--light-text);
-}
-
-.product-description-full
-{
-    font-size: var(--md);
-    font-weight: 500;
-    color: var(--light-text);
-}
-
-.shopping-cart-product-grid
-{
-    padding: 1.5em;
-}
-.aside-myorder-details
-{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-}
-
-
-.aside-myorder-article-box:not(:last-of-type)
-{
-    padding-bottom: 2em;
-    margin-bottom: 2em;
-
-    border-bottom: 1rem solid #999999;
-}
-
-.overlay-gray
-{
-    display: none;
-    position: absolute;
-    z-index: 0;
-
-    width: 100%;
-    height: 100%;
-
-    border-radius: 8px;
-    background-color:rgba(139, 139, 139, 0.5);
-
-}
-.aside-myorder-article
-{
-    position: relative;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-}
-
-.aside-product-options
-{
-    display: none;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    height: 100%;
-    max-width: 150rem;
-    width: 80%;
-    
-}
-
-.aside-product-options button
-{
-    margin: 0;
-    padding: 0 .5em;
-
-    width: 100%;
-    height: 40%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: var(--sm);
-}
-
-.aside-myorder-article:hover .overlay-gray
-{
-    display: block;
-}
-
-.aside-myorder-article:hover .aside-product-options
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.aside-product-figure
-{
-    width: 110rem;
-    height: 110rem;
-}
-
-.aside-product-figure img
-{
-    width: inherit;
-    height: inherit;
-    border-radius: 16rem;
-
-    object-fit: cover;
-}
-
-.aside-myorder-product-info
-{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 16rem;
-
-        padding: 0 .5em;
-        
-        text-align: center;
-}
 
 .aside-product-price
 {
@@ -928,47 +769,287 @@ aside:not(.display-none) ~ .card-display
     max-width: 250rem;
 
 }
-.aside-product-title
-{
-    font-size: var(--md);
-    font-weight: 500;
-    color: var(--black);
-}
 
-.myorder-resume
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    
-    padding: 1em 1.5em;
-    width: 100%;
 
-}
+/* ASIDE - SHOPPING CART*/
+/*=============================================================*/
+        .aside-product-properties-sc
+        {
 
-.resume-info h1
-{
-    margin-bottom: .5em;
-    font-size: var(--lg);
-    font-weight: 700;
-}
+            display: grid;
+            grid-template-rows: 75px 1fr auto;
 
-.resume-info p
-{
-    font-size: var(--md);
-    font-weight: 500;
-    color: var(--light-text);
-}
+            height: 100%;
+            max-height:900rem ;
 
-.total-product-price
-{
-    font-size: var(--xlg);
-    font-weight: 700;
-}
+            background-color: white;
+        }
 
+        .shopping-cart-product-grid
+        {
+            padding: 1.5em;
+        }
+
+        .aside-myorder-details
+        {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+        }
+
+
+        .aside-myorder-article-box:not(:last-of-type)
+        {
+            padding-bottom: 2em;
+            margin-bottom: 2em;
+
+            border-bottom: 1rem solid #999999;
+        }
+
+        .overlay-gray
+        {
+            display: none;
+            position: absolute;
+            z-index: 0;
+
+            width: 100%;
+            height: 100%;
+
+            border-radius: 8px;
+            background-color:rgba(139, 139, 139, 0.5);
+
+        }
+        .aside-myorder-article
+        {
+            position: relative;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+        }
+
+        .aside-product-options
+        {
+            display: none;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            height: 100%;
+            max-width: 150rem;
+            width: 80%;
+            
+        }
+
+        .aside-product-options button
+        {
+            margin: 0;
+            padding: 0 .5em;
+
+            width: 100%;
+            height: 40%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: var(--sm);
+        }
+
+        .aside-myorder-article:hover .overlay-gray
+        {
+            display: block;
+        }
+
+        .aside-myorder-article:hover .aside-product-options
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .aside-product-figure
+        {
+            width: 110rem;
+            height: 110rem;
+        }
+
+        .aside-product-figure img
+        {
+            width: inherit;
+            height: inherit;
+            border-radius: 16rem;
+
+            object-fit: cover;
+        }
+
+        .aside-myorder-product-info
+        {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 16rem;
+
+                padding: 0 .5em;
+                
+                text-align: center;
+        }
+
+        .aside-product-title
+        {
+            font-size: var(--md);
+            font-weight: 500;
+            color: var(--black);
+        }
+
+        .myorder-resume
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            
+            padding: 1em 1.5em;
+            width: 100%;
+
+        }
+
+        .resume-info h1
+        {
+            margin-bottom: .5em;
+            font-size: var(--lg);
+            font-weight: 700;
+        }
+
+        .resume-info p
+        {
+            font-size: var(--md);
+            font-weight: 500;
+            color: var(--light-text);
+        }
+
+        .total-aside-product-price
+        {
+            font-size: var(--xlg);
+            font-weight: 700;
+        }
+                
 /*=============================================================*/
 
+/* ASIDE - PRODUCT VIEW*/
+
+        .aside-product-properties
+        {
+
+            display: grid;
+            grid-template-rows: repeat(3 auto);
+
+            height: 100%;
+            max-height:900rem ;
+
+            background-color: white;
+        }
+
+        .aside-figure-grid
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 16rem;
+        }
+
+        .aside-product-figure-pv img
+        {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        
+        .aside-product-grid
+        {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            gap: 16rem;
+
+        }
+
+        .aside-product-description
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16rem;
+
+            padding: 0 1.5em 1em;
+        }
+
+        .slide-button-display
+        {
+            display: flex;
+            justify-content: center;
+            gap: 8rem;
+            width: 100%;
+
+        }
+        
+        .slide-button
+        {
+            width: 16rem;
+            height: 16rem;
+            border: 2rem solid var(--light-text);
+            border-radius: 100%;
+            
+            background-color: white;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .slide-button:hover
+        {
+            border-color: var(--object-fill-hover);
+            transform: scale(1.3);
+        }
+        
+        .slide-button /*:focus - since is one button and there is no js, this is set by default*/
+        {
+            border-color: var(--object-fill);
+            background-color: var(--object-fill-hover);
+            transform: scale(1.3);
+        }
+        
+
+        .aside-product-button
+        {
+            margin-bottom: 1em;
+            align-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12rem;
+
+            height: 60rem;
+
+        }
+
+        .aside-product-title-pv
+        {
+            font-size: var(--xlg);
+            font-weight: 500;
+        }
+
+        .product-description-full
+        {
+            font-size: var(--md);
+            font-weight: 500;
+            color: var(--light-text);
+        }
+
+/*=============================================================*/
 /*=============================================================*/
 
 
@@ -1029,7 +1110,7 @@ aside:not(.display-none) ~ .card-display
             .aside-display
             {
                 max-width: 400rem;
-                width: 75%;
+                width: 85%;
             }
             .aside-title h1
             {
