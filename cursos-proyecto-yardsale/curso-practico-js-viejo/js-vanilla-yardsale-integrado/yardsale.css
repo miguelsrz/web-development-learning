@@ -190,6 +190,7 @@
             color: var(--black);
         }
 
+
         
 /*=============================================================*/
    
@@ -550,7 +551,7 @@ main
             cursor: pointer;
         }
 
-        .card-item:hover p
+        .card-item:hover p 
         {
             text-decoration: underline;
         }
@@ -672,6 +673,20 @@ aside:not(.display-none) ~ .card-display
     clip-path: inset(0rem -15rem 0rem -15rem);
 
 }
+
+.aside-product-properties
+        {
+
+            display: grid;
+            grid-template-rows: 75px 1fr auto;
+
+            height: 100%;
+            max-height:900rem ;
+
+            background-color: white;
+        }
+
+
     .custom-scrollbar
     {
         overflow-y: auto;
@@ -774,17 +789,7 @@ aside:not(.display-none) ~ .card-display
 
 /* ASIDE - SHOPPING CART*/
 /*=============================================================*/
-        .aside-product-properties-sc
-        {
-
-            display: grid;
-            grid-template-rows: 75px 1fr auto;
-
-            height: 100%;
-            max-height:900rem ;
-
-            background-color: white;
-        }
+        
 
         .shopping-cart-product-grid
         {
@@ -942,23 +947,10 @@ aside:not(.display-none) ~ .card-display
 
 /* ASIDE - PRODUCT VIEW*/
 
-        .aside-product-properties
-        {
-
-            display: grid;
-            grid-template-rows: repeat(3 auto);
-
-            height: 100%;
-            max-height:900rem ;
-
-            background-color: white;
-        }
-
         .aside-figure-grid
         {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            display: grid;
+            grid-template-rows: 90% auto;
             gap: 16rem;
         }
 
@@ -980,12 +972,14 @@ aside:not(.display-none) ~ .card-display
 
         .aside-product-description
         {
+            border-top: 1rem solid #999999;
             display: flex;
             flex-direction: column;
             justify-content: center;
             gap: 16rem;
 
-            padding: 0 1.5em 1em;
+            margin: 0 1.5em 1em;
+            padding-top: 1em;
         }
 
         .slide-button-display

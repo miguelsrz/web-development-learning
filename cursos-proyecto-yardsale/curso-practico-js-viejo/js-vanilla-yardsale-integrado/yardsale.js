@@ -59,7 +59,7 @@ class CreateProduct
     productTitle.textContent = this.title;
 
     const figureContainerSVG = document.createElement('figure'); // (3) FIGURE CONTAINER
-    figureContainerSVG.classList.add('add-to-cart');
+    figureContainerSVG.classList.add('no-dropdown','add-to-cart');
 
     const imgShoppingSVG = document.createElement('img'); // (4) IMG SVG
     imgShoppingSVG.setAttribute('src','assets/icons/bt_add_to_cart.svg');
@@ -181,6 +181,14 @@ const productsDataArray = ([
     alt: 'Bike',
     price: '125,99'
   },
+  {
+    id:101,
+    title: 'Classssic bike',
+    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id magna posuere, elementum ex sit amet, pellentesque lorem. Nulla a pretium ex. Maecenas viverra facilisis diam, eget tempus massa facilisis in. Duis lectus tortor, cursus eget malesuada eu, iaculis sed dolor. Nulla id leo finibus, ornare eros id, tristique tortor. ',
+    img: 'assets/img/bike.jpg',
+    alt: 'Bike',
+    price: '125,99'
+  }
 ])
 
 let productInstancesArray = [];
@@ -213,20 +221,25 @@ const cardItems = document.querySelectorAll('.card-item');
 function handleDropdown(event) {
     event.stopPropagation();
     const button = event.target; // Use the event.target, the clicked element
-    const className = "display-none"; // Spcecify the class name one time
-    const contentId = button.closest('.drop-down-button').getAttribute('data-target'); // Finds the nearest drop-down-parent container
-    let myContent = document.getElementById(contentId); // The drop down contents of the clicked item, if found
+    if(!button.closest('.no-dropdown'))
+    {
+      const className = "display-none"; // Spcecify the class name one time
+      const contentId = button.closest('.drop-down-button').getAttribute('data-target'); // Finds the nearest drop-down-parent container
+      let myContent = document.getElementById(contentId); // The drop down contents of the clicked item, if found
 
-    dropDownContent.forEach( element => {
-      if (element !== myContent) {
-        element.classList.add(className);
-      }
-    });
+      dropDownContent.forEach( element => {
+        if (element !== myContent) {
+          element.classList.add(className);
+        }
+      }); // Document listener no funciona con contenido dropdown, aqui verificamos si es dropdown content. Todo lo que no sea el contenido que fue activado obtiene display-none
+   
 
-    // If the clicked have content, toggle if it is shown or not.
-    if (myContent){
-      myContent.classList.toggle(className);
-    } 
+      // If the clicked have content, toggle if it is shown or not.
+      if (myContent){
+        myContent.classList.toggle(className);
+      } 
+    }
+    
   }
   
 dropDownButtons.forEach( element => element.addEventListener("click",  handleDropdown));
