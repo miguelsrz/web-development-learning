@@ -1,0 +1,202 @@
+[
+  {
+    "id": 100,
+    "title": "Rustic Bookshelf",
+    "img": "https://i.etsystatic.com/24359277/r/il/b588b8/4585657062/il_570xN.4585657062_b44r.jpg",
+    "alt": "Rustic wooden bookshelf with five shelves",
+    "price": 120,
+    "description": "This rustic wooden bookshelf features five spacious shelves, perfect for storing books, decor items, or collectibles. The sturdy construction ensures durability, while the natural wood finish adds warmth and character to any room. Its versatile design complements a variety of interior styles, making it a functional and stylish addition to your home."
+  },
+  {
+    "id": 101,
+    "title": "Leather Armchair",
+    "img": "https://www.oakworld.co.uk/wp-content/uploads/2021/05/ARMCHAIR.jpg",
+    "alt": "Brown leather armchair with cushioned seat",
+    "price": 200,
+    "description": "Sink into comfort with this luxurious brown leather armchair, featuring a cushioned seat and backrest for ultimate relaxation. The high-quality leather offers both style and durability, making it a perfect choice for any living room or study. Its classic design and sturdy construction ensure it will be a beloved piece for years to come."
+  },
+  {
+    "id": 102,
+    "title": "Ceramic Coffee Set",
+    "img": "https://image.made-in-china.com/202f0j00knlacNohfgzy/Creative-Glass-Porcelain-Coffee-Pot-Set-Glass-Porcelain-Dinner-Tea-Set.webp",
+    "alt": "Vintage ceramic coffee set with cups and saucers",
+    "price": 35,
+    "description": "Enjoy your coffee in style with this charming vintage ceramic coffee set. The set includes four delicately designed cups and matching saucers, each featuring a unique floral pattern. Perfect for entertaining guests or adding a touch of elegance to your morning routine, this set is both functional and decorative, making it a great addition to any kitchen."
+  },
+  {
+    "id": 103,
+    "title": "Wooden Dining Table",
+    "img": "https://m.media-amazon.com/images/I/91H82-mQZLL._AC_UF894,1000_QL80_.jpg",
+    "alt": "Large wooden dining table with a polished finish",
+    "price": 300,
+    "description": "Gather around this large wooden dining table, which comfortably seats six people, making it ideal for family meals and social gatherings. The polished finish adds a touch of sophistication, while the solid wood construction ensures longevity. Its timeless design allows it to blend seamlessly with various decor styles, enhancing the beauty of your dining area."
+  },
+  {
+    "id": 104,
+    "title": "Vintage Wall Clock",
+    "img": "https://greentouchcraftsindia.com/cdn/shop/products/GN1.jpg?v=1641990022",
+    "alt": "Vintage wall clock with Roman numerals",
+    "price": 50,
+    "description": "This classic vintage wall clock features Roman numerals and a beautifully weathered finish that adds a touch of nostalgia to any room. The clock’s large face and clear markings make it easy to read from a distance. Whether in your living room or kitchen, this clock serves as both a functional timepiece and a charming decorative element."
+  },
+  {
+    "id": 105,
+    "title": "Antique Mirror",
+    "img": "https://m.media-amazon.com/images/I/71s+xxHgEvL._AC_UF894,1000_QL80_.jpg",
+    "alt": "Antique mirror with ornate gold frame",
+    "price": 150,
+    "description": "Elevate your interior decor with this elegant antique mirror, featuring an ornate gold frame that exudes timeless beauty. The mirror’s large size makes it perfect for creating a focal point in your hallway or bedroom. Its detailed craftsmanship and vintage charm make it more than just a mirror, but a statement piece that enhances any space."
+  },
+  {
+    "id": 106,
+    "title": "Garden Bench",
+    "img": "https://www.familyhandyman.com/wp-content/uploads/2023/02/Timber-Outdoor-Garden-Bench-FHM.jpg?fit=700%2C700",
+    "alt": "Wooden garden bench with iron frame",
+    "price": 75,
+    "description": "Relax in your garden with this sturdy wooden garden bench, supported by a durable iron frame. The bench’s classic design and natural finish allow it to blend seamlessly into any outdoor setting. Perfect for enjoying a sunny afternoon or reading a book, this bench provides both comfort and style, making it an ideal addition to your garden or patio."
+  },
+  {
+    "id": 107,
+    "title": "Glass Coffee Table",
+    "img": "https://assets.pbimgs.com/pbimgs/ab/images/dp/wcm/202427/0264/everson-rectangular-glass-coffee-table-52-2-o.jpg",
+    "alt": "Modern glass coffee table with metal legs",
+    "price": 90,
+    "description": "Add a touch of modern elegance to your living room with this sleek glass coffee table. The tempered glass top provides a clear, spacious surface, while the metal legs offer sturdy support and a contemporary look. Ideal for displaying magazines, decor, or serving coffee, this table combines functionality with a minimalist design that complements any modern decor."
+  },
+  {
+    "id": 108,
+    "title": "Handmade Quilt",
+    "img": "https://tracyfredrychowski.com/wp-content/uploads/2020/02/amish-quilt-large-dahlia-1.png",
+    "alt": "Colorful handmade quilt with intricate patterns",
+    "price": 60,
+    "description": "This colorful handmade quilt features intricate patterns and vibrant hues, making it a perfect addition to your bed or sofa. Crafted with care, it offers warmth and comfort while adding a splash of color to your living space. The quilt’s detailed stitching and quality materials ensure it will be a treasured piece in your home for years to come."
+  },
+  {
+    "id": 109,
+    "title": "Outdoor Grill",
+    "img": "https://smallbee.co.uk/cdn/shop/products/AI0396-1901.jpg?v=1679465906",
+    "alt": "Stainless steel outdoor grill with side burners",
+    "price": 180,
+    "description": "Take your outdoor cooking to the next level with this high-quality stainless steel grill, complete with side burners for added versatility. Perfect for summer barbecues and gatherings, this grill offers ample cooking space and easy-to-use controls. Its durable construction and sleek design make it a stylish and functional addition to your patio or backyard."
+  },
+  {
+    "id": 110,
+    "title": "Wicker Basket Set",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6J7SqTZ1YI0UzkTnuShCxWppccWNfGJtAVA&s",
+    "alt": "Set of three wicker baskets in different sizes",
+    "price": 40,
+    "description": "Organize your home with this set of three beautifully crafted wicker baskets, each in a different size. These baskets are perfect for storing everything from laundry to toys, while also adding a rustic touch to your decor. Their sturdy construction and natural finish make them both practical and decorative, suitable for any room in your home."
+  },
+  {
+    "id": 111,
+    "title": "Bicycle",
+    "img": "https://cdn.shopify.com/s/files/1/1800/3387/files/what-is-a-vintage-bike-1-brownie-7-dutch-bike_480x480.jpg?v=1685976080",
+    "alt": "Classic road bicycle with a steel frame",
+    "price": 150,
+    "description": "Enjoy smooth rides with this classic road bicycle, featuring a durable steel frame and comfortable seat. Perfect for commuting, weekend adventures, or leisurely rides around town, this bike combines style and functionality. Its reliable build ensures a comfortable and efficient ride, making it a great choice for cyclists of all levels."
+  },
+  {
+    "id": 112,
+    "title": "Porcelain Doll Collection",
+    "img": "https://dollsmagazine.com/wp-content/uploads/2022/11/VictorianEra1-627x376.jpg",
+    "alt": "Set of four collectible porcelain dolls",
+    "price": 100,
+    "description": "This exquisite set of four collectible porcelain dolls showcases unique outfits and delicate features, making them perfect for collectors or as decorative pieces. Each doll is meticulously crafted, reflecting a different style and era. Whether displayed together or individually, these dolls add a touch of elegance and nostalgia to any room."
+  },
+  {
+    "id": 113,
+    "title": "Solid Wood Dresser",
+    "img": "https://assets.weimgs.com/weimgs/rk/images/wcm/products/202414/0017/keira-solid-wood-6-drawer-dresser-34-o.jpg",
+    "alt": "Solid wood dresser with six drawers",
+    "price": 250,
+    "description": "Store your clothes and accessories in style with this solid wood dresser, featuring six spacious drawers. The dresser’s robust construction and timeless design make it a durable and elegant addition to any bedroom. Its smooth finish and classic look ensure it will complement a wide range of decor styles, providing both functionality and beauty."
+  },
+  {
+    "id": 114,
+    "title": "KitchenAid Mixer",
+    "img": "https://images.bloomingdalesassets.com/is/image/BLM/products/3/optimized/12254383_fpx.tif?op_sharpen=1&wid=700&fit=fit,1&$filtersm$",
+    "alt": "Red KitchenAid stand mixer",
+    "price": 120,
+    "description": "This versatile KitchenAid stand mixer in vibrant red is a must-have for baking and cooking enthusiasts. With multiple speed settings and attachments, it’s perfect for mixing, whipping, and kneading. Its sturdy build and iconic design make it both a reliable kitchen tool and a stylish countertop accessory, ensuring it will be a staple in your kitchen for years."
+  },
+  {
+    "id": 115,
+    "title": "Folding Camping Chair",
+    "img": "https://i5.walmartimages.com/seo/FELICON-355-lb-Heavy-Duty-Camping-Beach-Folding-Chairs-USA-Portable-Lightweight-Steel-Wood-Armrest-Chair-Outdoors-Home-Lawn-Travel-Concert-Comet-Adul_06e7820f-d84d-4496-be7b-1232bc121f79.fc8ef11e9f8e091b5e91bcd1e7780ab4.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
+    "alt": "Lightweight folding camping chair with cup holder",
+    "price": 25,
+    "description": "This lightweight folding camping chair is perfect for outdoor activities, offering comfort and convenience on the go. It features a built-in cup holder and a sturdy frame that’s easy to fold and carry. Whether you're camping, attending a sports event, or enjoying a picnic, this chair provides a comfortable and portable seating solution."
+  },
+  {
+    "id": 116,
+    "title": "Retro Arcade Machine",
+    "img": "https://www.homeleisuredirect.com/App/Image.aspx?i=39021-Cat07-MultiGame2.jpg&h=527&w=720",
+    "alt": "Retro arcade machine with classic games",
+    "price": 350,
+    "description": "Relive the golden age of gaming with this retro arcade machine, featuring a collection of classic games from the 80s and 90s. The machine's vibrant display and authentic controls provide an immersive gaming experience. Perfect for adding a nostalgic touch to your game room, this arcade machine is both a fun and stylish addition."
+  },
+  {
+    "id": 117,
+    "title": "Electric Guitar",
+    "img": "https://image.made-in-china.com/2f0j00lbycNMzPAQqI/Cheap-Electric-Guitar-Factory-Wholase-OEM-St-Electrico-Guitars-for-Sale.jpg",
+    "alt": "Black electric guitar with amplifier",
+    "price": 220,
+    "description": "Rock out with this sleek black electric guitar, which comes with a matching amplifier. Ideal for both beginners and seasoned players, this guitar offers great sound and a smooth playing experience. Its stylish design and reliable build make it perfect for practice sessions, performances, or just jamming at home."
+  },
+  {
+    "id": 118,
+    "title": "Patio Umbrella",
+    "img": "https://images.thdstatic.com/productImages/c876db44-341a-4d66-a7f5-bb82d033e425/svn/black-pure-garden-patio-umbrella-stands-hw1500212-fa_600.jpg",
+    "alt": "Large patio umbrella with tilt function",
+    "price": 70,
+    "description": "Stay cool and shaded with this large patio umbrella, which features a tilt function to provide optimal coverage throughout the day. The umbrella’s durable construction and weather-resistant fabric ensure long-lasting use, making it perfect for your outdoor space. Whether for your garden, patio, or deck, this umbrella combines functionality with style."
+  },
+  {
+    "id": 119,
+    "title": "Lawn Mower",
+    "img": "https://cgmowers.co.uk/wp-content/uploads/2022/01/hayter-harrier-48.jpg",
+    "alt": "Gas-powered lawn mower with adjustable height",
+    "price": 180,
+    "description": "Keep your lawn looking pristine with this gas-powered lawn mower, which features an adjustable cutting height for a perfectly manicured lawn. Its powerful engine and easy-to-use controls make mowing your yard a breeze. Durable and reliable, this lawn mower is built to handle even tough mowing jobs, ensuring your lawn stays neat and tidy."
+  },
+  {
+    "id": 120,
+    "title": "Vintage Camera",
+    "img": "https://www.vintagecamerahut.com/cdn/shop/files/CAnonae-1_bac17835-d728-48bd-84ab-18e0e0aff072_345x345@2x.jpg?v=1697133294",
+    "alt": "Vintage film camera with leather case",
+    "price": 90,
+    "description": "Capture moments in timeless style with this vintage film camera, complete with a leather case. Ideal for photography enthusiasts and collectors, the camera offers a classic design and reliable performance. Whether used for creative projects or displayed as a collectible, this camera adds a nostalgic touch to any photographer's collection."
+  },
+  {
+    "id": 121,
+    "title": "Electric Fireplace",
+    "img": "https://www.litedeerhomes.com/cdn/shop/files/litedeer-homes-latitude-75-smart-electric-fireplace-with-app-driftwood-log-and-river-rock-zef75v-litedeer-homes-2_700x700.jpg?v=1717454557",
+    "alt": "Freestanding electric fireplace with remote control",
+    "price": 200,
+    "description": "Add warmth and ambiance to your home with this freestanding electric fireplace, which comes with a convenient remote control. The fireplace’s realistic flame effects create a cozy atmosphere without the hassle of a traditional fireplace. Perfect for any room, this electric fireplace offers both style and functionality, making it a great addition to your living space."
+  },
+  {
+    "id": 122,
+    "title": "Baby Stroller",
+    "img": "https://moonbunbaby.com/cdn/shop/products/WechatIMG303_e0aab77f-e551-47da-a0fa-a346af4ca2bc.png?v=1624235101",
+    "alt": "Lightweight baby stroller with storage basket",
+    "price": 85,
+    "description": "Take your little one out in comfort with this lightweight baby stroller, which features a large storage basket for all your essentials. The stroller’s easy maneuverability and sturdy construction make it perfect for daily walks and outings. Its stylish design and practical features ensure both you and your baby will enjoy using it."
+  },
+  {
+    "id": 123,
+    "title": "Set of Garden Tools",
+    "img": "https://www.gardengatemagazine.com/review/wp-content/uploads/2024/03/Gardening-Tool-Set-channel-323-article-227130.jpg",
+    "alt": "Set of five essential garden tools",
+    "price": 30,
+    "description": "This set of five essential garden tools includes everything you need for planting, pruning, and maintaining your garden. Each tool is designed with durability and comfort in mind, featuring ergonomic handles and high-quality materials. Perfect for both novice and experienced gardeners, this set helps you keep your garden looking its best all season long."
+  },
+  {
+    "id": 124,
+    "title": "Wine Rack",
+    "img": "https://i.etsystatic.com/11059938/r/il/f4c00b/5675704853/il_1080xN.5675704853_4f6q.jpg",
+    "alt": "Wooden wine rack holding twelve bottles",
+    "price": 50,
+    "description": "Display and store your wine collection in style with this elegant wooden wine rack, which holds up to twelve bottles. Its sturdy construction and timeless design make it a perfect addition to any kitchen or dining area. The rack’s compact size ensures it fits neatly on a countertop or shelf, adding both functionality and charm to your space."
+  }
+]

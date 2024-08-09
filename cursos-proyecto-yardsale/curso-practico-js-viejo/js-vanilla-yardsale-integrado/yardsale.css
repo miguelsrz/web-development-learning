@@ -19,9 +19,10 @@
             --lg: 18rem;
             --md: 16rem;
             --sm: 14rem;
+            --xsm: 12rem;
 
             --add-nav-height: 60px;
-            --card-width: 280px;
+            --card-width: 320px;
 
         }
 
@@ -69,7 +70,7 @@
             display: block;
             width: 100%;
 
-            border-radius: 16px;
+            border-radius: 8px;
             border: 2px solid transparent;
 
             text-decoration: none;
@@ -350,20 +351,20 @@
         .shopping-cart-item-num
         {
             position: absolute;
-            top: 10%;
+            top: 5%;
             right: 10%;
 
             display: flex;
             justify-content: center;
             align-items: center;
 
-            width: 16px;
-            height: 16px;
+            width: 18px;
+            height: 18px;
             border-radius: 16px;
 
             font-size: var(--sm);
             font-weight: 700;
-            background-color: var(--object-fill);
+            background-color: var(--object-fill-hover);
         }
 
 /* NAV MENU - DESKTOP CSS*/
@@ -440,7 +441,7 @@
     background-color: white;
     padding: 2em;
 
-    height: calc(100vh - 65px);
+    height: calc(100vh - var(--add-nav-height));
     width: 100%;
 
 }
@@ -521,7 +522,7 @@ main
             display: flex;
             
             justify-content: center;
-            height: 100%;
+            height: auto;
 
             padding: 0 1em;
         }
@@ -529,16 +530,17 @@ main
         .card-container
         {
             width: 100%;
-            max-width: 1800px;
+            max-width: 2000px;
             margin: 2em 0;
 
 
             display: grid;
-            justify-content: center;
+            justify-content: space-around;
             grid-template-columns: repeat(auto-fit, var(--card-width));
             grid-auto-rows: max-content;
-            gap: 24px;
+            gap: 24rem;
         }
+        
         
         .card-item
         {
@@ -549,11 +551,26 @@ main
             height: 100%;
 
             cursor: pointer;
+            
         }
 
         .card-item:hover p 
         {
             text-decoration: underline;
+        }
+
+        .product-text
+        {
+            border-right: 1rem solid #999999;
+
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            width: 100%;
+            height: 75%;
+            padding-right: 8rem;
         }
 
         .product-figure
@@ -565,25 +582,28 @@ main
         {
             width: 100%;
             height: 100%;
-            border-radius: 20px;
+            border-radius: 8rem;
             object-fit:cover;        
         }
 
         .product-title
         {
-            font-size: var(--md);
+            font-size: var(--sm);
             font-weight: 500;
             color: var(--light-text);
         }
 
         .card-info
         {
+
+
             display: flex;
-            justify-content: space-between;
+            flex-direction: row;
+            justify-content: center;
             align-items: center;
             height: 50px;
 
-            margin-top: .5em;
+            margin-top: .25em;
         }
 
         
@@ -592,18 +612,30 @@ main
             display: flex;
             justify-content: center;
             align-items: center;
-            cursor: pointer;
-            width: 48px;
-            height: 48px;
+
+            min-width: 48px;
+            min-height: 48px;
 
             border-radius: 50%;
-            border: 4px solid transparent;
+
+            border: 2px solid transparent;
+
+            
+
+            margin-left: 8rem;
         }
 
         .add-to-cart:hover
         {
             border: 2px solid var(--light-text);
         }
+
+        .add-to-cart:active
+        {
+            border: 2px solid greenyellow;
+
+        }
+
         
 /*=============================================================*/
 
@@ -639,13 +671,12 @@ main
     z-index: 50;
     display: none;
 
-    position: absolute;
+    position: fixed;
     background-color: var(--light-text);
     opacity: 50%;
     top: 0;
     width: 100vw;
-    height: 100%;
-
+    height: 100vh;
 }
 
 aside:not(.display-none) ~ .blur-gray  /*ACTIVATE BACKGROUND GRAY OVERLAY WHEN ASIDE IS DISPLAYED!!!!*/
@@ -655,7 +686,7 @@ aside:not(.display-none) ~ .blur-gray  /*ACTIVATE BACKGROUND GRAY OVERLAY WHEN A
 
 aside:not(.display-none) ~ .card-display
 {
-    overflow:clip;
+    overflow: hidden;
 }
 
 .aside-product-shadow
@@ -681,7 +712,7 @@ aside:not(.display-none) ~ .card-display
             grid-template-rows: 75px 1fr auto;
 
             height: 100%;
-            max-height:900rem ;
+            max-height:1600rem ;
 
             background-color: white;
         }
@@ -781,7 +812,7 @@ aside:not(.display-none) ~ .card-display
 
 .aside-product-info
 {
-    max-width: 250rem;
+    max-width: 300rem;
 
 }
 
@@ -815,15 +846,14 @@ aside:not(.display-none) ~ .card-display
 
         .overlay-gray
         {
-            display: none;
             position: absolute;
-            z-index: 0;
+            z-index: -1;
 
             width: 100%;
             height: 100%;
 
-            border-radius: 8px;
-            background-color:rgba(139, 139, 139, 0.5);
+            border-radius: 3px;
+            background-color:rgba(139, 139, 139, 0.61);
 
         }
         .aside-myorder-article
@@ -844,8 +874,11 @@ aside:not(.display-none) ~ .card-display
             transform: translate(-50%, -50%);
 
             height: 100%;
-            max-width: 150rem;
-            width: 80%;
+            width: 100%;
+
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
             
         }
 
@@ -854,7 +887,8 @@ aside:not(.display-none) ~ .card-display
             margin: 0;
             padding: 0 .5em;
 
-            width: 100%;
+            max-width: 150rem;
+            width: 80%;
             height: 40%;
 
             display: flex;
@@ -864,17 +898,12 @@ aside:not(.display-none) ~ .card-display
             font-size: var(--sm);
         }
 
-        .aside-myorder-article:hover .overlay-gray
-        {
-            display: block;
-        }
-
         .aside-myorder-article:hover .aside-product-options
         {
             display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
         }
+
+
 
         .aside-product-figure
         {
@@ -886,7 +915,7 @@ aside:not(.display-none) ~ .card-display
         {
             width: inherit;
             height: inherit;
-            border-radius: 16rem;
+            border-radius: 8rem;
 
             object-fit: cover;
         }
@@ -949,23 +978,35 @@ aside:not(.display-none) ~ .card-display
 
         .aside-figure-grid
         {
+            margin-top: .5em;
             display: grid;
             grid-template-rows: 90% auto;
             gap: 16rem;
         }
 
-        .aside-product-figure-pv img
+        .aside-product-figure-pv
         {
             width: 100%;
             height: 100%;
+            padding: .5em;
+
+            display: flex;
+            justify-content: center;
+        }
+        .aside-product-figure-pv img
+        {
+            width: 75%;
+            height: 100%;
             object-fit: cover;
+            border-radius: 8px;
+
         }
 
         
         .aside-product-grid
         {
             display: grid;
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-rows: 50% auto;
             gap: 16rem;
 
         }
@@ -975,8 +1016,8 @@ aside:not(.display-none) ~ .card-display
             border-top: 1rem solid #999999;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            gap: 16rem;
+            justify-content:baseline;
+            gap: 24rem;
 
             margin: 0 1.5em 1em;
             padding-top: 1em;
@@ -1046,6 +1087,75 @@ aside:not(.display-none) ~ .card-display
 /*=============================================================*/
 /*=============================================================*/
 
+/* ERROR 404*/
+/*=============================================================*/
+
+.error-display
+{
+    z-index: 101;
+
+    bottom: 3%;
+    left: 3%;
+    
+    position: fixed;
+    width: 400px;
+    height: 75px;
+
+    background-color: rgb(173, 15, 15);
+
+    border-radius: 8px;
+
+    -webkit-box-shadow: 0px 2px 8px 0px rgba(139,139,139,1);
+            -moz-box-shadow: 0px 2px 8px 0px rgba(139,139,139,1);
+            box-shadow: 0px 2px 8px 0px rgba(139,139,139,1)
+
+}
+
+.error-grid
+{
+    position: fixed;
+    width: inherit;
+    height: inherit;
+    bottom: 2%;
+    left: 2%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+
+    background-color: var(--white);
+
+    border: 1px solid var(--light-text);
+    border-radius: 8px;
+    padding: .5em 1em;
+
+    -webkit-box-shadow: 0px 2px 8px 0px rgba(139,139,139,1);
+            -moz-box-shadow: 0px 2px 8px 0px rgba(139,139,139,1);
+            box-shadow: 0px 2px 8px 0px rgba(139,139,139,1)
+
+    
+}
+
+.error-grid h1
+{
+    font-size: var(--md);
+    border-bottom: 1rem solid #999999;
+    padding-bottom: .25em;
+}
+
+
+.error-grid p
+{
+    font-size: var(--sm);
+    color: var(--black);
+}
+
+
+
+
+
+/*=============================================================*/
 
 
 /* MEDIA QUERIES */
@@ -1096,6 +1206,23 @@ aside:not(.display-none) ~ .card-display
             {
                 display: none;
             }
+
+            .error-display
+            {   
+                width: 250px;
+            }
+
+            .error-grid h1
+            {
+                font-size: var(--md);
+                
+            }
+
+            .error-grid p
+            {
+                font-size: var(--sm);
+            }
+
         }
 
         @media (max-width: 768px)
@@ -1106,11 +1233,8 @@ aside:not(.display-none) ~ .card-display
                 max-width: 400rem;
                 width: 85%;
             }
-            .aside-title h1
-            {
-                font-size: var(--lg);
-            }
-
+            
+            
         }
 
         @media (max-width:640px)
@@ -1119,21 +1243,27 @@ aside:not(.display-none) ~ .card-display
             {
                 --card-width: 150px;
             }
+            
+            .card-info
+            {
+                height: 75px;
+            }
 
+            .product-text
+            {
+                height: 70%;
+            }
             .product-title
             {
                 max-width: 175px;
+                font-size: var(--xsm);
+
             }
         }
 
         @media (max-width:540px)
         {
             
-            .product-title
-            {
-            font-size: var(--sm);
-            
-            }
             .card-add-to-cart
             {
                 min-width: 35px;
@@ -1141,12 +1271,9 @@ aside:not(.display-none) ~ .card-display
                 
             }
 
-            .total-aside-product-price, .resume-info h1
-            {
-                font-size: var(--md);
-            }
+            
 
-            .product-title, .aside-product-price
+            .aside-product-price
             {
                 font-size: var(--sm);
                 text-align: center;
@@ -1161,9 +1288,22 @@ aside:not(.display-none) ~ .card-display
 
         @media (max-width:440px)
         {
+            
+        }
+
+        @media (max-width:345px)
+        {
             .figure-nav img
             {
                 height: 25px;
+            }
+            .total-aside-product-price, .aside-title h1
+            {
+                font-size: var(--lg);
+            }
+            .resume-info h1
+            {
+                font-size: var(--md);
             }
         }
 /*=============================================================*/

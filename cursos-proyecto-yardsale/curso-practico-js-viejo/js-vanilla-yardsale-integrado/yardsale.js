@@ -1,7 +1,20 @@
 // OBTAIN DOM ELEMENTS - ESSENTIAL FOR RENDERING PAGE
-
 const asideCartContainer = document.querySelector('.aside-myorder-details');
 const mainCardContainer = document.querySelector('.card-container');
+const dropDownContent = document.querySelectorAll('.drop-down-content');
+
+const deleteFromCartParent = document.querySelector('.delete-from-cart');
+const navTotalProducts = document.querySelector('.shopping-cart-item-num');
+const shoppingCartTotalProducts = document.querySelector('#shopping-cart-counter');
+const shoppingCartTotalPrice = document.querySelector('#shopping-cart-total');
+
+const error404 = document.querySelector('.error-display');
+const isNoContent = document.querySelectorAll('.error404');
+
+
+let totalProductsCounter = 0;
+let totalProductsPrice = 0;
+
 // ------------------------------------------------------
 
 // PRODUCT CLASS AND INFORMATION
@@ -13,14 +26,15 @@ class CreateProduct
   img;
   price;
 
-  constructor(id,title,description,img,alt,price)
+  constructor(jsonData) //Receives json data and applies each value of the json into the new instance
   {
-    this.id = id;
-    this.title = title;
-    this.description = description;
-    this.img = img;
-    this.alt = alt;
-    this.price = price
+    this.id = jsonData.id;
+    this.title = jsonData.title;
+    this.img = jsonData.img;
+    this.alt = jsonData.alt;
+    this.price = jsonData.price;
+    this.description = jsonData.description;
+
   }
 
   createMainCardProductHTML = function()
@@ -29,7 +43,7 @@ class CreateProduct
 
     // SECTION CONTAINER
     const sectionContainer = document.createElement('section'); // (1) MAIN CARD CONTAINER
-    sectionContainer.classList.add('card-item','drop-down-button');
+    sectionContainer.classList.add('card-item','drop-down-button','view-product-button');
     sectionContainer.setAttribute('data-target','aside-product-view')
     sectionContainer.id = this.id;
     // --------------------------------------------------------------
@@ -39,8 +53,9 @@ class CreateProduct
     figureContainerProduct.classList.add('product-figure'); 
 
     const imgProduct = document.createElement('img'); // (3) IMG 
-    imgProduct.setAttribute('src',this.img);
-    imgProduct.setAttribute('alt',this.alt);
+    imgProduct.src = this.img;
+    imgProduct.alt = this.alt;
+
     // --------------------------------------------------------------
 
     // CARD INFO
@@ -59,7 +74,7 @@ class CreateProduct
     productTitle.textContent = this.title;
 
     const figureContainerSVG = document.createElement('figure'); // (3) FIGURE CONTAINER
-    figureContainerSVG.classList.add('no-dropdown','add-to-cart');
+    figureContainerSVG.classList.add('no-dropdown','add-to-cart' , 'add-to-cart-button');
 
     const imgShoppingSVG = document.createElement('img'); // (4) IMG SVG
     imgShoppingSVG.setAttribute('src','assets/icons/bt_add_to_cart.svg');
@@ -82,11 +97,19 @@ class CreateProduct
 
   createShoppingCarProductHTML = function()
   {
+    // DINAMICALLY CHANGING SHOPPING CART INFORMATION
+    totalProductsCounter++;
+    totalProductsPrice += this.price;
+
+    navTotalProducts.innerText = shoppingCartTotalProducts.innerText = totalProductsCounter;
+    shoppingCartTotalPrice.innerText = totalProductsPrice;
+
     // CREATING ELEMENTS AND ADDING THEIR CLASSES - NUM INDICATES HIERARCHY
 
     // CONTAINERS
     const divMainContainer = document.createElement('div'); // (1) MAIN CONTAINER
-    divMainContainer.classList.add('aside-myorder-article-box');
+    divMainContainer.classList.add('aside-myorder-article-box');    
+    divMainContainer.setAttribute('data-target', this.id)
 
     const sectionStructure = document.createElement('section'); // (2) PRODUCT STRUCTURE - SEMANTIC
     sectionStructure.classList.add('objhovfoc-gray', 'aside-myorder-article')
@@ -95,7 +118,7 @@ class CreateProduct
 
     // GRAY OVERLAY ON PRODUCT HOVER
     const divHoverOverlay = document.createElement('div'); // (3) HOVER GRAY OVERLAY
-    divHoverOverlay.classList.add('overlay-gray');
+    divHoverOverlay.classList.add('overlay-gray','no-dropdown');
 
     // --------------------------------------------------------------
 
@@ -131,11 +154,12 @@ class CreateProduct
     divProductOptions.classList.add('aside-product-options');
 
     const buttonRemove = document.createElement('button'); // (4) REMOVE PRODUCT BUTTON
-    buttonRemove.classList.add('button-primary');
+    buttonRemove.classList.add('button-primary','delete-from-cart-button','no-dropdown');
     buttonRemove.textContent = 'Remove from cart';
 
     const buttonView = document.createElement('button'); // (4) VIEW PRODUCT BUTTON
-    buttonView.classList.add('button-secondary');
+    buttonView.classList.add('button-secondary','button-view-product');
+
     buttonView.textContent = 'View product';
     // --------------------------------------------------------------
     // --------------------------------------------------------------
@@ -147,9 +171,9 @@ class CreateProduct
     articleInfo.appendChild(productTitle);
     divDetailsContainer.append(articleInfo, productPrice);
 
-    divProductOptions.append(buttonRemove, buttonView);
-
-    sectionStructure.append(divHoverOverlay, figureContainer, divDetailsContainer, divProductOptions);
+    divProductOptions.append(divHoverOverlay,buttonRemove, buttonView);
+  /**/ 
+    sectionStructure.append(figureContainer, divDetailsContainer, divProductOptions);
 
     divMainContainer.appendChild(sectionStructure);
 
@@ -158,11 +182,13 @@ class CreateProduct
 
   updateAsideProductView = function()
   {
+    const asideProductView = document.querySelector('#aside-product-view')
     const productImg = document.querySelector('#apv-img');
     const productPrice = document.querySelector('#apv-price');
     const productTitle = document.querySelector('#apv-title');
     const productDescription = document.querySelector('#apv-description');
 
+    asideProductView.setAttribute('data-target', this.id)
     productImg.setAttribute('src', this.img);
     productImg.setAttribute('alt', this.alt);
     productPrice.textContent = '$ ' + this.price;
@@ -171,54 +197,68 @@ class CreateProduct
   }
 
 } 
+// ------------------------------------------------------
 
-const productsDataArray = ([
-  {
-    id:100,
-    title: 'Classic bike',
-    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id magna posuere, elementum ex sit amet, pellentesque lorem. Nulla a pretium ex. Maecenas viverra facilisis diam, eget tempus massa facilisis in. Duis lectus tortor, cursus eget malesuada eu, iaculis sed dolor. Nulla id leo finibus, ornare eros id, tristique tortor. ',
-    img: 'assets/img/bike.jpg',
-    alt: 'Bike',
-    price: '125,99'
-  },
-  {
-    id:101,
-    title: 'Classssic bike',
-    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id magna posuere, elementum ex sit amet, pellentesque lorem. Nulla a pretium ex. Maecenas viverra facilisis diam, eget tempus massa facilisis in. Duis lectus tortor, cursus eget malesuada eu, iaculis sed dolor. Nulla id leo finibus, ornare eros id, tristique tortor. ',
-    img: 'assets/img/bike.jpg',
-    alt: 'Bike',
-    price: '125,99'
-  }
-])
+// FUNCTION TO FECTH JSON DATA AND CREATE INSTANCES
 
 let productInstancesArray = [];
-// ------------------------------------------------------
-
-// CREATE CONTENT AUTOMATICALLY (Como el ejercicio Superheroe con JSON, pero sin JSON)
-function renderProducts()
+async function loadProducts() 
 {
-  for(product of productsDataArray)
+  try
+  {
+    const response = await fetch('data/yard-sale-products.json'); // Fetchs json
+    if(!response.ok)
     {
-      const newProduct = new CreateProduct(product.id,product.title, product.description, product.img, product.alt, product.price);
-      productInstancesArray.push(newProduct);
-
-      newProduct.createMainCardProductHTML();
+      throw new Error('Response was not OK'); // Incase it doesnt fetch
     }
+
+    const productsDataArray = await response.json(); // Gets the response of each object into an array
+    console.log(productsDataArray)
+
+    productInstancesArray = productsDataArray.map(data => new CreateProduct(data))
+
+    productInstancesArray.forEach(product =>
+    {
+      product.createMainCardProductHTML();
+    }
+    )
+    // QUERY SELECTORS AND EVENT LISTENERS: THEY WAIT FOR GENERATED CONTENT TO INCLUDE THEM
+
+    const dropDownButtons = document.querySelectorAll('.drop-down-button');
+    const viewProduct = document.querySelectorAll('.view-product-button');
+    const buttonAddToCart = document.querySelectorAll('.add-to-cart-button');
+
+
+    dropDownButtons.forEach( element => element.addEventListener("click",  handleDropdown));
+    buttonAddToCart.forEach(button => button.addEventListener('click', addToCart))
+    viewProduct.forEach(item =>
+      {
+        item.addEventListener('click', asideProductViewPrepareUpdate)
+      }
+      );
+
+
+  }catch(error)
+  {
+    console.error('Failed to load products: ',error);
+  }
 }
 
-renderProducts();
-// ------------------------------------------------------
-
-// OBTAIN DOM ELEMENTS - THAT ACCESS PRODUCTS RENDERED
-const dropDownButtons = document.querySelectorAll('.drop-down-button');
-const dropDownContent = document.querySelectorAll('.drop-down-content')
-const cardItems = document.querySelectorAll('.card-item');
-
+document.addEventListener('DOMContentLoaded', ()=>
+{
+  loadProducts();
+  
+})
 
 // ------------------------------------------------------
+
+
+// EVENT HANDLERS
+
 
 // EVENT HANDLERS
 function handleDropdown(event) {
+    console.log('b')
     event.stopPropagation();
     const button = event.target; // Use the event.target, the clicked element
     if(!button.closest('.no-dropdown'))
@@ -241,9 +281,6 @@ function handleDropdown(event) {
     }
     
   }
-  
-dropDownButtons.forEach( element => element.addEventListener("click",  handleDropdown));
-
 
 document.documentElement.addEventListener('click',(event)=>
 {
@@ -265,35 +302,87 @@ document.documentElement.addEventListener('click',(event)=>
   }
 })
 
-cardItems.forEach(item =>
-  {
-    item.addEventListener('click',(event)=>
-  {
-    if(!event.target.closest('.add-to-cart'))
-    {
-      const productId = event.target.closest('.card-item').id;
-      const getProduct = productInstancesArray.find(product => product.id === +productId);
-      getProduct.updateAsideProductView();
-    }
-  })
-  }
-  );
-// ------------------------------------------------------
-
-// ADD TO CART METHOD
-const buttonAddToCart = document.querySelectorAll('.add-to-cart');
-
 function addToCart(event)
 {
-      const productId = event.target.closest('.card-item').id;
-      const getProduct = productInstancesArray.find(product => product.id === +productId)
+      let getProduct
+      const productByID = event.target.closest('.card-item');
+      const productByData = event.target.closest('[data-target]');
+      if(productByID)
+      {
+        getProduct = productInstancesArray.find(product => product.id === +productByID.id)
+      }else if(productByData)
+      {
+        getProduct = productInstancesArray.find(product => product.id === +productByData.getAttribute('data-target'))
+
+      }
+      
       console.log(getProduct)
       getProduct.createShoppingCarProductHTML();
 }
 
-buttonAddToCart.forEach(button => button.addEventListener('click', addToCart))
+deleteFromCartParent.addEventListener('click',(event)=>
+{
+  event.stopPropagation();
+  const button = event.target.closest('.delete-from-cart-button')
+  if(button)
+  {
+    const cartProduct = button.closest('.aside-myorder-article-box')
+    const getProduct = productInstancesArray.find(product => product.id === +cartProduct.getAttribute('data-target'))
+    
+    totalProductsCounter--
+    totalProductsPrice -= getProduct.price;
+    navTotalProducts.innerText = shoppingCartTotalProducts.innerText = totalProductsCounter;
+    shoppingCartTotalPrice.innerText = totalProductsPrice;
+
+    asideCartContainer.removeChild(cartProduct)
+  }
+
+})
+
+
+function asideProductViewPrepareUpdate(event)
+{       
+        let getProduct
+        const productByID = event.target.closest('.card-item');
+        const productByData = event.target.closest('.aside-myorder-article-box');
+        const isCartButton = event.target.closest('.button-view-product')
+
+        if(!event.target.closest('.add-to-cart') && productByID)
+        {
+          getProduct = productInstancesArray.find(product => product.id === +productByID.id);
+          getProduct.updateAsideProductView();
+        }else if(productByData && isCartButton)
+        {
+          getProduct = productInstancesArray.find(product => product.id === +productByData.getAttribute('data-target'));
+          getProduct.updateAsideProductView();
+        }
+}
+
+let timeout;
+isNoContent.forEach(element =>
+{
+  element.addEventListener('click',()=>
+  {
+    if(timeout)
+    {
+      clearTimeout(timeout);
+    }
+
+    error404.classList.remove('display-none');
+    timeout = setTimeout(()=>error404.classList.add('display-none'),1200)
+  }
+  )
+}
+)
 // ------------------------------------------------------
 
+
+
+
+
+
+
+// ------------------------------------------------------
 /* CARD MAIN PAGE HTML STRUCTURE
 
   <section class="card-item">
@@ -357,4 +446,4 @@ buttonAddToCart.forEach(button => button.addEventListener('click', addToCart))
 */
 
 /* */
-
+// ------------------------------------------------------
