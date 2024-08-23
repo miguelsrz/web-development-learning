@@ -1,0 +1,25 @@
+{
+  "name": "npm-init",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node": "node src/index.js && node src/index.js"
+  },
+  "keywords": [
+    "node",
+    "npm"
+  ],
+  "author": "Miguel Suarez <suarezmontielm@gmail.com>",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.2",
+    "moment": "^2.30.1",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.9.0"
+  }
+}

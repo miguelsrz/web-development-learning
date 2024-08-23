@@ -1,0 +1,183 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link  href="output.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/media-chrome@3/+esm"></script>
+</head>
+
+<body>
+  <div id="start" class="relative bg-slate-200 dark:bg-slate-950 overflow-hidden ">
+    <div class="max-w-7xl mx-auto">
+      <div class="relative z-10 pb-8 bg-slate-200 dark:bg-slate-950 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+        <svg class="hidden fill-cyan-600 dark:fill-gray-800 lg:block absolute right-0 inset-y-0 h-full w-40 text-white transform translate-x-1/2"
+           viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <polygon points="50,0 100,0 50,100 0,100" />
+        </svg>
+        <div>
+          <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
+            <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
+              <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+                <div class="flex items-center justify-between w-full md:w-auto  ">
+                  <a id="toggleLightDark" href="#"  class="relative">
+                    <!-- https://i.pinimg.com/564x/f5/4c/2f/f54c2fae3348ca4543112c1764fd825c.jpg -->
+                    <span class="sr-only">Title</span>
+                    <div class="rounded-md absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-gray-500 bg-fixed opacity-0 transition duration-200 ease-in-out hover:opacity-50">
+                    </div>
+                    <img  class="h-8 w-auto sm:h-10 rounded-md border-solid border-2 border-cyan-600" src="https://i.ibb.co/8BN8mNz/M-LOGO-BLANCO-NEGRO.jpg">
+                  </a>
+                </div>
+              </div>
+              <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+                <a href="https://github.com/miguelsrz" target="_blank" class="transition duration-200 ease-in-out font-medium text-gray-600 dark:text-gray-300 hover:text-black dark:text-slate-100 dark:hover:text-slate-400">About</a>
+                <a href="https://miguelsrz.github.io/web-development-learning/" target="_blank" class="transition duration-200 ease-in-out font-medium text-gray-600 dark:text-gray-300 hover:text-black dark:text-slate-100 dark:hover:text-slate-400">Projects</a>
+                <a href="https://linkedin.com/in/miguel-angel-suarez-montiel-3169932a9" target="_blank" class="transition duration-200 ease-in-out font-medium text-gray-600 dark:text-gray-300 hover:text-black dark:text-slate-100 dark:hover:text-slate-400">Contact</a>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+          <div class="sm:text-center lg:text-left">
+            <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-slate-100   sm:text-5xl md:text-6xl">
+              <span class="block xl:inline">Miguel Angel Suarez Montiel</span>
+              <span class="block text-cyan-600 dark:text-cyan-400 xl:inline">@_miguelsrz</span>
+            </h1>
+            <p
+              class="mt-3 text-base text-gray-500 dark:text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+              Systems Engineering student at Universidad Nacional of Colombia.
+              <br> <br>
+              Learning Web Development through Platzi's courses.
+              <br> <br>
+              This page showcases different API's usage!
+            </p>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+      <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+        src="https://agenciadenoticias.unal.edu.co/fileadmin/Agencia_de_Noticias/Imagenes/2023/08-Agosto/723/AgenciaUNAL-150823-01.jpg" alt="UNAL Campus">
+    </div>
+  </div>
+  <div class="relative bg-white dark:bg-slate-900">
+    <!-- Navbar -->
+    <nav class="py-4 border-b-2 border-slate-500 dark:border-slate-600 sticky top-0 z-10 flex-no-wrap  flex w-full items-center justify-between bg-gray-300  shadow-md shadow-black/5 dark:bg-gray-950 dark:shadow-black/10 lg:flex-wrap lg:justify-start">
+      <div class="flex max-w-7xl mx-auto w-full flex-wrap items-center justify-between px-3">
+        
+
+        <!-- Collapsible navigation container -->
+        <div
+          class="flex-grow  items-center  basis-auto"
+          id="navbarSupportedContent1"
+          data-twe-collapse-item>
+
+          <!-- Left navigation links -->
+          <ul
+            class="divide-x divide-slate-500 dark:divide-slate-600 list-style-none me-auto flex  ps-0 flex-row justify-center"
+            data-twe-navbar-nav-ref>
+            <li class="mb-0 pe-4 ps-4" data-twe-nav-item-ref>
+              <!-- Projects link -->
+              <a
+                class="align-middle font-bold dark:text-slate-100 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
+                href="#start"
+                data-twe-nav-link-ref
+                >Start</a
+              >
+            </li>
+            <li class="mb-0 pe-4 ps-4" data-twe-nav-item-ref>
+              <!-- Projects link -->
+              <a
+                class="align-middle font-bold dark:text-slate-100 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
+                href="#youtube"
+                data-twe-nav-link-ref
+                >YouTube</a
+              >
+            </li>
+            <li class="mb-0 pe-4 ps-4" data-twe-nav-item-ref>
+              <!-- Projects link -->
+              <a
+                class="align-middle font-bold dark:text-slate-100 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
+                href="#spotify"
+                data-twe-nav-link-ref
+                >Spotify</a
+              >
+            </li>
+            <li class="mb-0 pe-4 ps-4" data-twe-nav-item-ref>
+              <!-- Projects link -->
+              <a
+                class="align-middle font-bold dark:text-slate-100 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
+                href="#nba"
+                data-twe-nav-link-ref
+                >NBA</a
+              >
+            </li>
+            <!-- About me link -->
+
+          </ul>
+        </div>
+
+        
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <div id="youtube" class="border-b-2 max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+      <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-slate-100 ">YouTube API | Recent UNAL YouTube Videos</h2>
+      <div id="contentParentYoutube" class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+        
+        
+        <!-- content -->
+         <!-- <div class="group relative">
+          <div
+            class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
+            <img src="" alt="" class="w-full">
+          </div>
+          <div class="mt-4 flex justify-between">
+            <h3 class="text-sm text-gray-700">
+              <span aria-hidden="true" class="absolute inset-0"></span>
+              Using YouTube's API
+            </h3>
+          </div>
+        </div> -->
+
+
+      </div>
+    </div>
+
+    <div  id="spotify" class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+      <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-slate-100 ">Spotify API | Tyler the Creator Famous Songs</h2>
+      <div id="contentParentSpotify" class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+        
+      </div>
+    </div>
+
+  </div>
+  <div class="bg-gray-300 dark:bg-gray-950">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+      <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-slate-100  sm:text-4xl">
+        <span class="block">Tailwind template</span>
+        <span class="block text-cyan-600 dark:text-cyan-400">Made by Oscar Barajas Tavares</span>
+      </h2>
+      <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0 gap-2">
+        <a href="https://github.com/gndx" target="_blank">
+          <svg x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z" class="fill-black dark:fill-white hover:fill-slate-800 dark:hover:fill-slate-400 transition duration-200 ease-in-out "/>        
+          </svg>
+        </a>
+        <a href="https://www.youtube.com/@gndx/featured" target="_blank">
+          <svg x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.5949 4.45999C21.5421 4.71353 22.2865 5.45785 22.54 6.40501C22.9982 8.12002 23 11.7004 23 11.7004C23 11.7004 23 15.2807 22.54 16.9957C22.2865 17.9429 21.5421 18.6872 20.5949 18.9407C18.88 19.4007 12 19.4007 12 19.4007C12 19.4007 5.12002 19.4007 3.405 18.9407C2.45785 18.6872 1.71353 17.9429 1.45999 16.9957C1 15.2807 1 11.7004 1 11.7004C1 11.7004 1 8.12002 1.45999 6.40501C1.71353 5.45785 2.45785 4.71353 3.405 4.45999C5.12002 4 12 4 12 4C12 4 18.88 4 20.5949 4.45999ZM15.5134 11.7007L9.79788 15.0003V8.40101L15.5134 11.7007Z" class="fill-black dark:fill-white hover:fill-slate-800 dark:hover:fill-slate-400 transition duration-200 ease-in-out"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="main-asc-project.js"></script>
+</body>
+
+</html>

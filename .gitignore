@@ -1,6 +1,7 @@
 *.code-workspace
-curso-asincronismo/node-modules/
+node_modules
 .env
+.gitignore
 
 ### VisualStudioCode ###
 .vscode/*
